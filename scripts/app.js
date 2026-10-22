@@ -411,6 +411,7 @@
 
     stack.innerHTML = ACTORS.map((a) => {
       const thumbs = a.gallery
+        .filter((g) => LOCAL_HUB || !/_(QUAD|AVATAR)_SHEET\./.test(g.src))
         .map(
           (g, idx) => `
           <button type="button" class="${idx === 0 ? "on" : ""}" data-actor="${esc(a.id)}" data-src="${esc(g.src)}" data-label="${esc(g.label)}" title="${esc(g.label)}">
