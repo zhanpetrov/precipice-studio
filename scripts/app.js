@@ -1,7 +1,7 @@
 // PRECIPICE — Workshop #1 & AI Actors Production Hub Controller
 (function () {
   const DATA = window.PRECIPICE_HUB_DATA;
-  const BRIDGE_BASE = "http://127.0.0.1:8765";
+  const BRIDGE_BASE = "http://127.0.0.1:8788";
 
   let activeVideoIdx = 0;
   let activeChapterIdx = 0;
@@ -61,7 +61,7 @@
     if (drawer) {
       drawer.classList.add("visible");
       drawerTitle.textContent = `⚡ Dispatching: ${payload.title || payload.id}`;
-      drawerMsg.textContent = "Connecting to local Google Flow Chrome Automation Bridge (127.0.0.1:8765)...";
+      drawerMsg.textContent = "Connecting to local Google Flow Chrome Automation Bridge (127.0.0.1:8788)...";
       drawerPrompt.textContent = payload.prompt;
     }
 

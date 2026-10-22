@@ -16,7 +16,7 @@ import time
 import urllib.request
 from datetime import datetime
 
-PORT = 8765
+PORT = 8788
 BASE_DIR = "/Users/studio/Desktop/helloworld/precipice-studio"
 GEN_DIR = os.path.join(BASE_DIR, "assets/generated")
 os.makedirs(GEN_DIR, exist_ok=True)
