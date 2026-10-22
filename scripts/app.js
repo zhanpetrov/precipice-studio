@@ -25,6 +25,10 @@
   const LOCAL_HUB = ["127.0.0.1", "localhost"].includes(location.hostname);
   const LOCAL_ONLY = '<span class="local-only">Local hub only</span>';
 
+  // Decisions (D001, D010 …) are owned by the Control Tower; read them live from there.
+  const TOWER = "https://zhanpetrov.github.io/precipice/";
+  let DECISIONS = {};
+
   const $ = (id) => document.getElementById(id);
 
   let player = null;
@@ -47,6 +51,48 @@
     return String(str ?? "").replace(/[&<>"']/g, (c) => (
       { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
     ));
+  }
+
+  function dref(id) {
+    const d = DECISIONS[id];
+    const title = d ? `${id} · ${d.status}: ${d.title}` : "Open in Control Tower";
+    return `<a class="dref${d ? " dref-" + esc(d.status) : ""}" data-dref="${esc(id)}" href="${TOWER}#dec-${esc(id)}" target="_blank" rel="noopener" title="${esc(title)}">${esc(id)}${d ? " · " + esc(d.status) : ""}</a>`;
+  }
+
+  function refreshDrefs() {
+    document.querySelectorAll("[data-dref]").forEach((el) => { el.outerHTML = dref(el.dataset.dref); });
+  }
+
+  function loadDecisions() {
+    fetch(TOWER + "data/production.json", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((j) => { (j.decisions || []).forEach((d) => { DECISIONS[d.id] = d; }); refreshDrefs(); })
+      .catch(() => {});
+  }
+
+  // ---------- Views: each menu item shows its own sections ----------
+  const VIEW_OF_HASH = { "": "workshop", top: "workshop", workshop: "workshop", "every-moment": "workshop",
+    actors: "actors", suggestions: "video", cast: "cast", how: "how" };
+
+  function showView(view, scrollTarget) {
+    document.querySelectorAll("[data-view]").forEach((sec) => { sec.hidden = sec.dataset.view !== view; });
+    document.querySelectorAll("[data-view-link]").forEach((a) => a.classList.toggle("on", a.dataset.viewLink === view));
+    const on = document.querySelector(".bar-link.on");
+    const nav = on && on.parentElement;
+    if (nav && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = on.offsetLeft - nav.clientWidth / 2 + on.offsetWidth / 2;
+    if (scrollTarget) scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+    else window.scrollTo(0, 0);
+  }
+
+  function routeFromHash() {
+    const h = location.hash.slice(1);
+    const view = h.startsWith("actor-card-") ? "actors" : VIEW_OF_HASH[h] || "workshop";
+    showView(view, h && h !== view && h !== "workshop" && h !== "top" ? document.getElementById(h) : null);
+  }
+
+  function goTo(hash) {
+    if (location.hash === "#" + hash) routeFromHash();
+    else location.hash = hash;
   }
 
   function loadChoices() {
@@ -72,7 +118,7 @@
       if (label) label.textContent = `Google Flow Bridge Ready · ${tabText}`;
     } catch (e) {
       if (dot) dot.classList.add("offline");
-      if (label) label.textContent = "Google Flow · Clipboard / Remote Mode";
+      if (label) label.textContent = "Flow bridge offline · Generate copies the prompt";
     }
   }
 
@@ -194,6 +240,7 @@
       }
     }
     const wrap = document.querySelector(".player-wrap");
+    if (wrap && wrap.hidden) history.replaceState(null, "", "#workshop"), showView("workshop");
     if (wrap) wrap.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -316,7 +363,7 @@
         </div>
       </div>
       <p class="note">
-        <b>Creative Rule D001 &amp; Prompt Lock</b>
+        <b>Creative Rule ${dref("D001")} &amp; Prompt Lock</b>
         Candid observational handheld 35mm cinéma-vérité in three-quarter profile; never alter Russ Murphy’s recognizable appearance.
       </p>
       <div class="actions">
@@ -389,11 +436,10 @@
       <article class="shot-card" id="actor-card-${esc(a.id)}">
         <div class="meta">
           <span>${esc(a.id)}</span> ·
-          <span>${esc(a.group)}</span> ·
-          <span class="tc">${esc(a.ruleBadge)}</span> ·
-          <span>${esc(a.status)}</span>
+          <span>${esc(a.group)}</span>
         </div>
         <h3>${esc(a.name)} <span style="font-weight:400;color:var(--text-2);font-size:0.75em;">— ${esc(a.roleTitle)}</span></h3>
+        <p class="actor-sub">${/^D\d{3}\b/.test(a.ruleBadge) ? dref(a.ruleBadge.slice(0, 4)) + " " + esc(a.ruleBadge.slice(5)) : esc(a.ruleBadge)} · ${esc(a.status)}</p>
 
         <div class="actor-top-split">
           <div>
@@ -410,7 +456,7 @@
               ${thumbs}
             </div>
             <div class="voice-row">
-              <span><b>D010 Voice Stem</b> · ${esc(a.voiceLabel)}</span>
+              <span><b>Voice stem</b> ${dref("D010")} · ${esc(a.voiceLabel)}</span>
               ${LOCAL_HUB ? `<audio controls preload="none" src="${esc(a.voiceSample)}"></audio>` : LOCAL_ONLY}
             </div>
           </div>
@@ -887,14 +933,11 @@
     if (item.type === "moment") {
       seekToChapter(item.vI, item.cI, true);
     } else if (item.type === "actor") {
-      const el = $(`actor-card-${item.id}`);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      goTo(`actor-card-${item.id}`);
     } else if (item.type === "cast") {
-      const el = $("cast");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      goTo("cast");
     } else if (item.type === "suggestions") {
-      const el = $("suggestions");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      goTo("suggestions");
     }
   });
 
@@ -906,5 +949,9 @@
   renderCastBible();
   renderEveryMoment();
   checkBridgeStatus();
+  loadDecisions();
+  refreshDrefs();
+  window.addEventListener("hashchange", routeFromHash);
+  routeFromHash();
   setInterval(checkBridgeStatus, 5000);
 })();

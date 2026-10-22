@@ -18,17 +18,18 @@
         <kbd>⌘K</kbd>
       </button>
       <nav class="bar-nav">
-        <a class="bar-link on" href="#top">Workshop</a>
-        <a class="bar-link" href="#actors">AI Actors</a>
-        <a class="bar-link" href="#cast">Cast (28)</a>
-        <a class="bar-link" href="#suggestions">AI Video</a>
-        <a class="bar-link how" href="#how">How it works</a>
+        <a class="bar-link on" href="#workshop" data-view-link="workshop">Workshop</a>
+        <a class="bar-link" href="#actors" data-view-link="actors">AI Actors</a>
+        <a class="bar-link" href="#cast" data-view-link="cast">Cast (28)</a>
+        <a class="bar-link" href="#suggestions" data-view-link="video">AI Video</a>
+        <a class="bar-link how" href="#how" data-view-link="how">How it works</a>
+        <a class="bar-link tower" href="https://zhanpetrov.github.io/precipice/" target="_blank" rel="noopener">Tower ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" data-view="workshop">
       <p class="hero-kicker">Film Workspace · Direct Action &amp; AI Actor Studio</p>
       <h1>Precipice</h1>
       <p class="byline">A film by Rob Nilsson · Co-Produced &amp; Photographed by Zhan Petrov</p>
@@ -36,7 +37,7 @@
     </section>
 
     <!-- PLAYER -->
-    <section class="player-wrap" aria-label="Workshop player">
+    <section class="player-wrap" data-view="workshop" aria-label="Workshop player">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
         <div class="cut-switch" role="tablist" aria-label="Choose a workshop film" id="video-switch">
           <button type="button" role="tab" data-vid="0" class="on">Workshop #1 <small>Aug 31 · 50:54</small></button>
@@ -78,7 +79,7 @@
     </section>
 
     <!-- THIS MOMENT -->
-    <section class="monitor-section" aria-label="This moment">
+    <section class="monitor-section" data-view="workshop" aria-label="This moment">
       <div class="section-head">
         <h2>This Moment</h2>
         <p id="monitor-hint">Follows the workshop as it plays. Press Start to Generate to send this moment's prompt to Google Flow.</p>
@@ -87,7 +88,7 @@
     </section>
 
     <!-- AI ACTORS -->
-    <section class="monitor-section" id="actors" aria-label="AI Actors">
+    <section class="monitor-section" data-view="actors" id="actors" aria-label="AI Actors">
       <div class="section-head">
         <p class="eyebrow">Tier 1 · Built from Acting Workshop #1 &amp; Dinner Masters</p>
         <h2>AI Actors</h2>
@@ -97,7 +98,7 @@
     </section>
 
     <!--AI VIDEO SUGGESTIONS -->
-    <section class="list-section" id="suggestions" aria-label="AI Video Generation Suggestions">
+    <section class="list-section" data-view="video" id="suggestions" aria-label="AI Video Generation Suggestions">
       <div class="section-head">
         <p class="eyebrow">Google Flow Veo 3.1 Pre-Visualization</p>
         <h2>Suggested AI Video Generations</h2>
@@ -107,7 +108,7 @@
     </section>
 
     <!-- FULL 28-CAST CHARACTER BIBLE -->
-    <section class="list-section" id="cast" aria-label="Character Bible — All 28 Cast Members">
+    <section class="list-section" data-view="cast" id="cast" aria-label="Character Bible — All 28 Cast Members">
       <div class="section-head">
         <p class="eyebrow">Tier 2 · Oct 14 &amp; Oct 20 Production Roster + D010 Intake Matrix</p>
         <h2>Character Bible (28 Cast)</h2>
@@ -117,7 +118,7 @@
     </section>
 
     <!-- EVERY MOMENT IN WORKSHOP #1 & DINNER -->
-    <section class="list-section" id="every-moment" aria-label="Every chapter in the workshop">
+    <section class="list-section" data-view="workshop" id="every-moment" aria-label="Every chapter in the workshop">
       <div class="section-head">
         <h2>Every Workshop Moment</h2>
         <p>Browse all <span id="moment-total">30</span> indexed workshop &amp; dinner beats, extracted 1080p stills, and AI scene suggestions. Tap any row to play it.</p>
@@ -126,7 +127,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="how-section" id="how" aria-label="How it works">
+    <section class="how-section" data-view="how" id="how" aria-label="How it works">
       <div class="section-head">
         <p class="eyebrow">How 220 Studio works on Precipice</p>
         <h2>Built around Direct Action &amp; AI Actors.</h2>
@@ -142,7 +143,7 @@
             <li><b>Press Start to Generate</b> on any actor, chapter, or cast card to inject the prompt into Google Flow in Chrome and start generation.</li>
             <li><b>Track</b> the full 28-cast Character Bible and D010 pre-scene intake protocol (6-angle photos + 2-minute clean voice sample).</li>
           </ul>
-          <p class="how-foot">Rule D001: Capture authentic vérité first; AI never alters Russ Murphy’s recognizable appearance.</p>
+          <p class="how-foot">Rule <span data-dref="D001">D001</span>: Capture authentic vérité first; AI never alters Russ Murphy’s recognizable appearance.</p>
         </article>
         <article class="how-card">
           <h3>Production strategy &amp; next milestones</h3>

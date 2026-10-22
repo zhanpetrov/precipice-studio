@@ -448,3 +448,32 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
   border-radius: 999px;
   padding: 3px 10px;
 }
+
+/* One menu item = one view */
+[data-view][hidden] { display: none !important; }
+
+/* Live decision references from the Control Tower (D001, D010 …) */
+.dref {
+  display: inline-block;
+  font: 600 11px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0 7px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  color: var(--text-2);
+  text-decoration: none;
+  vertical-align: 1px;
+}
+.dref:hover { text-decoration: none; opacity: 0.8; }
+.dref-agreed { color: #1a9e5a; }
+.dref-proposed { color: #c77800; }
+.dref-superseded, .dref-folded { color: var(--text-2); text-decoration: line-through; }
+
+.actor-sub { margin: -4px 0 14px; font-size: 13px; color: var(--text-2); }
+.bar-link.tower { color: var(--text-2); }
+
+
+/* Phones: menu scrolls sideways instead of pushing the page wider */
+@media (max-width: 734px) {
+  .bar-nav { min-width: 0; flex: 1 1 auto; overflow-x: auto; scrollbar-width: none; justify-content: flex-start; }
+  .bar-nav::-webkit-scrollbar { display: none; }
+}
