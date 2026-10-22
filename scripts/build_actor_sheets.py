@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
 Organizes individual high-res character stills and builds 4-panel AI Actor Reference Sheets
-for Russ Murphy, Ken Newman, Rob Nilsson, and Zhan Petrov in assets/actors/.
+with the verified identities:
+- Russ (Rusty) Murphy: Silver-grey swept-back hair, angular cheekbones, dark navy zip sweater over striped shirt.
+- Ken Newman: Bald/shaved head, salt-and-pepper goatee, silver ear hoop, black-and-white buffalo check plaid flannel shirt.
+- Rob Nilsson: Olive baseball cap / white hair, black-rimmed glasses, khaki field jacket over black turtleneck.
 """
+import glob
 import os
 import shutil
 import subprocess
@@ -13,26 +17,30 @@ FRAMES_DIR = os.path.join(BASE_DIR, "assets/workshop_frames")
 ACTORS_DIR = os.path.join(BASE_DIR, "assets/actors")
 os.makedirs(ACTORS_DIR, exist_ok=True)
 
+# Clean old CHAR_RUSS_* and CHAR_KEN_* files first so no stale filenames remain
+for old_f in glob.glob(os.path.join(ACTORS_DIR, "CHAR_RUSS_*")) + glob.glob(os.path.join(ACTORS_DIR, "CHAR_KEN_*")):
+    os.remove(old_f)
+
 ACTOR_STILLS = {
     "russ_murphy": [
-        ("w1_04_05m10s.jpg", "CHAR_RUSS_01_GUITAR_PROFILE.jpg"),
-        ("w1_09_16m40s.jpg", "CHAR_RUSS_02_DETENTION_CLOSEUP.jpg"),
-        ("w1_12_23m30s.jpg", "CHAR_RUSS_03_THREE_QUARTER.jpg"),
-        ("w1_15_30m05s.jpg", "CHAR_RUSS_04_SILENCE_INTENSE.jpg"),
-        ("w1_19_36m40s.jpg", "CHAR_RUSS_05_BAR_CON_LOOK.jpg"),
-        ("w1_02_01m15s.jpg", "CHAR_RUSS_06_HANDS_GUITAR.jpg"),
-        ("w2_03_04m30s.jpg", "CHAR_RUSS_07_DINNER_WARM.jpg"),
-        ("w2_09_21m45s.jpg", "CHAR_RUSS_08_DINNER_SPEAKING.jpg"),
+        ("w1_13_25m15s.jpg", "CHAR_RUSS_01_THREE_QUARTER_LEFT.jpg"),
+        ("w1_16_31m30s.jpg", "CHAR_RUSS_02_CONTEMPLATIVE_FRONT.jpg"),
+        ("w1_18_35m35s.jpg", "CHAR_RUSS_03_INTENSE_SPEECH.jpg"),
+        ("w1_08_14m30s.jpg", "CHAR_RUSS_04_LEANING_BACK.jpg"),
+        ("w1_22_40m45s.jpg", "CHAR_RUSS_05_HANDS_DETAIL.jpg"),
+        ("w2_01_00m45s.jpg", "CHAR_RUSS_06_DINNER_TWO_SHOT.jpg"),
+        ("w2_08_18m10s.jpg", "CHAR_RUSS_07_DINNER_PORTRAIT.jpg"),
+        ("w1_25_48m15s.jpg", "CHAR_RUSS_08_WIDE_WORKSHOP.jpg"),
     ],
     "ken_newman": [
-        ("w1_13_25m15s.jpg", "CHAR_KEN_01_THREE_QUARTER_LEFT.jpg"),
-        ("w1_16_31m30s.jpg", "CHAR_KEN_02_CONTEMPLATIVE_FRONT.jpg"),
-        ("w1_18_35m35s.jpg", "CHAR_KEN_03_INTENSE_SPEECH.jpg"),
-        ("w1_08_14m30s.jpg", "CHAR_KEN_04_LEANING_BACK.jpg"),
-        ("w1_22_40m45s.jpg", "CHAR_KEN_05_FRENCH_DROP_HANDS.jpg"),
-        ("w2_01_00m45s.jpg", "CHAR_KEN_06_DINNER_TWO_SHOT.jpg"),
-        ("w2_08_18m10s.jpg", "CHAR_KEN_07_DINNER_PORTRAIT.jpg"),
-        ("w1_25_48m15s.jpg", "CHAR_KEN_08_WIDE_WORKSHOP.jpg"),
+        ("w1_04_05m10s.jpg", "CHAR_KEN_01_GUITAR_PROFILE.jpg"),
+        ("w1_09_16m40s.jpg", "CHAR_KEN_02_DETENTION_CLOSEUP.jpg"),
+        ("w1_12_23m30s.jpg", "CHAR_KEN_03_THREE_QUARTER.jpg"),
+        ("w1_15_30m05s.jpg", "CHAR_KEN_04_SILENCE_INTENSE.jpg"),
+        ("w1_19_36m40s.jpg", "CHAR_KEN_05_BAR_CON_LOOK.jpg"),
+        ("w1_23_42m50s.jpg", "CHAR_KEN_06_FRENCH_DROP_GESTURE.jpg"),
+        ("w2_03_04m30s.jpg", "CHAR_KEN_07_DINNER_WARM.jpg"),
+        ("w2_09_21m45s.jpg", "CHAR_KEN_08_DINNER_MEXICO_STORY.jpg"),
     ],
     "rob_nilsson": [
         ("w1_10_18m45s.jpg", "CHAR_ROB_01_CAP_GLASSES_FRONT.jpg"),
@@ -67,4 +75,4 @@ if __name__ == "__main__":
         if len(copied) >= 4:
             sheet_p = os.path.join(ACTORS_DIR, f"CHAR_{actor.upper()}_QUAD_SHEET.jpg")
             build_quad_sheet(copied[:4], sheet_p)
-    print("Actor stills and quad sheets ready.")
+    print("Corrected Actor stills and quad sheets ready.")
