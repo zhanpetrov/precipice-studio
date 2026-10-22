@@ -6,37 +6,54 @@
   <meta name="color-scheme" content="light dark" />
   <title>Precipice · 220 Studio</title>
   <link rel="stylesheet" href="styles/apple.css?v=1" />
+  <link rel="stylesheet" href="styles/studio.css?v=3" />
+  <meta name="description" content="Precipice Studio brings workshop screenings, performer references, and scene pre-visualization together. A 220 Studio production by Rob Nilsson and Zhan Petrov." />
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
 
   <header class="bar">
     <div class="bar-inner">
-      <a class="wordmark" href="#top"><span class="brand">220 Studio</span><span class="brand-film">Precipice</span></a>
+      <a class="wordmark" href="#top"><span class="brand-symbol" aria-hidden="true">p.</span><span class="brand">Precipice <span class="studio-word">Studio</span></span></a>
       <button type="button" class="search-trigger" id="open-search" aria-label="Search the workshop and cast">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <span>Search</span>
         <kbd>⌘K</kbd>
       </button>
-      <nav class="bar-nav">
-        <a class="bar-link on" href="#top">Workshop</a>
-        <a class="bar-link" href="#actors">AI Actors</a>
-        <a class="bar-link" href="#cast">Cast (28)</a>
-        <a class="bar-link" href="#suggestions">AI Video</a>
-        <a class="bar-link how" href="#how">How it works</a>
+      <nav class="bar-nav" aria-label="Main navigation">
+        <a class="bar-link on" href="#workshop">Workshop</a>
+        <a class="bar-link" href="#actors">Actors</a>
+        <a class="bar-link" href="#cast">Cast</a>
+        <a class="bar-link" href="#suggestions">Scenes</a>
+        <a class="bar-link how" href="#how">Production</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <p class="hero-kicker">Film Workspace · Direct Action &amp; AI Actor Studio</p>
-      <h1>Precipice</h1>
-      <p class="byline">A film by Rob Nilsson · Co-Produced &amp; Photographed by Zhan Petrov</p>
-      <p class="lede">One night in connected Berkeley bar and pool rooms during a No Kings protest — built from Acting Workshop #1 into a live AI Actor and scene generation workspace.</p>
+    <section class="hero-header" aria-labelledby="hero-title">
+      <div class="hero-eyebrow">220 Studio · Rob Nilsson × Zhan Petrov</div>
+      <h1 class="hero-h1" id="hero-title">Human stories.<br><span>New possibilities.</span></h1>
+      <p class="hero-sub">The Precipice production studio. Explore the performances,<br class="desktop-break"> meet the cast, and shape what comes next.</p>
+      <div class="hero-actions">
+        <a class="btn-flow-primary" href="#workshop">Explore the workshop <span aria-hidden="true">↓</span></a>
+        <a class="hero-text-link" href="https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe" target="_blank" rel="noopener noreferrer">Open Google Flow <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-filmstrip" aria-label="Original workshop photography">
+        <figure class="film-frame film-left"><img src="assets/actors/CHAR_RUSS_01_GUITAR_PROFILE.jpg" alt="Russ Murphy playing guitar during the original workshop" fetchpriority="high"><figcaption><span>01 / The performance</span><strong>It starts with something real.</strong></figcaption></figure>
+        <figure class="film-frame film-center"><img src="assets/actors/CHAR_KEN_01_THREE_QUARTER_LEFT.jpg" alt="Ken Newman in a candid workshop close-up" fetchpriority="high"><figcaption><span>02 / The character</span><strong>Every detail tells a story.</strong></figcaption></figure>
+        <figure class="film-frame film-right"><img src="assets/actors/CHAR_ROB_03_DIRECTING_HANDS.jpg" alt="Rob Nilsson directing the Precipice workshop" fetchpriority="high"><figcaption><span>03 / The direction</span><strong>Discover it together.</strong></figcaption></figure>
+      </div>
+      <div class="studio-overview" aria-label="Studio library overview">
+        <div><strong>02</strong><span>Workshop films</span></div>
+        <div><strong id="chapter-count">30</strong><span>Indexed moments</span></div>
+        <div><strong>04</strong><span>Actor studies</span></div>
+        <div><strong>28</strong><span>Cast members</span></div>
+      </div>
     </section>
-
+    <div class="section-head workshop-heading"><p class="eyebrow">01 / The screening room</p><h2>A closer look at the moment.</h2><p>Two films. Every moment, indexed. Choose a chapter and explore what comes next.</p></div>
     <!-- PLAYER -->
-    <section class="player-wrap" aria-label="Workshop player">
+    <section id="workshop" class="player-wrap" aria-label="Workshop player">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
         <div class="cut-switch" role="tablist" aria-label="Choose a workshop film" id="video-switch">
           <button type="button" role="tab" data-vid="0" class="on">Workshop #1 <small>Aug 31 · 50:54</small></button>
@@ -90,7 +107,7 @@
     <section class="monitor-section" id="actors" aria-label="AI Actors">
       <div class="section-head">
         <p class="eyebrow">Tier 1 · Built from Acting Workshop #1 &amp; Dinner Masters</p>
-        <h2>AI Actors</h2>
+        <h2>Real people. Richer characters.</h2>
         <p>Full character profiles, multi-angle 1080p stills, 4-angle turnaround sheets, clean voice stems (D010), and 1-click Google Flow generation.</p>
       </div>
       <div class="actors-stack" id="actors-stack"></div>
@@ -100,7 +117,7 @@
     <section class="list-section" id="suggestions" aria-label="AI Video Generation Suggestions">
       <div class="section-head">
         <p class="eyebrow">Google Flow Veo 3.1 Pre-Visualization</p>
-        <h2>Suggested AI Video Generations</h2>
+        <h2>Imagine the next scene.</h2>
         <p>Eight production-ready scene recipes derived from Workshop #1 and the Three Connected Universes plan. Press Start to Generate on any scene.</p>
       </div>
       <div class="shot-list" id="suggestions-list"></div>
@@ -110,7 +127,7 @@
     <section class="list-section" id="cast" aria-label="Character Bible — All 28 Cast Members">
       <div class="section-head">
         <p class="eyebrow">Tier 2 · Oct 14 &amp; Oct 20 Production Roster + D010 Intake Matrix</p>
-        <h2>Character Bible (28 Cast)</h2>
+        <h2>One story. Twenty-eight perspectives.</h2>
         <p>Browse all 28 cast members across the 6 connected groups. Every profile includes a pre-configured Google Flow prompt and Start to Generate button.</p>
       </div>
       <div class="shot-list" id="cast-list"></div>
@@ -181,7 +198,7 @@
     <div class="sheet" role="dialog" aria-modal="true" aria-label="Search Precipice">
       <div class="sheet-field">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input type="search" id="search-input" placeholder="Search actors, moments, cast, magic, pool or a timecode" autocomplete="off" />
+        <input type="search" id="search-input" aria-label="Search the studio" placeholder="Search actors, moments, cast, magic, pool or a timecode" autocomplete="off" />
         <button type="button" class="sheet-close" id="close-search">Cancel</button>
       </div>
       <div class="scopes" id="scopes" role="tablist">
@@ -196,7 +213,7 @@
   </div>
 
   <!-- FLOATING GOOGLE FLOW GENERATION STATUS TOAST -->
-  <div class="flow-sheet-toast" id="flow-toast" hidden>
+  <div class="flow-sheet-toast" id="flow-toast" role="status" aria-live="polite" hidden>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;">
       <strong id="toast-title" style="font-size:15px;">Generating in Google Flow…</strong>
       <button type="button" class="sheet-close" id="close-toast" style="font-size:13px;">Done</button>
@@ -208,8 +225,9 @@
     </div>
   </div>
 
+  <dialog id="image-preview" aria-label="Full resolution workshop image"><button type="button" id="close-image-preview" aria-label="Close image">×</button><img alt="Full resolution workshop reference" id="preview-image"></dialog>
   <script src="data/hub_data.js?v=2"></script>
-  <script src="scripts/app.js?v=2"></script>
+  <script src="scripts/app.js?v=3"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

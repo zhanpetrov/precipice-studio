@@ -29,7 +29,7 @@
   let chapIdx = 0;
   let choices = loadChoices();
   let lastPayload = null;
-  const openMore = { ideas: true, files: false };
+  const openMore = { ideas: false, files: false };
 
   function fmt(sec) {
     sec = Math.max(0, Math.floor(sec));
@@ -68,7 +68,7 @@
       if (label) label.textContent = `Google Flow Bridge Ready · ${tabText}`;
     } catch (e) {
       if (dot) dot.classList.add("offline");
-      if (label) label.textContent = "Google Flow · Clipboard / Remote Mode";
+      if (label) label.textContent = "Flow · Clipboard mode";
     }
   }
 
@@ -307,7 +307,7 @@
           <p class="desc" style="font-size:17px;">${esc(c.beat)}</p>
           <div class="transcript">
             <b>Google Flow Veo 3.1 Prompt (${esc(chosen.code)})</b>
-            <textarea class="prompt-textarea" id="monitor-prompt-box">${esc(chosen.prompt)}</textarea>
+            <textarea aria-label="Current scene prompt" class="prompt-textarea" id="monitor-prompt-box">${esc(chosen.prompt)}</textarea>
           </div>
         </div>
       </div>
@@ -318,10 +318,10 @@
       <div class="actions">
         <button type="button" class="pill-btn" data-generate-moment>
           <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          Start to Generate
+          Generate in Flow ↗
         </button>
         <button type="button" class="pill-btn ghost" data-replay>Replay moment</button>
-        <a class="pill-btn ghost" href="${esc(v.youtubeUrl)}&t=${c.seconds}s" target="_blank" rel="noopener">Watch on YouTube</a>
+        <a class="pill-btn ghost" href="${esc(v.youtubeUrl)}?t=${c.seconds}s" target="_blank" rel="noopener">Watch on YouTube</a>
       </div>
       <details class="more" data-more="ideas" ${openMore.ideas ? "open" : ""}>
         <summary>AI generation variations <span>Picked: ${esc(chosen.code)}</span></summary>
@@ -407,11 +407,13 @@
             </div>
             <div class="voice-row">
               <span><b>D010 Voice Stem</b> · ${esc(a.voiceLabel)}</span>
-              <audio controls preload="none" src="${esc(a.voiceSample)}"></audio>
+              <audio aria-label="${esc(a.name)} voice reference" controls preload="none" src="${esc(a.voiceSample)}"></audio>
             </div>
           </div>
 
-          <div>
+          <details class="character-study more">
+            <summary>Explore character study <span>Appearance, voice &amp; prompts</span></summary>
+            <div class="character-study-content">
             <p class="desc" style="font-size:16px;">
               <b>Physical &amp; Wardrobe Lock:</b> ${esc(a.physicalProfile.hairFacial)}. ${esc(a.physicalProfile.wardrobeProps)}
             </p>
@@ -424,7 +426,7 @@
             </div>
             <div class="note" style="margin-top:14px;">
               <b>Google Flow Veo 3.1 AI Actor Prompt</b>
-              <textarea class="prompt-textarea" id="actor-prompt-${esc(a.id)}">${esc(a.defaultFlowPrompt)}</textarea>
+              <textarea aria-label="${esc(a.name)} Flow prompt" class="prompt-textarea" id="actor-prompt-${esc(a.id)}">${esc(a.defaultFlowPrompt)}</textarea>
               <label style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;color:var(--text-2);cursor:pointer;">
                 <input type="checkbox" id="actor-chip-${esc(a.id)}" ${a.attachAvatarDefault ? "checked" : ""} />
                 Attach Character Ingredient Chip in Google Flow
@@ -433,12 +435,13 @@
             <div class="actions">
               <button type="button" class="pill-btn" data-generate-actor="${esc(a.id)}" data-name="${esc(a.name)}">
                 <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                Start to Generate ${esc(a.name.split(" ")[0])}
+                Generate in Flow ↗
               </button>
               <a class="pill-btn ghost" href="${esc(a.quadSheet)}" target="_blank" rel="noopener">Open 4-Angle Sheet</a>
               <a class="pill-btn ghost" href="${esc(a.aiStill)}" target="_blank" rel="noopener">Open AI Still</a>
             </div>
-          </div>
+            </div>
+          </details>
         </div>
 
         <details class="more">
@@ -468,11 +471,11 @@
         </summary>
         <div style="padding:16px 18px;">
           <p style="font-size:15px;color:var(--text-2);margin-bottom:8px;">${esc(s.purpose)}</p>
-          <textarea class="prompt-textarea" id="sug-prompt-${esc(s.id)}">${esc(s.prompt)}</textarea>
+          <textarea aria-label="${esc(s.title)} scene prompt" class="prompt-textarea" id="sug-prompt-${esc(s.id)}">${esc(s.prompt)}</textarea>
           <div class="actions" style="margin-bottom:4px;">
             <button type="button" class="pill-btn" data-generate-sug="${esc(s.id)}" data-title="${esc(s.title)}">
               <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              Start to Generate
+              Generate in Flow ↗
             </button>
           </div>
         </div>
@@ -514,7 +517,7 @@
                 <div class="rq">Prompt: “${esc(m.flowPrompt)}”</div>
               </span>
               <button type="button" class="pill-btn" data-generate-cast="${esc(m.id)}" data-name="${esc(m.name)}" data-prompt="${esc(m.flowPrompt)}" style="white-space:nowrap;">
-                Start to Generate
+                Generate in Flow ↗
               </button>
             </div>
           `).join("")}
@@ -550,7 +553,7 @@
               <div class="rq">AI Pre-Viz: “${esc(c.aiSuggestion)}”</div>
             </span>
             <button type="button" class="pill-btn ghost" data-gen-row="${vIdx}:${cIdx}" style="white-space:nowrap;">
-              Start to Generate
+              Generate in Flow ↗
             </button>
           </div>
         `).join("")}
@@ -749,7 +752,10 @@
   let sel = 0;
   const TRY_TERMS = ["Russ Murphy", "Ken Newman", "French Drop", "Downstairs", "Billy Aguero", "Don Bajema", "Women Academics", "Jeff Kao"];
 
+  let searchTrigger;
   function openSearch(q) {
+    searchTrigger = document.activeElement;
+    document.body.classList.add("modal-open");
     sheet.hidden = false;
     if (typeof q === "string") input.value = q;
     input.focus();
@@ -758,6 +764,8 @@
   }
   function closeSearch() {
     sheet.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (searchTrigger) searchTrigger.focus();
   }
 
   $("open-search").addEventListener("click", () => openSearch());
@@ -775,6 +783,12 @@
       openSearch();
     } else if (!sheet.hidden) {
       if (e.key === "Escape") closeSearch();
+      if (e.key === "Tab") {
+        const controls = [...sheet.querySelectorAll('button, input, a[href], [tabindex="0"]')].filter(el => el.getClientRects().length);
+        const first = controls[0], last = controls[controls.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
     }
   });
 
@@ -894,6 +908,33 @@
     }
   });
 
+  // Image previews use a native dialog for keyboard focus and Escape support.
+  const imageDialog = $("image-preview");
+  const closeImage = () => imageDialog.close();
+  $("close-image-preview").addEventListener("click", closeImage);
+  imageDialog.addEventListener("click", event => { if (event.target === imageDialog) closeImage(); });
+  imageDialog.addEventListener("close", () => document.body.classList.remove("modal-open"));
+  document.addEventListener("click", event => {
+    const image = event.target.closest(".actor-stage img");
+    if (!image) return;
+    $("preview-image").src = image.src;
+    $("preview-image").alt = image.alt || "Full resolution workshop reference";
+    imageDialog.showModal();
+    document.body.classList.add("modal-open");
+  });
+  document.addEventListener("keydown", event => {
+    if (event.target.matches('.actor-stage img') && ["Enter", " "].includes(event.key)) {
+      event.preventDefault(); event.target.click();
+    }
+  });
+  function enhanceImageControls() {
+    document.querySelectorAll('.actor-stage img').forEach(image => {
+      image.tabIndex = 0; image.setAttribute("role", "button");
+      image.setAttribute("aria-label", `Enlarge ${image.alt || "reference image"}`);
+    });
+  }
+  new MutationObserver(enhanceImageControls).observe(document.querySelector('main'), {childList: true, subtree: true});
+
   // ---------- Init ----------
   renderChaptersBar();
   setChapter(0);
@@ -901,6 +942,8 @@
   renderSuggestions();
   renderCastBible();
   renderEveryMoment();
+  enhanceImageControls();
+  $("chapter-count").textContent = String(VIDEOS.reduce((sum, video) => sum + video.chapters.length, 0));
   checkBridgeStatus();
   setInterval(checkBridgeStatus, 5000);
 })();
