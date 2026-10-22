@@ -283,7 +283,7 @@ window.PRECIPICE_HUB_DATA = {
       aiStill: "assets/actors/AI_STILL_RUSS_LAMA_BAR.jpg",
       aiVideo: "assets/generated/PRECIPICE_FLOW_RUSS_LAMA_BAR.mp4",
       quadSheet: "assets/actors/CHAR_RUSS_MURPHY_QUAD_SHEET.jpg",
-      voiceSample: "assets/voices/voice_russ_murphy_improv.mp3",
+      voiceSample: "assets/voices/voice_russ_murphy_improv.m4a",
       voiceLabel: "45s Clean Voice Stem — Workshop #1 Improv (Humor & Survival)",
       gallery: [
         { src: "assets/actors/CHAR_RUSS_01_GUITAR_PROFILE.jpg", label: "Angle 1: Right Profile + Alvarez Guitar (05:10)" },
@@ -335,7 +335,7 @@ window.PRECIPICE_HUB_DATA = {
       aiStill: "assets/actors/AI_STILL_KEN_FRENCH_DROP.jpg",
       aiVideo: "assets/generated/PRECIPICE_FLOW_KEN_FRENCH_DROP.mp4",
       quadSheet: "assets/actors/CHAR_KEN_NEWMAN_QUAD_SHEET.jpg",
-      voiceSample: "assets/voices/voice_ken_newman_magic.mp3",
+      voiceSample: "assets/voices/voice_ken_newman_magic.m4a",
       voiceLabel: "45s Clean Voice Stem — Workshop #1 ('The Magic Is a Lie' & French Drop)",
       gallery: [
         { src: "assets/actors/CHAR_KEN_01_THREE_QUARTER_LEFT.jpg", label: "Angle 1: Left 3/4 Razor Close-Up (25:15)" },
@@ -387,7 +387,7 @@ window.PRECIPICE_HUB_DATA = {
       aiStill: "assets/actors/AI_STILL_ROB_DIRECT_ACTION.jpg",
       aiVideo: "assets/generated/PRECIPICE_FLOW_ROB_DIRECT_ACTION.mp4",
       quadSheet: "assets/actors/CHAR_ROB_NILSSON_QUAD_SHEET.jpg",
-      voiceSample: "assets/voices/voice_rob_nilsson_directing.mp3",
+      voiceSample: "assets/voices/voice_rob_nilsson_directing.m4a",
       voiceLabel: "45s Clean Voice Stem — Workshop #1 (33:31 Developing the Characters)",
       gallery: [
         { src: "assets/actors/CHAR_ROB_01_CAP_GLASSES_FRONT.jpg", label: "Angle 1: Cap & Glasses Front Study (18:45)" },
@@ -433,7 +433,7 @@ window.PRECIPICE_HUB_DATA = {
       aiStill: "assets/actors/AI_STILL_ZHAN_CAMERA_A.jpg",
       aiVideo: "assets/generated/PRECIPICE_FLOW_ZHAN_CAMERA_A.mp4",
       quadSheet: "assets/actors/CHAR_ZHAN_AVATAR_SHEET.jpg",
-      voiceSample: "assets/voices/voice_workshop_zoom0038.mp3",
+      voiceSample: "assets/voices/voice_workshop_zoom0038.m4a",
       voiceLabel: "45s 24-bit Zoom H6 Master Stem — Workshop Room & Camera Presence",
       gallery: [
         { src: "assets/actors/CHAR_ZHAN_PORTRAIT.png", label: "Angle 1: Studio Portrait Master" },
