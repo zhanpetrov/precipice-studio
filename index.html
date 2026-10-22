@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRECIPICE — AI Actor Studio & Workshop #1 Production Hub | 220 Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <!-- Sticky Top Telemetry & Google Flow Bridge Bar -->
+  <header class="top-telemetry-bar">
+    <div class="brand-cluster">
+      <span class="brand-badge">220 STUDIO · DIRECT ACTION</span>
+      <span class="brand-title">PRECIPICE · AI ACTOR & WORKSHOP HUB</span>
+    </div>
+
+    <nav class="nav-pills">
+      <a class="nav-pill active" href="#section-workshop">01 · Workshop #1 Player (44 Beats)</a>
+      <a class="nav-pill" href="#section-ai-actors">02 · Tier-1 AI Actors (4 Deep Profiles)</a>
+      <a class="nav-pill" href="#section-cast-bible">03 · Full 28-Cast Character Bible</a>
+      <a class="nav-pill" href="#section-video-suggestions">04 · AI Video Suggestions (8)</a>
+      <a class="nav-pill" href="#section-strategy">05 · Production Strategy</a>
+      <a class="nav-pill" href="https://zhanpetrov.github.io/precipice/" target="_blank">Control Tower ↗</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+      <label style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);display:flex;align-items:center;gap:0.35rem;cursor:pointer;" title="When checked, clicking Generate brings Google Chrome to the foreground so you can watch Google Flow type and submit live.">
+        <input type="checkbox" id="toggle-bring-front" />
+        Focus Chrome on Generate
+      </label>
+      <div class="bridge-status-pill" id="bridge-status-pill">
+        <span class="pulse-dot"></span>
+        <span id="bridge-status-text">Checking Local Google Flow Bridge (127.0.0.1:8765)...</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Header -->
+    <section class="hero-header">
+      <div class="hero-top-row">
+        <div>
+          <div class="hero-eyebrow">
+            ROB NILSSON × ZHAN PETROV · WORKSHOP #1 (AUG 31, 2026) · OCT 20 PRODUCTION INTAKE
+          </div>
+          <h1 class="hero-h1">PRECIPICE — AI Actor Studio & Workshop #1 Production Hub</h1>
+          <p class="hero-sub">
+            Interactive screening room, multi-angle character reference library, and 1-click <strong>Google Flow Veo 3.1</strong> generation studio built directly from the camera-original 1080p HLG HDR masters of <em>PRECIPICE — Acting Workshop #1</em> (<code>sokfqTz0Gfk</code>) and <em>Dinner After the Workshop</em> (<code>zRTcxtOp6uQ</code>).
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-flow-primary" href="https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe" target="_blank">
+            ⚡ Open Google Flow Studio Project ↗
+          </a>
+          <a class="btn-secondary" href="https://youtu.be/sokfqTz0Gfk" target="_blank">
+            ▶ Watch Workshop #1 on YouTube ↗
+          </a>
+          <a class="btn-secondary" href="https://youtu.be/zRTcxtOp6uQ" target="_blank">
+            ▶ Watch Dinner Video on YouTube ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Creative & Technical Rules Strip -->
+      <div class="rules-strip" id="rules-strip"></div>
+    </section>
+
+    <!-- SECTION 1: DUAL WORKSHOP SCREENING STAGE & CHAPTER-TO-AI INSPECTOR -->
+    <section class="section-block" id="section-workshop">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">01 · INTERACTIVE WORKSHOP #1 & DINNER SCREENING ROOM</div>
+          <h2 class="section-title">Dual-Video Chapter Timeline & Instant AI Scene Pre-Viz</h2>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.74rem;color:var(--text-muted);">
+          Click any chapter on the right to jump the video player, inspect the 1080p master frame, and generate that dramatic beat in Google Flow.
+        </div>
+      </div>
+
+      <div class="video-switch-tabs" id="video-switch-tabs"></div>
+
+      <p id="active-video-summary" style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.1rem;"></p>
+
+      <div class="screening-grid">
+        <div class="player-stage-card">
+          <div class="youtube-embed-wrap">
+            <iframe
+              id="workshop-yt-iframe"
+              src="https://www.youtube.com/embed/sokfqTz0Gfk?rel=0"
+              title="PRECIPICE Acting Workshop #1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="active-beat-inspector" id="active-beat-inspector"></div>
+        </div>
+
+        <aside class="chapter-sidebar">
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--amber);margin-bottom:0.7rem;display:flex;justify-content:space-between;">
+            <span>INDEXED WORKSHOP CHAPTERS</span>
+            <span>CLICK TO SEEK + PRE-VIZ</span>
+          </div>
+          <div class="chapter-list-scroll" id="chapter-list-scroll"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TIER 1 DEEP AI ACTORS FROM WORKSHOP #1 -->
+    <section class="section-block" id="section-ai-actors">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">02 · TIER-1 DEEP AI ACTOR PROFILES (WORKSHOP #1 CORE)</div>
+          <h2 class="section-title">Multi-Angle Stills, D010 Voice Stems & Google Flow Generators</h2>
+        </div>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <button class="btn-secondary" onclick="window.openLightbox('assets/sheets/workshop1_contact_sheet.jpg')">
+            ⊞ View 26-Frame Workshop #1 Contact Sheet
+          </button>
+          <button class="btn-secondary" onclick="window.openLightbox('assets/sheets/dinner_contact_sheet.jpg')">
+            ⊞ View 12-Frame Dinner Contact Sheet
+          </button>
+        </div>
+      </div>
+
+      <div class="actors-grid" id="tier1-actors-grid"></div>
+    </section>
+
+    <!-- SECTION 3: TIER 2 FULL 28-CAST PRECIPICE CHARACTER BIBLE -->
+    <section class="section-block" id="section-cast-bible">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">03 · TIER-2 FULL 28-CAST CHARACTER BIBLE & D010 INTAKE MATRIX</div>
+          <h2 class="section-title">All 28 Performers Across 5 Connected Story Groups</h2>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.73rem;color:var(--text-muted);">
+          Privacy Lock Active: Personal phones/emails masked · Every card has a live Google Flow Veo 3.1 generator button
+        </div>
+      </div>
+
+      <div class="filter-bar" id="cast-filter-bar"></div>
+      <div class="cast-roster-grid" id="tier2-cast-grid"></div>
+    </section>
+
+    <!-- SECTION 4: AI VIDEO GENERATION SUGGESTIONS DECK -->
+    <section class="section-block" id="section-video-suggestions">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">04 · AI VIDEO GENERATION SUGGESTIONS DECK</div>
+          <h2 class="section-title">8 Production-Ready Google Flow Veo 3.1 Pre-Viz Recipes</h2>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.73rem;color:var(--text-muted);">
+          Derived from Workshop #1 + Sept 19 Three-Space Architecture + Oct 20 Production Intake
+        </div>
+      </div>
+
+      <div class="suggestions-grid" id="video-suggestions-grid"></div>
+    </section>
+
+    <!-- SECTION 5: COMPLETE PRODUCTION STRATEGY BLUEPRINT -->
+    <section class="section-block" id="section-strategy">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">05 · END-TO-END EXECUTION STRATEGY</div>
+          <h2 class="section-title">How Workshop #1 + AI Actors Power PRECIPICE Principal Photography</h2>
+        </div>
+      </div>
+
+      <div class="rules-strip" style="margin-top:0;border-top:none;padding-top:0;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));">
+        <div class="rule-card">
+          <div class="rule-code">PHASE 1 · COMPLETED</div>
+          <div class="rule-title">Master Ingestion & HLG→BT.709 Extraction</div>
+          <div class="rule-desc">
+            Ingested the camera-original 1080p 10-bit HLG HDR masters (<code>Aug-31-2026-1788230980_2108788.MOV</code> & <code>IMG_4967.MOV</code>) + 24-bit Zoom H6 WAVs. Extracted 38 tone-mapped stills, 4-panel character sheets, and 45s voice reference clips for Russ Murphy, Ken Newman, Rob Nilsson, and Zhan Petrov.
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-code">PHASE 2 · COMPLETED</div>
+          <div class="rule-title">2-Tier AI Actor & 28-Cast Character Bible</div>
+          <div class="rule-desc">
+            Built deep psychological & visual dossiers (<code>NEED / WANT / HATE / LOVE</code>, wardrobe/prop locks, voice stems) for the 4 Workshop #1 core participants + pre-scene intake slots and pre-viz prompts for all 28 cast members across the 5 story groups.
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-code">PHASE 3 · LIVE NOW</div>
+          <div class="rule-title">1-Click Google Flow Chrome Automation Bridge</div>
+          <div class="rule-desc">
+            Every character card, workshop chapter, and scene suggestion has a live <strong>"⚡ Start to Generate in Google Flow"</strong> button connected to <code>scripts/flow_bridge_server.py</code> (<code>127.0.0.1:8765</code>), which injects the prompt directly into Google Chrome's <code>ProseMirror</code> editor and triggers generation.
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-code">PHASE 4 · OCT 26 & OCT 28</div>
+          <div class="rule-title">Women's Workshop & 9-Mic Sound Check</div>
+          <div class="rule-desc">
+            <strong>Mon Oct 26:</strong> Women Academics Workshop (capture D010 6-angle photos + 2m voice stems for all 7 women).<br/>
+            <strong>Wed Oct 28 (11 AM):</strong> Locked Technical Sound Check with Vitaly Ponomarev, Rob, and Zhan testing 9 wireless channels (Jeff Kao's 3 Sennheisers + DJI lavs + Zoom F8n/H6).
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-code">PHASE 5 · MID-NOV 2026</div>
+          <div class="rule-title">5-Day Principal Shoot & Hybrid Post</div>
+          <div class="rule-desc">
+            Projected 5-day staggered shoot (<code>$24,500</code> production / <code>$51,500</code> full working plan) across Buffalo Billiards, Lama Bar, and the Downstairs Room. Capture authentic Direct Action vérité first (<code>D001</code>), using the AI Actor Library for exterior protest plates, pickups, and continuity insurance.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Live Google Flow Generation Status Drawer -->
+  <div class="flow-toast-drawer" id="flow-toast-drawer">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;">
+      <strong id="toast-title" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--amber-bright);">
+        ⚡ Google Flow Generator
+      </strong>
+      <button onclick="document.getElementById('flow-toast-drawer').classList.remove('visible')" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem;">✕</button>
+    </div>
+    <p id="toast-msg" style="font-size:0.78rem;color:var(--text-main);margin-bottom:0.45rem;"></p>
+    <div id="toast-prompt" style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);background:#05080f;padding:0.45rem;border-radius:6px;max-height:72px;overflow-y:auto;margin-bottom:0.55rem;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
+      <a href="https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe" target="_blank" class="btn-secondary" style="padding:0.35rem 0.65rem;font-size:0.7rem;">
+        Open Google Flow Tab ↗
+      </a>
+      <span style="font-family:var(--font-mono);font-size:0.66rem;color:var(--emerald);">Prompt also copied to clipboard</span>
+    </div>
+  </div>
+
+  <!-- Full-Res Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="window.closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Resolution Character Frame" />
+  </div>
+
+  <script src="data/hub_data.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
