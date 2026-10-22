@@ -1,71 +1,88 @@
-// PRECIPICE — Workshop #1 & AI Actors Production Hub Controller
+/**
+ * PRECIPICE · 220 Studio
+ * Built on the exact Search for Her 220 Studio design system (styles/apple.css).
+ * Includes:
+ * - Dual YouTube IFrame API player (Workshop #1 sokfqTz0Gfk + Dinner After zRTcxtOp6uQ)
+ * - Live "This Moment" monitor card with AI video ideas + Source files + Start to Generate button
+ * - Tier 1 AI Actors (Russ Murphy, Ken Newman, Rob Nilsson, Zhan Petrov) with 8-angle stills,
+ *   4-angle turnaround sheets, Kodak 500T AI stills/videos, D010 voice stems & Start to Generate
+ * - Tier 2 Full 28-Cast Character Bible grouped in expandable .ch accordions
+ * - ⌘K Search Sheet across AI Actors, Moments, Cast, and AI Video Suggestions
+ * - Live connection to local Google Flow Chrome Automation Bridge (http://127.0.0.1:8788)
+ */
 (function () {
+  "use strict";
+
   const DATA = window.PRECIPICE_HUB_DATA;
+  const VIDEOS = DATA.workshopVideos;
+  const ACTORS = DATA.tier1Actors;
+  const CAST = DATA.tier2CastRoster;
+  const SUGGESTIONS = DATA.videoSuggestions;
   const BRIDGE_BASE = "http://127.0.0.1:8788";
+  const STORE_KEY = "precipice-studio-choices";
 
-  let activeVideoIdx = 0;
-  let activeChapterIdx = 0;
-  let activeCastGroup = "ALL";
-  let bridgeOnline = false;
-  let bringChromeToFront = false;
+  const $ = (id) => document.getElementById(id);
 
-  function init() {
-    renderRulesStrip();
-    renderVideoTabs();
-    renderScreeningStage();
-    renderTier1Actors();
-    renderCastFilters();
-    renderTier2Cast();
-    renderVideoSuggestions();
-    checkBridgeStatus();
-    setInterval(checkBridgeStatus, 5000);
+  let player = null;
+  let ready = false;
+  let vidIdx = 0;
+  let chapIdx = 0;
+  let choices = loadChoices();
+  let lastPayload = null;
+  const openMore = { ideas: true, files: false };
 
-    const frontToggle = document.getElementById("toggle-bring-front");
-    if (frontToggle) {
-      frontToggle.addEventListener("change", (e) => {
-        bringChromeToFront = e.target.checked;
-      });
-    }
+  function fmt(sec) {
+    sec = Math.max(0, Math.floor(sec));
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
   }
 
+  function esc(str) {
+    return String(str ?? "").replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+  }
+
+  function loadChoices() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { return {}; }
+  }
+
+  function saveChoices() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(choices)); } catch (e) {}
+  }
+
+  // ---------- Google Flow Local Bridge ----------
   async function checkBridgeStatus() {
-    const pill = document.getElementById("bridge-status-pill");
-    const text = document.getElementById("bridge-status-text");
+    const dot = $("bridge-dot");
+    const label = $("bridge-label");
     try {
-      const res = await fetch(`${BRIDGE_BASE}/api/status`, { method: "GET" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
-      bridgeOnline = true;
-      if (pill) pill.classList.remove("offline");
-      const tabInfo = data.chromeFlowTab
-        ? `Chrome Tab ${data.chromeFlowTab.windowId}:${data.chromeFlowTab.tabIndex}`
+      const res = await fetch(`${BRIDGE_BASE}/api/status`);
+      if (!res.ok) throw new Error("offline");
+      const info = await res.json();
+      if (dot) dot.classList.remove("offline");
+      const tabText = info.chromeFlowTab
+        ? `Chrome ${info.chromeFlowTab.windowId}:${info.chromeFlowTab.tabIndex}`
         : "Chrome Ready";
-      if (text) {
-        text.textContent = `FLOW BRIDGE ONLINE · ${tabInfo} · ${data.generatedFiles ? data.generatedFiles.length : 0} MP4s`;
-      }
-    } catch (err) {
-      bridgeOnline = false;
-      if (pill) pill.classList.add("offline");
-      if (text) {
-        text.textContent = "FLOW BRIDGE: REMOTE / CLIPBOARD MODE (Run flow_bridge_server.py for live Chrome control)";
-      }
+      if (label) label.textContent = `Google Flow Bridge Ready · ${tabText}`;
+    } catch (e) {
+      if (dot) dot.classList.add("offline");
+      if (label) label.textContent = "Google Flow · Clipboard / Remote Mode";
     }
   }
 
-  window.triggerFlowGeneration = async function (payload) {
-    const drawer = document.getElementById("flow-toast-drawer");
-    const drawerTitle = document.getElementById("toast-title");
-    const drawerMsg = document.getElementById("toast-msg");
-    const drawerPrompt = document.getElementById("toast-prompt");
-
-    if (drawer) {
-      drawer.classList.add("visible");
-      drawerTitle.textContent = `⚡ Dispatching: ${payload.title || payload.id}`;
-      drawerMsg.textContent = "Connecting to local Google Flow Chrome Automation Bridge (127.0.0.1:8788)...";
-      drawerPrompt.textContent = payload.prompt;
+  async function triggerFlowGeneration(payload) {
+    lastPayload = payload;
+    const toast = $("flow-toast");
+    const tTitle = $("toast-title");
+    const tMsg = $("toast-msg");
+    if (toast) {
+      toast.hidden = false;
+      tTitle.textContent = `Start to Generate · ${payload.title || payload.id}`;
+      tMsg.textContent = "Sending prompt to Google Flow in Chrome…";
     }
 
-    // Always copy prompt to clipboard as convenient backup
     if (navigator.clipboard && payload.prompt) {
       navigator.clipboard.writeText(payload.prompt).catch(() => {});
     }
@@ -74,458 +91,816 @@
       const res = await fetch(`${BRIDGE_BASE}/api/flow-generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...payload,
-          bringToFront: bringChromeToFront
-        })
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (data && data.ok && data.job) {
-        drawerTitle.textContent = `✅ Google Flow Active: ${data.job.status}`;
-        drawerMsg.textContent = `${data.job.message} (Insert: ${data.job.insertResult || "OK"} · Submit: ${data.job.submitResult || "OK"})`;
+        tTitle.textContent = `Generating in Google Flow (${data.job.status})`;
+        tMsg.textContent = `${data.job.message} Prompt also copied to clipboard.`;
       } else {
-        throw new Error("Unexpected response");
+        throw new Error("Bridge error");
       }
     } catch (err) {
-      drawerTitle.textContent = "📋 Prompt Locked to Clipboard (Remote Mode)";
-      drawerMsg.textContent =
-        "Prompt copied! Start local bridge (`python3 scripts/flow_bridge_server.py`) for automatic Chrome injection, or click 'Open Google Flow' below to paste.";
+      tTitle.textContent = "Prompt Copied for Google Flow";
+      tMsg.textContent = "Prompt copied to clipboard. Open Google Flow below or run flow_bridge_server.py for automatic Chrome injection.";
     }
-  };
-
-  function renderRulesStrip() {
-    const container = document.getElementById("rules-strip");
-    if (!container) return;
-    container.innerHTML = DATA.projectMeta.rules
-      .map(
-        (r) => `
-      <div class="rule-card">
-        <div class="rule-code">RULE ${r.code}</div>
-        <div class="rule-title">${r.name}</div>
-        <div class="rule-desc">${r.desc}</div>
-      </div>
-    `
-      )
-      .join("");
   }
 
-  function renderVideoTabs() {
-    const wrap = document.getElementById("video-switch-tabs");
-    if (!wrap) return;
-    wrap.innerHTML = DATA.workshopVideos
-      .map(
-        (v, idx) => `
-      <button class="video-tab-btn ${idx === activeVideoIdx ? "active" : ""}" onclick="window.selectWorkshopVideo(${idx})">
-        <div>PART ${idx + 1}: ${v.title}</div>
-        <small>YouTube (${v.youtubeId}) · Duration ${v.duration} · ${v.chapters.length} Indexed Beats · ${v.masterFile}</small>
-      </button>
-    `
-      )
-      .join("");
-  }
+  window.triggerFlowGeneration = triggerFlowGeneration;
 
-  window.selectWorkshopVideo = function (idx) {
-    activeVideoIdx = idx;
-    activeChapterIdx = 0;
-    renderVideoTabs();
-    renderScreeningStage();
-  };
-
-  window.selectWorkshopChapter = function (cIdx) {
-    activeChapterIdx = cIdx;
-    const video = DATA.workshopVideos[activeVideoIdx];
-    const chap = video.chapters[cIdx];
-    const iframe = document.getElementById("workshop-yt-iframe");
-    if (iframe && chap) {
-      iframe.src = `https://www.youtube.com/embed/${video.youtubeId}?start=${chap.seconds}&autoplay=1&rel=0`;
-    }
-    updateChapterInspector();
-    highlightActiveChapterItem();
-  };
-
-  function highlightActiveChapterItem() {
-    const items = document.querySelectorAll(".chapter-item");
-    items.forEach((el, i) => {
-      if (i === activeChapterIdx) el.classList.add("active");
-      else el.classList.remove("active");
+  // ---------- YouTube Player ----------
+  window.onYouTubeIframeAPIReady = function () {
+    player = new YT.Player("yt-player", {
+      videoId: VIDEOS[vidIdx].youtubeId,
+      playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+      events: {
+        onReady: () => {
+          ready = true;
+          updateTransportText(0);
+        },
+        onStateChange: (e) => {
+          const playing = e.data === YT.PlayerState.PLAYING;
+          const icon = $("icon-play");
+          if (icon) {
+            icon.innerHTML = playing
+              ? '<path d="M7 4h3v16H7zM14 4h3v16h-3z"/>'
+              : '<path d="M7 4l13 8-13 8z"/>';
+          }
+          const hint = $("monitor-hint");
+          if (hint) {
+            hint.textContent = playing
+              ? "Follows the workshop as it plays. Press Start to Generate to send this moment to Google Flow."
+              : `Paused at ${fmt(player.getCurrentTime ? player.getCurrentTime() : 0)}.`;
+          }
+        },
+      },
     });
+  };
+
+  function chapterAt(vIdx, sec) {
+    const chs = VIDEOS[vIdx].chapters;
+    let best = 0;
+    for (let i = 0; i < chs.length; i++) {
+      if (chs[i].seconds <= sec + 0.5) best = i;
+    }
+    return best;
   }
 
-  function renderScreeningStage() {
-    const video = DATA.workshopVideos[activeVideoIdx];
-    const chap = video.chapters[activeChapterIdx];
-    const iframe = document.getElementById("workshop-yt-iframe");
-    if (iframe) {
-      iframe.src = `https://www.youtube.com/embed/${video.youtubeId}?start=${chap.seconds}&rel=0`;
+  function selectVideo(nextVidIdx, startChapIdx = 0, autoPlay = false) {
+    const changed = nextVidIdx !== vidIdx;
+    vidIdx = nextVidIdx;
+    chapIdx = startChapIdx;
+    const v = VIDEOS[vidIdx];
+    const c = v.chapters[chapIdx];
+
+    document.querySelectorAll("#video-switch button").forEach((b) => {
+      const on = Number(b.dataset.vid) === vidIdx;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-selected", on);
+    });
+
+    const noteEl = $("video-note");
+    if (noteEl) {
+      noteEl.innerHTML = `Camera-original 1080p HLG HDR master: <code>${esc(v.masterFile)}</code> · <a href="${esc(v.youtubeUrl)}" target="_blank" rel="noopener">Watch on YouTube</a> · <a href="${esc(DATA.projectMeta.flowProjectUrl)}" target="_blank" rel="noopener">Open Google Flow Project</a>`;
     }
 
-    const summaryEl = document.getElementById("active-video-summary");
-    if (summaryEl) {
-      summaryEl.textContent = video.summary;
-    }
+    renderChaptersBar();
+    setChapter(chapIdx);
 
-    const listEl = document.getElementById("chapter-list-scroll");
-    if (listEl) {
-      listEl.innerHTML = video.chapters
-        .map(
-          (c, i) => `
-        <div class="chapter-item ${i === activeChapterIdx ? "active" : ""}" onclick="window.selectWorkshopChapter(${i})">
-          <img class="chapter-thumb" src="${c.frame}" alt="${c.title}" loading="lazy" />
-          <div>
-            <div class="chapter-meta-time">${c.time} · CHAPTER ${c.idx}</div>
-            <div class="chapter-meta-title">${c.title}</div>
-            <div class="chapter-meta-actors">${c.actors.join(" · ")}</div>
-          </div>
-        </div>
-      `
-        )
-        .join("");
+    if (ready && player) {
+      const opts = { videoId: v.youtubeId, startSeconds: c ? c.seconds : 0 };
+      if (changed) {
+        autoPlay ? player.loadVideoById(opts) : player.cueVideoById(opts);
+      } else {
+        player.seekTo(c ? c.seconds : 0, true);
+        if (autoPlay) player.playVideo();
+      }
     }
-
-    updateChapterInspector();
   }
 
-  function updateChapterInspector() {
-    const video = DATA.workshopVideos[activeVideoIdx];
-    const chap = video.chapters[activeChapterIdx];
-    const box = document.getElementById("active-beat-inspector");
-    if (!box || !chap) return;
+  function seekToChapter(vIdx, cIdx, autoPlay = true) {
+    if (vIdx !== vidIdx) {
+      selectVideo(vIdx, cIdx, autoPlay);
+    } else {
+      setChapter(cIdx);
+      const sec = VIDEOS[vidIdx].chapters[cIdx].seconds;
+      if (ready && player && typeof player.seekTo === "function") {
+        player.seekTo(sec, true);
+        if (autoPlay) player.playVideo();
+      }
+    }
+    const wrap = document.querySelector(".player-wrap");
+    if (wrap) wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-    box.innerHTML = `
-      <div class="inspector-top">
+  function renderChaptersBar() {
+    const v = VIDEOS[vidIdx];
+    const bar = $("chapters");
+    if (!bar) return;
+    bar.innerHTML = v.chapters
+      .map(
+        (c, i) =>
+          `<button type="button" class="chip ${i === chapIdx ? "on" : ""}" data-i="${i}"><b>${c.idx}</b>${esc(c.title)} <span class="chip-tc">${esc(c.time)}</span></button>`
+      )
+      .join("");
+  }
+
+  function setChapter(i) {
+    chapIdx = i;
+    const v = VIDEOS[vidIdx];
+    const c = v.chapters[i];
+    if (!c) return;
+
+    const nowTitle = $("now-title");
+    if (nowTitle) {
+      nowTitle.textContent = `${v.id === "workshop_part1" ? "Workshop #1" : "Dinner"} · ${c.idx}. ${c.title}`;
+    }
+
+    document.querySelectorAll("#chapters .chip").forEach((chip) => {
+      const on = Number(chip.dataset.i) === i;
+      if (on && !chip.classList.contains("on")) {
+        const row = $("chapters");
+        if (row) {
+          row.scrollTo({
+            left: chip.offsetLeft - row.offsetLeft - (row.clientWidth - chip.offsetWidth) / 2,
+            behavior: "smooth",
+          });
+        }
+      }
+      chip.classList.toggle("on", on);
+    });
+
+    renderMonitor();
+    markMomentRow();
+  }
+
+  function updateTransportText(t) {
+    const v = VIDEOS[vidIdx];
+    const tcEl = $("now-tc");
+    if (tcEl) tcEl.textContent = `${fmt(t)} / 00:${v.duration}`;
+  }
+
+  setInterval(() => {
+    if (!ready || !player || typeof player.getCurrentTime !== "function") return;
+    const state = player.getPlayerState ? player.getPlayerState() : -1;
+    if (state !== YT.PlayerState.PLAYING) return;
+    const t = player.getCurrentTime();
+    updateTransportText(t);
+    const i = chapterAt(vidIdx, t);
+    if (i !== chapIdx) setChapter(i);
+  }, 500);
+
+  // ---------- This Moment Monitor Card ----------
+  function buildMomentIdeas(c) {
+    return [
+      {
+        code: "A",
+        id: `${VIDEOS[vidIdx].id}_${c.idx}_A`,
+        title: `Direct Action Handheld 35mm Pre-Viz — ${c.title}`,
+        prompt: c.aiSuggestion,
+      },
+      {
+        code: "B",
+        id: `${VIDEOS[vidIdx].id}_${c.idx}_B`,
+        title: `Lama Bar Kodak Vision3 500T Tungsten-Amber Close-Up (${c.actors[0] || "Lead"})`,
+        prompt: `${c.aiSuggestion} Framed as an intimate tighter medium close-up inside Lama Bar under warm tungsten-amber practicals and deep slate-teal neon reflections.`,
+      },
+      {
+        code: "C",
+        id: `${VIDEOS[vidIdx].id}_${c.idx}_C`,
+        title: `1418 5th St. High-Contrast B&W Vérité Study`,
+        prompt: `${c.aiSuggestion} Rendered in gritty high-contrast 16mm black-and-white Direct Action monochrome with heavy organic silver halide grain.`,
+      },
+    ];
+  }
+
+  function renderMonitor() {
+    const v = VIDEOS[vidIdx];
+    const c = v.chapters[chapIdx];
+    const card = $("shot-card");
+    if (!card || !c) return;
+
+    const key = `${v.id}_ch_${c.idx}`;
+    const ideas = buildMomentIdeas(c);
+    const chosen = ideas.find((o) => o.id === choices[key]) || ideas[0];
+
+    const dirs = [
+      ["Workshop Film", v.title, v.youtubeUrl + "&t=" + c.seconds + "s"],
+      ["Camera Master", v.masterFile],
+      ["Extracted 1080p Still", c.frame, c.frame],
+      ["Zoom H6 24-bit Stem", "ZOOM0038_LR.WAV / ZOOM0039_LR.WAV", "assets/voices/voice_workshop_zoom0038.m4a"],
+      ["Google Flow Project", "fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe", DATA.projectMeta.flowProjectUrl],
+    ];
+
+    card.innerHTML = `
+      <div class="meta">
+        Chapter ${c.idx} of ${v.chapters.length} · <span class="tc">${esc(c.time)}</span> · ${esc(c.actors.join(", "))}
+      </div>
+      <h3>${esc(c.title)}</h3>
+      <div class="actor-top-split" style="margin-bottom:12px;">
         <div>
-          <img class="inspector-frame-img" src="${chap.frame}" alt="${chap.title}" onclick="window.openLightbox('${chap.frame}')" title="Click to enlarge 1080p tone-mapped frame" />
-          <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);margin-top:0.3rem;">
-            📷 1080p HDR→BT.709 Master Frame (Click to zoom)
+          <div class="actor-stage">
+            <img src="${esc(c.frame)}" alt="${esc(c.title)}" />
           </div>
         </div>
         <div>
-          <span class="inspector-time-badge">${video.youtubeId} @ ${chap.time} (${chap.seconds}s)</span>
-          <h3 style="font-family:var(--font-display);font-size:1.18rem;color:#fff;margin-bottom:0.35rem;">${chap.title}</h3>
-          <p style="font-size:0.86rem;color:var(--text-main);margin-bottom:0.5rem;">${chap.beat}</p>
-          <div style="font-family:var(--font-mono);font-size:0.74rem;color:var(--amber-bright);">
-            Active Performers: ${chap.actors.join(", ")}
+          <p class="desc" style="font-size:17px;">${esc(c.beat)}</p>
+          <div class="transcript">
+            <b>Google Flow Veo 3.1 Prompt (${esc(chosen.code)})</b>
+            <textarea class="prompt-textarea" id="monitor-prompt-box">${esc(chosen.prompt)}</textarea>
           </div>
         </div>
       </div>
-      <div class="inspector-prompt-box">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
-          <span style="font-family:var(--font-mono);font-size:0.74rem;color:var(--amber);">
-            🎬 AI SCENE PRE-VIZ SUGGESTION (GOOGLE FLOW VEO 3.1 PROMPT):
-          </span>
-          <a href="${video.youtubeUrl}&t=${chap.seconds}s" target="_blank" style="font-family:var(--font-mono);font-size:0.72rem;">
-            Open Timestamp on YouTube ↗
-          </a>
-        </div>
-        <textarea id="chapter-flow-prompt-input">${chap.aiSuggestion}</textarea>
-        <div class="flow-action-row">
-          <span style="font-family:var(--font-mono);font-size:0.71rem;color:var(--text-muted);">
-            Prompt Lock: 35mm Handheld Cinéma-Vérité · Kodak Vision3 500T · 3/4 Profile
-          </span>
-          <button class="btn-flow-primary" onclick="window.generateFromChapterInspector('${video.id}_ch${chap.idx}', '${chap.title.replace(/'/g, "\\'")}')">
-            ⚡ Start to Generate This Beat in Google Flow
-          </button>
-        </div>
+      <p class="note">
+        <b>Creative Rule D001 &amp; Prompt Lock</b>
+        Candid observational handheld 35mm cinéma-vérité in three-quarter profile; never alter Russ Murphy’s recognizable appearance.
+      </p>
+      <div class="actions">
+        <button type="button" class="pill-btn" data-generate-moment>
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Start to Generate
+        </button>
+        <button type="button" class="pill-btn ghost" data-replay>Replay moment</button>
+        <a class="pill-btn ghost" href="${esc(v.youtubeUrl)}&t=${c.seconds}s" target="_blank" rel="noopener">Watch on YouTube</a>
       </div>
+      <details class="more" data-more="ideas" ${openMore.ideas ? "open" : ""}>
+        <summary>AI generation variations <span>Picked: ${esc(chosen.code)}</span></summary>
+        <div class="ideas">
+          ${ideas
+            .map(
+              (o) => `
+            <button type="button" class="idea ${chosen.id === o.id ? "on" : ""}" data-opt="${esc(o.id)}">
+              <span class="letter">${chosen.id === o.id ? "✓" : esc(o.code)}</span>
+              <span>${esc(o.title)}</span>
+            </button>`
+            )
+            .join("")}
+        </div>
+      </details>
+      <details class="more" data-more="files" ${openMore.files ? "open" : ""}>
+        <summary>Source files <span>1080p HLG Master &amp; Stills</span></summary>
+        <div class="dirs">
+          ${dirs
+            .map(
+              ([k, val, url]) =>
+                `<div class="dir"><span>${esc(k)}</span>${
+                  url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(val)}</a>` : `<span>${esc(val)}</span>`
+                }</div>`
+            )
+            .join("")}
+        </div>
+      </details>
     `;
   }
 
-  window.generateFromChapterInspector = function (id, title) {
-    const ta = document.getElementById("chapter-flow-prompt-input");
-    const prompt = ta ? ta.value : "";
-    window.triggerFlowGeneration({
-      id: id,
-      title: `Chapter Beat: ${title}`,
-      prompt: prompt,
-      mode: "video"
-    });
-  };
+  // ---------- Tier 1 AI Actors ----------
+  function renderActors() {
+    const stack = $("actors-stack");
+    if (!stack) return;
 
-  function renderTier1Actors() {
-    const grid = document.getElementById("tier1-actors-grid");
-    if (!grid) return;
+    stack.innerHTML = ACTORS.map((a) => {
+      const thumbs = a.gallery
+        .map(
+          (g, idx) => `
+          <button type="button" class="${idx === 0 ? "on" : ""}" data-actor="${esc(a.id)}" data-src="${esc(g.src)}" data-label="${esc(g.label)}" title="${esc(g.label)}">
+            <img src="${esc(g.src)}" alt="${esc(g.label)}" loading="lazy" />
+          </button>`
+        )
+        .join("");
 
-    grid.innerHTML = DATA.tier1Actors
-      .map((actor, aIdx) => {
-        const thumbsHtml = actor.gallery
-          .map(
-            (g, gIdx) => `
-          <img src="${g.src}" alt="${g.label}" title="${g.label}" class="${gIdx === 0 ? "active" : ""}"
-               onclick="window.switchActorHeroMedia('${actor.id}', 'image', '${g.src}', '${g.label.replace(/'/g, "\\'")}', this)" />
-        `
-          )
-          .join("");
+      const presets = (a.presets || [])
+        .map(
+          (p, idx) => {
+            const code = String.fromCharCode(65 + idx);
+            return `
+            <button type="button" class="idea" data-actor-preset="${esc(a.id)}" data-prompt="${esc(p.prompt)}">
+              <span class="letter">${code}</span>
+              <span><b>${esc(p.label)}</b> — ${esc(p.prompt.slice(0, 120))}…</span>
+            </button>`;
+          }
+        )
+        .join("");
 
-        const presetsHtml = actor.presets
-          .map(
-            (p) => `
-          <button class="preset-chip" onclick="window.setActorPresetPrompt('${actor.id}', '${p.prompt.replace(/'/g, "\\'")}')">
-            ${p.label}
-          </button>
-        `
-          )
-          .join("");
+      return `
+      <article class="shot-card" id="actor-card-${esc(a.id)}">
+        <div class="meta">
+          <span>${esc(a.id)}</span> ·
+          <span>${esc(a.group)}</span> ·
+          <span class="tc">${esc(a.ruleBadge)}</span> ·
+          <span>${esc(a.status)}</span>
+        </div>
+        <h3>${esc(a.name)} <span style="font-weight:400;color:var(--text-2);font-size:0.75em;">— ${esc(a.roleTitle)}</span></h3>
 
-        return `
-        <article class="actor-dossier-card" id="card-${actor.id}">
-          <div class="actor-card-header">
-            <div>
-              <span class="actor-id-tag">${actor.id} · ${actor.group}</span>
-              <h3 class="actor-name">${actor.name}</h3>
-              <div class="actor-role">${actor.roleTitle}</div>
+        <div class="actor-top-split">
+          <div>
+            <div class="cut-switch" style="margin-bottom:8px;width:100%;display:flex;">
+              <button type="button" class="on" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="still" data-actor="${esc(a.id)}" data-src="${esc(a.heroStill)}">Still</button>
+              <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="sheet" data-actor="${esc(a.id)}" data-src="${esc(a.quadSheet)}">4-Angle</button>
+              <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="aistill" data-actor="${esc(a.id)}" data-src="${esc(a.aiStill)}">AI Still</button>
+              <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="aivideo" data-actor="${esc(a.id)}" data-src="${esc(a.aiVideo)}">AI Video</button>
             </div>
-            <div style="text-align:right;">
-              <div class="actor-id-tag" style="background:rgba(16,185,129,0.14);border-color:rgba(16,185,129,0.4);color:#6ee7b7;">
-                ${actor.ruleBadge}
-              </div>
-              <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);margin-top:0.25rem;">
-                ${actor.status}
-              </div>
+            <div class="actor-stage" id="stage-${esc(a.id)}">
+              <img src="${esc(a.heroStill)}" alt="${esc(a.name)}" />
             </div>
-          </div>
-
-          <div class="actor-visual-showcase">
-            <div>
-              <div class="hero-frame-box" id="hero-box-${actor.id}">
-                <img src="${actor.heroStill}" alt="${actor.name}" onclick="window.openLightbox('${actor.heroStill}')" style="cursor:pointer;" />
-                <div class="frame-caption-overlay" id="hero-cap-${actor.id}">
-                  Workshop #1 Master Vérité Reference — Click image to zoom
-                </div>
-              </div>
-              <div class="media-mode-pills">
-                <button class="media-pill active" onclick="window.switchActorHeroMedia('${actor.id}', 'image', '${actor.heroStill}', 'Workshop #1 Master Vérité Reference')">
-                  📷 Workshop Still
-                </button>
-                <button class="media-pill" onclick="window.switchActorHeroMedia('${actor.id}', 'image', '${actor.quadSheet}', '${actor.name} — 4-Panel Character Sheet')">
-                  ⊞ 4-Angle Sheet
-                </button>
-                <button class="media-pill" onclick="window.switchActorHeroMedia('${actor.id}', 'image', '${actor.aiStill}', '${actor.name} — Google Flow AI Generated Still')">
-                  ✨ AI Generated Still
-                </button>
-                <button class="media-pill" onclick="window.switchActorHeroMedia('${actor.id}', 'video', '${actor.aiVideo}', '${actor.name} — Google Flow Veo 3.1 AI Video')">
-                  ▶ Flow AI Video
-                </button>
-              </div>
+            <div class="actor-thumbs" id="thumbs-${esc(a.id)}">
+              ${thumbs}
             </div>
-
-            <div>
-              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.35rem;">
-                D010 MULTI-ANGLE STILLS (${actor.gallery.length} EXTRACTED FRAMES):
-              </div>
-              <div class="thumb-strip">
-                ${thumbsHtml}
-              </div>
-              <div style="margin-top:0.65rem;font-size:0.76rem;color:var(--text-muted);background:rgba(7,11,18,0.55);padding:0.55rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);">
-                <strong style="color:#fff;font-family:var(--font-mono);font-size:0.69rem;">PHYSICAL & WARDROBE LOCK:</strong><br/>
-                ${actor.physicalProfile.hairFacial}. ${actor.physicalProfile.wardrobeProps}
-              </div>
+            <div class="voice-row">
+              <span><b>D010 Voice Stem</b> · ${esc(a.voiceLabel)}</span>
+              <audio controls preload="none" src="${esc(a.voiceSample)}"></audio>
             </div>
           </div>
 
-          <div class="voice-stem-bar">
-            <div>
-              <div class="voice-stem-label">🎙️ D010 VOICE CLONE REFERENCE STEM</div>
-              <div style="font-size:0.75rem;color:var(--text-muted);">${actor.voiceLabel}</div>
+          <div>
+            <p class="desc" style="font-size:16px;">
+              <b>Physical &amp; Wardrobe Lock:</b> ${esc(a.physicalProfile.hairFacial)}. ${esc(a.physicalProfile.wardrobeProps)}
+            </p>
+            <div class="transcript" style="margin-top:12px;">
+              <b>Psychological Coordinate (Direct Action Spine)</b>
+              <p><b>Need:</b> ${esc(a.psychology.need)}</p>
+              <p><b>Want:</b> ${esc(a.psychology.want)}</p>
+              <p><b>Hate:</b> ${esc(a.psychology.hate)}</p>
+              <p><b>Love:</b> ${esc(a.psychology.love)}</p>
             </div>
-            <audio controls preload="none" src="${actor.voiceSample}"></audio>
-          </div>
-
-          <div class="psych-grid">
-            <div class="psych-cell"><strong>NEED (INNER CORE)</strong>${actor.psychology.need}</div>
-            <div class="psych-cell"><strong>WANT (SCENE OBJECTIVE)</strong>${actor.psychology.want}</div>
-            <div class="psych-cell"><strong>HATE (CONFLICT TRIGGER)</strong>${actor.psychology.hate}</div>
-            <div class="psych-cell"><strong>LOVE (ANCHOR)</strong>${actor.psychology.love}</div>
-          </div>
-
-          <div class="actor-flow-console">
-            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;">
-              <span style="font-family:var(--font-mono);font-size:0.74rem;color:var(--amber);font-weight:700;">
-                ⚡ GOOGLE FLOW VEO 3.1 AI ACTOR GENERATOR (${actor.name.toUpperCase()})
-              </span>
-              <label style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);display:flex;align-items:center;gap:0.35rem;cursor:pointer;">
-                <input type="checkbox" id="avatar-chk-${actor.id}" ${actor.attachAvatarDefault ? "checked" : ""} />
-                Attach Flow Character Ingredient Chip
+            <div class="note" style="margin-top:14px;">
+              <b>Google Flow Veo 3.1 AI Actor Prompt</b>
+              <textarea class="prompt-textarea" id="actor-prompt-${esc(a.id)}">${esc(a.defaultFlowPrompt)}</textarea>
+              <label style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;color:var(--text-2);cursor:pointer;">
+                <input type="checkbox" id="actor-chip-${esc(a.id)}" ${a.attachAvatarDefault ? "checked" : ""} />
+                Attach Character Ingredient Chip in Google Flow
               </label>
             </div>
-            <div class="preset-chips">
-              ${presetsHtml}
-            </div>
-            <textarea class="flow-prompt-textarea" id="prompt-${actor.id}">${actor.defaultFlowPrompt}</textarea>
-            <div class="flow-action-row">
-              <button class="btn-secondary" onclick="window.openLightbox('${actor.quadSheet}')">
-                🔍 Inspect 4-Angle Character Sheet
+            <div class="actions">
+              <button type="button" class="pill-btn" data-generate-actor="${esc(a.id)}" data-name="${esc(a.name)}">
+                <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Start to Generate ${esc(a.name.split(" ")[0])}
               </button>
-              <button class="btn-flow-primary" onclick="window.generateActorInFlow('${actor.id}', '${actor.name.replace(/'/g, "\\'")}')">
-                ⚡ Start to Generate ${actor.name.split(" ")[0]} in Google Flow
+              <a class="pill-btn ghost" href="${esc(a.quadSheet)}" target="_blank" rel="noopener">Open 4-Angle Sheet</a>
+              <a class="pill-btn ghost" href="${esc(a.aiStill)}" target="_blank" rel="noopener">Open AI Still</a>
+            </div>
+          </div>
+        </div>
+
+        <details class="more">
+          <summary>Scene generation presets for ${esc(a.name)} <span>${(a.presets || []).length} presets</span></summary>
+          <div class="ideas">
+            ${presets}
+          </div>
+        </details>
+      </article>`;
+    }).join("");
+  }
+
+  // ---------- Suggested AI Video Generations ----------
+  function renderSuggestions() {
+    const list = $("suggestions-list");
+    if (!list) return;
+
+    list.innerHTML = SUGGESTIONS.map((s, idx) => `
+      <details class="ch" ${idx < 2 ? "open" : ""}>
+        <summary>
+          <span class="num">${idx + 1}</span>
+          <span>
+            <div class="ct">${esc(s.title)}</div>
+            <div class="cs">${esc(s.geography)} · ${esc(s.characters.join(", "))} · ${esc(s.sourceRef)}</div>
+          </span>
+          <span class="count">Veo 3.1 Scene <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+        </summary>
+        <div style="padding:16px 18px;">
+          <p style="font-size:15px;color:var(--text-2);margin-bottom:8px;">${esc(s.purpose)}</p>
+          <textarea class="prompt-textarea" id="sug-prompt-${esc(s.id)}">${esc(s.prompt)}</textarea>
+          <div class="actions" style="margin-bottom:4px;">
+            <button type="button" class="pill-btn" data-generate-sug="${esc(s.id)}" data-title="${esc(s.title)}">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Start to Generate
+            </button>
+          </div>
+        </div>
+      </details>
+    `).join("");
+  }
+
+  // ---------- Tier 2 Full 28-Cast Character Bible ----------
+  function renderCastBible() {
+    const list = $("cast-list");
+    if (!list) return;
+
+    const groups = [
+      "Bar Core",
+      "Bartenders & Patrons",
+      "Pool Table",
+      "Silicon Valley Tech",
+      "Women Academics",
+      "Downstairs ICE Unit",
+    ];
+
+    list.innerHTML = groups.map((g, gIdx) => {
+      const members = CAST.filter((c) => c.group === g);
+      return `
+        <details class="ch" ${gIdx === 0 ? "open" : ""}>
+          <summary>
+            <span class="num">${gIdx + 1}</span>
+            <span>
+              <div class="ct">${esc(g)}</div>
+              <div class="cs">D010 Pre-Scene Protocol: 6-Angle Photos + 2-Minute Clean Voice Sample</div>
+            </span>
+            <span class="count">${members.length} cast <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+          </summary>
+          ${members.map((m) => `
+            <div class="row no-thumb">
+              <span>
+                <div class="rm"><span class="tc">${esc(m.id)}</span> · <b>${esc(m.name)}</b> · ${esc(m.d010Status)} · ${esc(m.contact)}</div>
+                <div class="row-note"><b>Role</b>${esc(m.role)}</div>
+                <div class="rq">Prompt: “${esc(m.flowPrompt)}”</div>
+              </span>
+              <button type="button" class="pill-btn" data-generate-cast="${esc(m.id)}" data-name="${esc(m.name)}" data-prompt="${esc(m.flowPrompt)}" style="white-space:nowrap;">
+                Start to Generate
               </button>
             </div>
-          </div>
-        </article>
+          `).join("")}
+        </details>
       `;
-      })
-      .join("");
+    }).join("");
   }
 
-  window.switchActorHeroMedia = function (actorId, mode, src, caption, thumbEl) {
-    const box = document.getElementById(`hero-box-${actorId}`);
-    if (!box) return;
-    if (mode === "video") {
-      box.innerHTML = `
-        <video src="${src}" controls autoplay loop muted playsinline></video>
-        <div class="frame-caption-overlay">${caption}</div>
-      `;
-    } else {
-      box.innerHTML = `
-        <img src="${src}" alt="${caption}" onclick="window.openLightbox('${src}')" style="cursor:pointer;" />
-        <div class="frame-caption-overlay">${caption}</div>
-      `;
-    }
-    if (thumbEl && thumbEl.parentElement) {
-      Array.from(thumbEl.parentElement.querySelectorAll("img")).forEach((im) => im.classList.remove("active"));
-      thumbEl.classList.add("active");
-    }
-  };
+  // ---------- Every Workshop Moment ----------
+  function renderEveryMoment() {
+    const list = $("moment-list");
+    const totalEl = $("moment-total");
+    const totalCount = VIDEOS.reduce((acc, v) => acc + v.chapters.length, 0);
+    if (totalEl) totalEl.textContent = totalCount;
+    if (!list) return;
 
-  window.setActorPresetPrompt = function (actorId, promptText) {
-    const ta = document.getElementById(`prompt-${actorId}`);
-    if (ta) ta.value = promptText;
-  };
+    list.innerHTML = VIDEOS.map((v, vIdx) => `
+      <details class="ch" ${vIdx === 0 ? "open" : ""}>
+        <summary>
+          <span class="num">${vIdx + 1}</span>
+          <span>
+            <div class="ct">${esc(v.title)}</div>
+            <div class="cs">Recorded ${esc(v.recordedDate)} · Duration ${esc(v.duration)} · ${esc(v.masterFile)}</div>
+          </span>
+          <span class="count">${v.chapters.length} moments <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+        </summary>
+        ${v.chapters.map((c, cIdx) => `
+          <div class="row ${vIdx === vidIdx && cIdx === chapIdx ? "now-playing" : ""}" data-v="${vIdx}" data-c="${cIdx}">
+            <img src="${esc(c.frame)}" alt="${esc(c.title)}" loading="lazy" style="cursor:pointer;" data-play-moment="1" />
+            <span style="cursor:pointer;" data-play-moment="1">
+              <div class="rm">Chapter ${c.idx} · <span class="tc">${esc(c.time)}</span> · ${esc(c.actors.join(", "))}</div>
+              <div class="row-note"><b>${esc(c.title)}</b>${esc(c.beat)}</div>
+              <div class="rq">AI Pre-Viz: “${esc(c.aiSuggestion)}”</div>
+            </span>
+            <button type="button" class="pill-btn ghost" data-gen-row="${vIdx}:${cIdx}" style="white-space:nowrap;">
+              Start to Generate
+            </button>
+          </div>
+        `).join("")}
+      </details>
+    `).join("");
+  }
 
-  window.generateActorInFlow = function (actorId, actorName) {
-    const ta = document.getElementById(`prompt-${actorId}`);
-    const chk = document.getElementById(`avatar-chk-${actorId}`);
-    const prompt = ta ? ta.value : "";
-    const attachAvatar = chk ? chk.checked : false;
-    window.triggerFlowGeneration({
-      id: `${actorId.toLowerCase()}_${Date.now()}`,
-      title: `AI Actor: ${actorName}`,
-      characterName: actorName,
-      prompt: prompt,
-      mode: "video",
-      attachAvatar: attachAvatar,
-      ingredientQuery: actorId === "CHAR-04" ? "avatar" : actorName.split(" ")[0].toLowerCase()
+  function markMomentRow() {
+    document.querySelectorAll("#moment-list .row").forEach((r) => {
+      const match = Number(r.dataset.v) === vidIdx && Number(r.dataset.c) === chapIdx;
+      r.classList.toggle("now-playing", match);
     });
-  };
-
-  function renderCastFilters() {
-    const bar = document.getElementById("cast-filter-bar");
-    if (!bar) return;
-    const groups = ["ALL", "Bar Core", "Bartenders & Patrons", "Pool Table", "Silicon Valley Tech", "Women Academics", "Downstairs ICE Unit"];
-    bar.innerHTML = groups
-      .map(
-        (g) => `
-      <button class="nav-pill ${g === activeCastGroup ? "active" : ""}" onclick="window.filterCastGroup('${g}')">
-        ${g === "ALL" ? "All 28 Cast Members" : g}
-      </button>
-    `
-      )
-      .join("");
   }
 
-  window.filterCastGroup = function (group) {
-    activeCastGroup = group;
-    renderCastFilters();
-    renderTier2Cast();
-  };
-
-  function renderTier2Cast() {
-    const grid = document.getElementById("tier2-cast-grid");
-    if (!grid) return;
-    const items =
-      activeCastGroup === "ALL"
-        ? DATA.tier2CastRoster
-        : DATA.tier2CastRoster.filter((c) => c.group === activeCastGroup);
-
-    grid.innerHTML = items
-      .map((c) => {
-        const isComplete = c.d010Status.includes("COMPLETE");
-        return `
-        <div class="cast-card">
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-              <span class="cast-group-tag">${c.id} · ${c.group}</span>
-              <span class="d010-badge ${isComplete ? "complete" : ""}">${c.d010Status}</span>
-            </div>
-            <h4 style="font-family:var(--font-display);font-size:1.05rem;color:#fff;">${c.name}</h4>
-            <p style="font-size:0.8rem;color:var(--amber-bright);margin:0.2rem 0 0.45rem;">${c.role}</p>
-            <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);margin-bottom:0.5rem;">
-              Contact Telemetry: ${c.contact} · D010 Protocol: 6-Angle Photos + 2m Voice
-            </div>
-            <textarea class="flow-prompt-textarea" id="cast-prompt-${c.id}" style="min-height:64px;font-size:0.72rem;">${c.flowPrompt}</textarea>
-          </div>
-          <button class="btn-flow-primary" style="width:100%;justify-content:center;" onclick="window.generateCastMember('${c.id}', '${c.name.replace(/'/g, "\\'")}')">
-            ⚡ Start to Generate ${c.name.split(" ")[0]} in Google Flow
-          </button>
-        </div>
-      `;
-      })
-      .join("");
-  }
-
-  window.generateCastMember = function (castId, castName) {
-    const ta = document.getElementById(`cast-prompt-${castId}`);
-    const prompt = ta ? ta.value : "";
-    window.triggerFlowGeneration({
-      id: `${castId.toLowerCase()}_${Date.now()}`,
-      title: `Cast Pre-Viz: ${castName}`,
-      characterName: castName,
-      prompt: prompt,
-      mode: "video"
-    });
-  };
-
-  function renderVideoSuggestions() {
-    const grid = document.getElementById("video-suggestions-grid");
-    if (!grid) return;
-    grid.innerHTML = DATA.videoSuggestions
-      .map(
-        (s) => `
-      <div class="suggestion-card">
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
-            <span class="actor-id-tag">${s.id} · ${s.geography}</span>
-            <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);">${s.sourceRef}</span>
-          </div>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#fff;margin-bottom:0.35rem;">${s.title}</h3>
-          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.5rem;">${s.purpose}</p>
-          <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--amber-bright);margin-bottom:0.4rem;">
-            Characters: ${s.characters.join(" · ")}
-          </div>
-          <textarea class="flow-prompt-textarea" id="sug-prompt-${s.id}">${s.prompt}</textarea>
-        </div>
-        <button class="btn-flow-primary" style="width:100%;justify-content:center;" onclick="window.generateSuggestion('${s.id}', '${s.title.replace(/'/g, "\\'")}')">
-          ⚡ Start to Generate Scene (${s.id}) in Google Flow
-        </button>
-      </div>
-    `
-      )
-      .join("");
-  }
-
-  window.generateSuggestion = function (sugId, title) {
-    const ta = document.getElementById(`sug-prompt-${sugId}`);
-    const prompt = ta ? ta.value : "";
-    window.triggerFlowGeneration({
-      id: `${sugId.toLowerCase()}_${Date.now()}`,
-      title: title,
-      prompt: prompt,
-      mode: "video"
-    });
-  };
-
-  window.openLightbox = function (src) {
-    const modal = document.getElementById("lightbox-modal");
-    const img = document.getElementById("lightbox-img");
-    if (modal && img) {
-      img.src = src;
-      modal.classList.add("open");
+  // ---------- Event Delegation ----------
+  document.addEventListener("click", (e) => {
+    // Cut switch between Workshop #1 and Dinner
+    const vidBtn = e.target.closest("#video-switch [data-vid]");
+    if (vidBtn) {
+      selectVideo(Number(vidBtn.dataset.vid), 0, false);
+      return;
     }
-  };
 
-  window.closeLightbox = function () {
-    const modal = document.getElementById("lightbox-modal");
-    if (modal) modal.classList.remove("open");
-  };
+    // Chapter chip click
+    const chip = e.target.closest("#chapters .chip");
+    if (chip) {
+      seekToChapter(vidIdx, Number(chip.dataset.i), true);
+      return;
+    }
 
-  document.addEventListener("DOMContentLoaded", init);
+    // Replay current moment
+    if (e.target.closest("[data-replay]")) {
+      seekToChapter(vidIdx, chapIdx, true);
+      return;
+    }
+
+    // Generate from This Moment monitor
+    if (e.target.closest("[data-generate-moment]")) {
+      const v = VIDEOS[vidIdx];
+      const c = v.chapters[chapIdx];
+      const ta = $("monitor-prompt-box");
+      triggerFlowGeneration({
+        id: `${v.id}_ch${c.idx}`,
+        title: `${c.time} · ${c.title}`,
+        prompt: ta ? ta.value : c.aiSuggestion,
+        mode: "video",
+      });
+      return;
+    }
+
+    // Pick A/B/C idea in This Moment monitor
+    const ideaBtn = e.target.closest("#shot-card .idea[data-opt]");
+    if (ideaBtn) {
+      const v = VIDEOS[vidIdx];
+      const c = v.chapters[chapIdx];
+      const key = `${v.id}_ch_${c.idx}`;
+      choices[key] = ideaBtn.dataset.opt;
+      saveChoices();
+      renderMonitor();
+      return;
+    }
+
+    // Actor thumbnail click
+    const thumbBtn = e.target.closest(".actor-thumbs button[data-actor]");
+    if (thumbBtn) {
+      const actorId = thumbBtn.dataset.actor;
+      const src = thumbBtn.dataset.src;
+      const stage = $(`stage-${actorId}`);
+      if (stage) stage.innerHTML = `<img src="${esc(src)}" alt="" />`;
+      thumbBtn.parentElement.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === thumbBtn));
+      return;
+    }
+
+    // Actor media mode switch (Still / 4-Angle / AI Still / AI Video)
+    const modeBtn = e.target.closest("[data-media-mode]");
+    if (modeBtn) {
+      const actorId = modeBtn.dataset.actor;
+      const mode = modeBtn.dataset.mediaMode;
+      const src = modeBtn.dataset.src;
+      const stage = $(`stage-${actorId}`);
+      if (stage) {
+        stage.innerHTML =
+          mode === "aivideo"
+            ? `<video src="${esc(src)}" controls autoplay loop muted playsinline></video>`
+            : `<img src="${esc(src)}" alt="" />`;
+      }
+      modeBtn.parentElement.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === modeBtn));
+      return;
+    }
+
+    // Actor scene preset click
+    const presetBtn = e.target.closest("[data-actor-preset]");
+    if (presetBtn) {
+      const actorId = presetBtn.dataset.actorPreset;
+      const ta = $(`actor-prompt-${actorId}`);
+      if (ta) ta.value = presetBtn.dataset.prompt;
+      return;
+    }
+
+    // Generate AI Actor button
+    const genActorBtn = e.target.closest("[data-generate-actor]");
+    if (genActorBtn) {
+      const actorId = genActorBtn.dataset.generateActor;
+      const name = genActorBtn.dataset.name;
+      const ta = $(`actor-prompt-${actorId}`);
+      const chk = $(`actor-chip-${actorId}`);
+      triggerFlowGeneration({
+        id: `${actorId.toLowerCase()}_${Date.now()}`,
+        title: `AI Actor · ${name}`,
+        characterName: name,
+        prompt: ta ? ta.value : "",
+        mode: "video",
+        attachAvatar: chk ? chk.checked : false,
+        ingredientQuery: actorId === "CHAR-04" ? "avatar" : name.split(" ")[0].toLowerCase(),
+      });
+      return;
+    }
+
+    // Generate AI Video Suggestion button
+    const genSugBtn = e.target.closest("[data-generate-sug]");
+    if (genSugBtn) {
+      const sugId = genSugBtn.dataset.generateSug;
+      const title = genSugBtn.dataset.title;
+      const ta = $(`sug-prompt-${sugId}`);
+      triggerFlowGeneration({
+        id: `${sugId.toLowerCase()}_${Date.now()}`,
+        title: title,
+        prompt: ta ? ta.value : "",
+        mode: "video",
+      });
+      return;
+    }
+
+    // Generate Cast Member button
+    const genCastBtn = e.target.closest("[data-generate-cast]");
+    if (genCastBtn) {
+      triggerFlowGeneration({
+        id: `${genCastBtn.dataset.generateCast.toLowerCase()}_${Date.now()}`,
+        title: `Cast Pre-Viz · ${genCastBtn.dataset.name}`,
+        characterName: genCastBtn.dataset.name,
+        prompt: genCastBtn.dataset.prompt,
+        mode: "video",
+      });
+      return;
+    }
+
+    // Generate from Every Moment row button
+    const genRowBtn = e.target.closest("[data-gen-row]");
+    if (genRowBtn) {
+      const [vI, cI] = genRowBtn.dataset.genRow.split(":").map(Number);
+      const c = VIDEOS[vI].chapters[cI];
+      triggerFlowGeneration({
+        id: `${VIDEOS[vI].id}_ch${c.idx}`,
+        title: `${c.time} · ${c.title}`,
+        prompt: c.aiSuggestion,
+        mode: "video",
+      });
+      return;
+    }
+
+    // Play moment when clicking row image/text
+    const playTarget = e.target.closest("[data-play-moment]");
+    if (playTarget) {
+      const row = playTarget.closest(".row[data-v]");
+      if (row) seekToChapter(Number(row.dataset.v), Number(row.dataset.c), true);
+    }
+  });
+
+  // Transport buttons
+  $("btn-play").addEventListener("click", () => {
+    if (!ready || !player) return;
+    player.getPlayerState() === YT.PlayerState.PLAYING ? player.pauseVideo() : player.playVideo();
+  });
+  $("btn-prev").addEventListener("click", () => {
+    seekToChapter(vidIdx, Math.max(0, chapIdx - 1), true);
+  });
+  $("btn-next").addEventListener("click", () => {
+    const maxIdx = VIDEOS[vidIdx].chapters.length - 1;
+    seekToChapter(vidIdx, Math.min(maxIdx, chapIdx + 1), true);
+  });
+
+  $("close-toast").addEventListener("click", () => {
+    $("flow-toast").hidden = true;
+  });
+  $("toast-focus-chrome").addEventListener("click", () => {
+    if (lastPayload) {
+      triggerFlowGeneration({ ...lastPayload, bringToFront: true });
+    }
+  });
+
+  // ---------- Search Sheet (⌘K) ----------
+  const sheet = $("search-sheet");
+  const input = $("search-input");
+  let scope = "all";
+  let searchItems = [];
+  let sel = 0;
+  const TRY_TERMS = ["Russ Murphy", "Ken Newman", "French Drop", "Downstairs", "Billy Aguero", "Don Bajema", "Women Academics", "Jeff Kao"];
+
+  function openSearch(q) {
+    sheet.hidden = false;
+    if (typeof q === "string") input.value = q;
+    input.focus();
+    input.select();
+    renderSearchResults();
+  }
+  function closeSearch() {
+    sheet.hidden = true;
+  }
+
+  $("open-search").addEventListener("click", () => openSearch());
+  $("close-search").addEventListener("click", closeSearch);
+  sheet.addEventListener("click", (e) => {
+    if (e.target === sheet) closeSearch();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      sheet.hidden ? openSearch() : closeSearch();
+    } else if (e.key === "/" && sheet.hidden && !/input|textarea/i.test(document.activeElement.tagName)) {
+      e.preventDefault();
+      openSearch();
+    } else if (!sheet.hidden) {
+      if (e.key === "Escape") closeSearch();
+    }
+  });
+
+  $("scopes").addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    scope = b.dataset.scope;
+    document.querySelectorAll("#scopes button").forEach((x) => x.classList.toggle("on", x === b));
+    renderSearchResults();
+    input.focus();
+  });
+  input.addEventListener("input", renderSearchResults);
+
+  function renderSearchResults() {
+    const q = input.value.trim().toLowerCase();
+    const terms = q.split(/\s+/).filter(Boolean);
+    const match = (text) => !terms.length || terms.every((t) => String(text).toLowerCase().includes(t));
+    const want = (s) => scope === "all" || scope === s;
+
+    searchItems = [];
+    let html = "";
+    if (!q) {
+      html += `<div class="res-group">Try</div><div class="suggest">${TRY_TERMS.map((t) => `<button type="button" data-suggest="${esc(t)}">${esc(t)}</button>`).join("")}</div>`;
+    }
+
+    if (want("actors")) {
+      const rows = ACTORS.filter((a) => match(`${a.name} ${a.roleTitle} ${a.physicalProfile.wardrobeProps} ${a.defaultFlowPrompt}`));
+      if (rows.length) {
+        html += `<div class="res-group">AI Actors</div>`;
+        rows.forEach((a) => {
+          html += `<button type="button" class="res" data-res-idx="${searchItems.length}">
+            <img src="${esc(a.heroStill)}" alt="" />
+            <span><div class="rt">${esc(a.name)} · ${esc(a.id)}</div><div class="rs">${esc(a.roleTitle)}</div></span>
+          </button>`;
+          searchItems.push({ type: "actor", id: a.id });
+        });
+      }
+    }
+
+    if (want("moments")) {
+      const mRows = [];
+      VIDEOS.forEach((v, vI) => {
+        v.chapters.forEach((c, cI) => {
+          if (match(`${c.title} ${c.beat} ${c.actors.join(" ")} ${c.time}`)) {
+            mRows.push({ vI, cI, c, v });
+          }
+        });
+      });
+      if (mRows.length) {
+        html += `<div class="res-group">Workshop Moments</div>`;
+        mRows.slice(0, 20).forEach(({ vI, cI, c, v }) => {
+          html += `<button type="button" class="res" data-res-idx="${searchItems.length}">
+            <img src="${esc(c.frame)}" alt="" />
+            <span><div class="rt">${esc(c.time)} · ${esc(c.title)}</div><div class="rs">${esc(v.id === "workshop_part1" ? "Workshop #1" : "Dinner")} · ${esc(c.beat)}</div></span>
+          </button>`;
+          searchItems.push({ type: "moment", vI, cI });
+        });
+      }
+    }
+
+    if (want("cast")) {
+      const cRows = CAST.filter((c) => match(`${c.name} ${c.group} ${c.role} ${c.flowPrompt}`));
+      if (cRows.length) {
+        html += `<div class="res-group">Cast Bible (28)</div>`;
+        cRows.slice(0, 15).forEach((c) => {
+          html += `<button type="button" class="res noimg" data-res-idx="${searchItems.length}">
+            <span><div class="rt">${esc(c.name)} (${esc(c.group)})</div><div class="rs">${esc(c.role)}</div></span>
+          </button>`;
+          searchItems.push({ type: "cast", id: c.id });
+        });
+      }
+    }
+
+    if (want("suggestions")) {
+      const sRows = SUGGESTIONS.filter((s) => match(`${s.title} ${s.geography} ${s.purpose} ${s.prompt}`));
+      if (sRows.length) {
+        html += `<div class="res-group">AI Video Suggestions</div>`;
+        sRows.forEach((s) => {
+          html += `<button type="button" class="res noimg" data-res-idx="${searchItems.length}">
+            <span><div class="rt">${esc(s.id)} · ${esc(s.title)}</div><div class="rs">${esc(s.geography)} — ${esc(s.purpose)}</div></span>
+          </button>`;
+          searchItems.push({ type: "suggestions" });
+        });
+      }
+    }
+
+    if (q && !searchItems.length) {
+      html += `<div class="empty">No results for “${esc(q)}”.</div>`;
+    }
+    $("results").innerHTML = html;
+  }
+
+  $("results").addEventListener("click", (e) => {
+    const sug = e.target.closest("[data-suggest]");
+    if (sug) {
+      input.value = sug.dataset.suggest;
+      renderSearchResults();
+      input.focus();
+      return;
+    }
+    const resBtn = e.target.closest("[data-res-idx]");
+    if (!resBtn) return;
+    const item = searchItems[Number(resBtn.dataset.resIdx)];
+    closeSearch();
+    if (!item) return;
+    if (item.type === "moment") {
+      seekToChapter(item.vI, item.cI, true);
+    } else if (item.type === "actor") {
+      const el = $(`actor-card-${item.id}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (item.type === "cast") {
+      const el = $("cast");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (item.type === "suggestions") {
+      const el = $("suggestions");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+
+  // ---------- Init ----------
+  renderChaptersBar();
+  setChapter(0);
+  renderActors();
+  renderSuggestions();
+  renderCastBible();
+  renderEveryMoment();
+  checkBridgeStatus();
+  setInterval(checkBridgeStatus, 5000);
 })();
