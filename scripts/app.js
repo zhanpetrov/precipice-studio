@@ -602,20 +602,51 @@
     `;
   }
 
-  function selectStudioMindMapKey(key) {
+  function selectStudioMindMapKey(rawKey) {
+    const key = !rawKey || rawKey === "hub" ? "ALL" : rawKey;
     activeMmKey = key;
+
     document.querySelectorAll("[data-st-mm-filter]").forEach((b) => {
       b.classList.toggle("on", b.dataset.stMmFilter === key);
     });
+
+    document.querySelectorAll("[data-st-mm-rhythm]").forEach((s, idx) => {
+      const rk = s.dataset.stMmRhythm;
+      if (key === "ALL") {
+        s.classList.toggle("on", idx === 0);
+      } else if (key === "day2b") {
+        s.classList.toggle("on", rk === "day2a");
+      } else {
+        s.classList.toggle("on", rk === key);
+      }
+    });
+
     document.querySelectorAll(".st-mm-svg .st-node").forEach((n) => {
       const nk = n.dataset.stMmNode;
-      n.classList.toggle("on", key === "ALL" ? nk === "hub" : nk === key);
+      if (key === "ALL") {
+        n.classList.toggle("on", nk === "hub");
+        n.classList.remove("dimmed");
+      } else {
+        const isActive = nk === key;
+        n.classList.toggle("on", isActive);
+        n.classList.toggle("dimmed", !isActive && nk !== "hub");
+      }
     });
+
     const insp = $("st-mm-inspector");
-    if (insp) insp.innerHTML = renderMindMapInspectorHtml(key);
+    if (insp) {
+      insp.innerHTML = renderMindMapInspectorHtml(key);
+      refreshDrefs();
+    }
+
+    const daysGrid = $("st-mm-days-grid");
+    if (daysGrid) {
+      daysGrid.classList.toggle("single-focus", key !== "ALL");
+    }
+
     document.querySelectorAll("[data-st-mm-card]").forEach((c) => {
       const ck = c.dataset.stMmCard;
-      if (key === "ALL" || key === "hub") {
+      if (key === "ALL") {
         c.hidden = false;
         c.classList.remove("focus");
       } else {
