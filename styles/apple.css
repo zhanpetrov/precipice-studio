@@ -440,14 +440,6 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
-/* Voice stems & likeness sheets exist only on the local hub */
-.local-only {
-  font-size: 12px;
-  color: var(--text-2);
-  border: 1px dashed currentColor;
-  border-radius: 999px;
-  padding: 3px 10px;
-}
 
 /* One menu item = one view */
 [data-view][hidden] { display: none !important; }

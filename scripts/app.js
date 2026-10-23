@@ -20,10 +20,6 @@
   const SUGGESTIONS = DATA.videoSuggestions;
   const BRIDGE_BASE = "http://127.0.0.1:8788";
   const STORE_KEY = "precipice-studio-choices";
-  // Voice stems and 4-angle likeness sheets are kept out of git (see .gitignore)
-  // and only exist on the local hub served by flow_bridge_server.py.
-  const LOCAL_HUB = ["127.0.0.1", "localhost"].includes(location.hostname);
-  const LOCAL_ONLY = '<span class="local-only">Local hub only</span>';
 
   // Decisions (D001, D010 …) are owned by the Control Tower; read them live from there.
   const TOWER = "https://zhanpetrov.github.io/precipice/";
@@ -339,7 +335,7 @@
       ["Workshop Film", v.title, v.youtubeUrl + "&t=" + c.seconds + "s"],
       ["Camera Master", v.masterFile],
       ["Extracted 1080p Still", c.frame, c.frame],
-      ["Zoom H6 24-bit Stem", "ZOOM0038_LR.WAV / ZOOM0039_LR.WAV" + (LOCAL_HUB ? "" : " · local hub only"), LOCAL_HUB ? "assets/voices/voice_workshop_zoom0038.m4a" : undefined],
+      ["Zoom H6 24-bit Stem", "ZOOM0038_LR.WAV / ZOOM0039_LR.WAV", "assets/voices/voice_workshop_zoom0038.m4a"],
       ["Google Flow Project", "fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe", DATA.projectMeta.flowProjectUrl],
     ];
 
@@ -411,7 +407,6 @@
 
     stack.innerHTML = ACTORS.map((a) => {
       const thumbs = a.gallery
-        .filter((g) => LOCAL_HUB || !/_(QUAD|AVATAR)_SHEET\./.test(g.src))
         .map(
           (g, idx) => `
           <button type="button" class="${idx === 0 ? "on" : ""}" data-actor="${esc(a.id)}" data-src="${esc(g.src)}" data-label="${esc(g.label)}" title="${esc(g.label)}">
@@ -446,7 +441,7 @@
           <div>
             <div class="cut-switch" style="margin-bottom:8px;width:100%;display:flex;">
               <button type="button" class="on" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="still" data-actor="${esc(a.id)}" data-src="${esc(a.heroStill)}">Still</button>
-              ${LOCAL_HUB ? `<button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="sheet" data-actor="${esc(a.id)}" data-src="${esc(a.quadSheet)}">4-Angle</button>` : ""}
+              <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="sheet" data-actor="${esc(a.id)}" data-src="${esc(a.quadSheet)}">4-Angle</button>
               <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="aistill" data-actor="${esc(a.id)}" data-src="${esc(a.aiStill)}">AI Still</button>
               <button type="button" style="flex:1;padding:6px 10px;font-size:13px;" data-media-mode="aivideo" data-actor="${esc(a.id)}" data-src="${esc(a.aiVideo)}">AI Video</button>
             </div>
@@ -458,7 +453,7 @@
             </div>
             <div class="voice-row">
               <span><b>Voice stem</b> ${dref("D010")} · ${esc(a.voiceLabel)}</span>
-              ${LOCAL_HUB ? `<audio controls preload="none" src="${esc(a.voiceSample)}"></audio>` : LOCAL_ONLY}
+              <audio controls preload="none" src="${esc(a.voiceSample)}"></audio>
             </div>
           </div>
 
@@ -486,7 +481,7 @@
                 <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 Start to Generate ${esc(a.name.split(" ")[0])}
               </button>
-              ${LOCAL_HUB ? `<a class="pill-btn ghost" href="${esc(a.quadSheet)}" target="_blank" rel="noopener">Open 4-Angle Sheet</a>` : ""}
+              <a class="pill-btn ghost" href="${esc(a.quadSheet)}" target="_blank" rel="noopener">Open 4-Angle Sheet</a>
               <a class="pill-btn ghost" href="${esc(a.aiStill)}" target="_blank" rel="noopener">Open AI Still</a>
             </div>
           </div>

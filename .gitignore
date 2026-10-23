@@ -2,7 +2,3 @@
 __pycache__/
 *.pyc
 
-# Actor likeness material (D010 voice stems, 4-angle sheets): local hub only, never published
-assets/voices/
-assets/actors/*_QUAD_SHEET.jpg
-assets/actors/*_AVATAR_SHEET.jpg
