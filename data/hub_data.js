@@ -302,27 +302,31 @@ window.PRECIPICE_HUB_DATA = {
         ageRange: "60s",
         build: "Lean, weathered working-class contractor build with intense, coiled posture",
         hairFacial: "Swept-back silver-grey hair, sharp high angular cheekbones, penetrating blue-grey eyes, clean-shaven",
-        wardrobeProps: "Dark navy/charcoal zip-neck knit sweater layered over a dark striped collared shirt and dark undershirt; Makeup Dept (Oct 20 intake): fake blood, bruises, cuts for post-downstairs confrontation sequence."
+        wardrobeProps: "Dark navy/charcoal zip-neck knit sweater layered over a dark striped collared shirt and dark undershirt; Props (Oct 23 D012): unfinished book manuscript/notebook carried at the bar for his 'save the house' & anti-Trump diatribe; Makeup Dept (Oct 20 intake): fake blood, bruises, cuts for post-confrontation sequence."
       },
       psychology: {
         need: "Preserve his moral dignity and democratic conscience when cornered by authoritarian intimidation.",
-        want: "Step inside Lama Bar from the No Kings protest outside, connect with people in the bar, and stand his ground when lured downstairs.",
+        want: "Enter the empty pool hall at night (opening shot), cross the door into Lama Bar, deliver his 'save the house' program and anti-Trump manuscript diatribe to the bartender, and stand his ground when Ken lures him to the basement.",
         hate: "MAGA authoritarianism, surveillance coercion, being manipulated by a con game.",
         love: "Direct eye-to-eye truth, political accountability, working-class solidarity."
       },
-      defaultFlowPrompt: "Candid observational handheld 35mm cinema-verite medium close-up inside Lama Bar in Berkeley at night. A 60-year-old working-class contractor with swept-back silver-grey hair and sharp angular cheekbones, wearing a dark navy zip-neck knit sweater over a dark striped collared shirt, sits at a mahogany bar counter in warm Kodak Vision3 500T tungsten-amber and deep slate-teal neon reflections. He looks in three-quarter profile toward the bar door as distant blue and red protest lights flash outside the frosted glass window. Natural micro-expressions, organic breathing, gritty independent film grain, never looking at the lens.",
+      defaultFlowPrompt: "Candid observational handheld 35mm cinema-verite medium close-up inside Lama Bar in Berkeley at night. A 60-year-old working-class contractor with swept-back silver-grey hair and sharp angular cheekbones, wearing a dark navy zip-neck knit sweater over a dark striped collared shirt, sits at a mahogany bar counter holding an unbound stack of book manuscript pages in warm Kodak Vision3 500T tungsten-amber and deep slate-teal neon reflections. He speaks passionately to the bartender in three-quarter profile as distant protest lights flash outside the frosted glass window. Natural micro-expressions, gritty independent film grain, never looking at the lens.",
       presets: [
         {
-          label: "Beat 1: Lama Bar Entry from No Kings Protest",
-          prompt: "Candid handheld 35mm cinema-verite tracking shot inside Buffalo Billiards and Lama Bar at night. A 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater over a striped shirt walks in from a noisy street demonstration outside, pausing in three-quarter profile under warm amber bar practicals and deep teal neon shadows as the heavy door slams behind him. Kodak Vision3 500T grain."
+          label: "Beat 1 (Day 2 Opening Shot): Empty Pool Hall Walk-Through to Lama Bar Door",
+          prompt: "Candid handheld 35mm cinema-verite tracking shot inside an empty pool hall at night (Buffalo Billiards): a 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater over a striped shirt walks alone past darkened green-felt pool tables and opens a heavy interior door leading directly into the warm neon-and-tungsten glow of Lama Bar. Kodak Vision3 500T grain."
         },
         {
-          label: "Beat 2: Watching Ken's French Drop Magic at the Bar",
-          prompt: "Candid handheld 35mm cinema-verite close-up at a dimly lit Berkeley bar counter: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater watches a sleight-of-hand coin trick in three-quarter profile under warm tungsten bar light."
+          label: "Beat 2 (Day 1 Lama Bar): 'Save the House' & Anti-Trump Manuscript Diatribe",
+          prompt: "Candid handheld 35mm cinema-verite medium close-up at Lama Bar counter: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater flips through a worn unfinished book manuscript notebook on the bar counter while delivering a fiery anti-authoritarian monologue to the bartender under warm tungsten practical light, three-quarter profile."
         },
         {
-          label: "Beat 3: Downstairs Confrontation & Post-Assault Bruise Makeup",
-          prompt: "Claustrophobic handheld 35mm cinema-verite close-up inside a locked downstairs basement room: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy sweater confronts his captors in three-quarter profile under a single harsh overhead tungsten bulb, subtle bruise and cut makeup on his cheekbone."
+          label: "Beat 3 (Day 1): Watching Ken's French Drop & Exiting for Basement",
+          prompt: "Candid handheld 35mm cinema-verite close-up at a dimly lit Berkeley bar counter: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater watches a sleight-of-hand coin trick in three-quarter profile before following the bald magician toward the basement door."
+        },
+        {
+          label: "Beat 4 (Day 3): Upstairs / Basement Confrontation & Bruise Makeup",
+          prompt: "Claustrophobic handheld 35mm cinema-verite close-up inside a locked storeroom: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy sweater confronts his captors in three-quarter profile under a single harsh overhead tungsten bulb, subtle bruise and cut makeup on his cheekbone."
         }
       ]
     },
@@ -358,23 +362,23 @@ window.PRECIPICE_HUB_DATA = {
       },
       psychology: {
         need: "Command the unseen mechanics of every room he enters — use charm, humor, and illusion to stay in control.",
-        want: "Disarm Russ at Lama Bar using close-up magic ('The French Drop') and camaraderie, then lure him through the door downstairs (36:05 'The Objective: Get Him Downstairs').",
+        want: "Listen to Russ's anti-Trump diatribe apparently in agreement while doing magic tricks, slip into the Lama Corridor to exchange a covert nod with 1 ICE agent, then return and tell Russ 'I got some guys who want you to talk to' to lure him to the basement.",
         hate: "Being cornered without an angle or losing control of the room's rhythm.",
         love: "The elegance of misdirection ('The Magic Is a Lie', 38:14), acoustic guitar, and Edward Albee-style psychological fencing (17:13 'The Zoo Story')."
       },
       defaultFlowPrompt: "Candid handheld 35mm cinema-verite medium close-up inside a smoky dimly lit Berkeley bar and pool hall at night. A charismatic bald 60-year-old bar magician with a salt-and-pepper goatee, small silver hoop earring in his right ear, silver wrist cuff, and black-and-white buffalo check plaid flannel shirt performs the French Drop coin vanish sleight-of-hand trick between his fingers under a warm amber bar practical light. He leans across the wooden counter in three-quarter profile with a knowing, seductive con-man smile. Shallow depth of field, Kodak Vision3 500T 35mm film grain, authentic independent cinema.",
       presets: [
         {
-          label: "Beat 1: The French Drop Coin Vanish at Lama Bar",
-          prompt: "Medium close-up on a 35mm handheld cinema-verite camera inside Lama Bar: a bald 60-year-old magician with a salt-and-pepper goatee, silver ear hoop, silver wrist cuff, and black-and-white buffalo plaid flannel shirt performs the French Drop coin vanish over a mahogany bar counter under warm tungsten amber light, his eyes locking onto his mark in three-quarter profile."
+          label: "Beat 1 (Day 1): Apparent Agreement & French Drop Magic at Lama Bar",
+          prompt: "Medium close-up on a 35mm handheld cinema-verite camera inside Lama Bar: a bald 60-year-old magician with a salt-and-pepper goatee, silver ear hoop, silver wrist cuff, and black-and-white buffalo plaid flannel shirt nods in apparent agreement while performing the French Drop coin vanish over a mahogany bar counter under warm tungsten amber light."
         },
         {
-          label: "Beat 2: 'The Magic Is a Lie' Bar Seduction",
-          prompt: "Candid handheld 35mm cinema-verite over-the-shoulder two-shot inside Lama Bar: a bald bar magician with a goatee in a buffalo plaid shirt leans in close to a silver-haired contractor in a dark navy zip sweater, gesturing toward the back stairwell door as bar patrons dance in blurred neon light behind them."
+          label: "Beat 2 (Day 1): Covert Nod with 1 ICE Agent in Lama Corridor",
+          prompt: "Suspenseful handheld 35mm cinema-verite medium shot in the narrow dimly lit Lama Bar corridor leading toward the back patio: a bald 60-year-old man with a salt-and-pepper goatee and buffalo plaid shirt pauses in shadow to exchange a quiet, conspiratorial nod with a plainclothes ICE operative before turning back toward the bar."
         },
         {
-          label: "Beat 3: Acoustic Guitar Warm-Up & Bar Catalyst",
-          prompt: "Candid handheld 35mm cinema-verite medium close-up: a bald 60-year-old man with a salt-and-pepper goatee, silver ear hoop, and silver wrist cuff in a black-and-white buffalo plaid shirt fingerpicks a classical acoustic guitar under warm amber tungsten practical light, three-quarter profile."
+          label: "Beat 3 (Day 1): 'I Got Some Guys Who Want You to Talk To' — Basement Exit",
+          prompt: "Candid handheld 35mm cinema-verite over-the-shoulder two-shot inside Lama Bar: a bald bar magician with a goatee in a buffalo plaid shirt leans in close to a silver-haired contractor in a dark navy zip sweater, gesturing toward the basement door as bar patrons move in blurred neon light behind them."
         }
       ]
     },
@@ -404,19 +408,19 @@ window.PRECIPICE_HUB_DATA = {
         ageRange: "80s",
         build: "Lean, alert, kinetic observational posture",
         hairFacial: "White hair, thick black-rimmed rectangular glasses",
-        wardrobeProps: "Olive-drab 'NORTHWOODS LAND TRUST' baseball cap, khaki field jacket over black turtleneck, signature silver rings with dark stone settings on both hands, production notes."
+        wardrobeProps: "Olive-drab 'NORTHWOODS LAND TRUST' baseball cap, khaki field jacket over black turtleneck, signature silver rings with dark stone settings on both hands, Oct 23 3-day shooting schedule outline."
       },
       psychology: {
         need: "Strip away every ounce of theatrical falseness until only raw human voltage remains.",
-        want: "Orchestrate PRECIPICE across three connected spaces where camera, crew, and actors move like a living jazz dance (Sept 19 Creative Rule #1).",
-        hate: "Pre-chewed Hollywood coverage, rigid actor marks, politically timid cinema.",
+        want: "Orchestrate PRECIPICE across the 3-Night Consolidated Schedule (Day 1 Lama Bar, Day 2 Pool Hall, Day 3 Lama Restaurant) with staggered rest days between midnight shoots (D011) and unobstructed 360° camera sightlines (D012).",
+        hate: "Pre-chewed Hollywood coverage, craft services cluttering a 360° frame, rigid actor marks.",
         love: "Direct Action ensemble alchemy, high-contrast black-and-white & Kodak 500T night shadows."
       },
       defaultFlowPrompt: "Candid observational handheld 16mm and 35mm cinema-verite medium shot inside a cluttered downstairs storage and rehearsal room in Berkeley with a red Persian rug and cardboard boxes on shelves. An 80-year-old independent film director wearing an olive-drab baseball cap, thick black-rimmed glasses, khaki field jacket over a black turtleneck, and silver rings on his fingers leans forward in his chair, gesturing with quiet intensity as he coaches two actors in an interrogation improvisation. High-contrast warm tungsten practical bulb overhead, raw Direct Action documentary realism.",
       presets: [
         {
-          label: "Beat 1: Self-Reflexive Crew Presence in the Bar",
-          prompt: "Candid handheld 35mm cinema-verite medium shot inside a smoky Berkeley pool hall at night: an 80-year-old director in an olive cap, thick black-rimmed glasses, and khaki jacket over a black turtleneck stands near the edge of the pool room light in three-quarter profile, quietly whispering an adjustment to an actor mid-take."
+          label: "Beat 1: Directing 360° Ensemble Blocking in Lama Bar",
+          prompt: "Candid handheld 35mm cinema-verite medium shot inside a smoky Berkeley bar at night: an 80-year-old director in an olive cap, thick black-rimmed glasses, and khaki jacket over a black turtleneck stands near the edge of the bar light in three-quarter profile, quietly whispering an adjustment to an actor mid-take."
         },
         {
           label: "Beat 2: Coaching 'Get Him Downstairs'",
@@ -450,12 +454,12 @@ window.PRECIPICE_HUB_DATA = {
         ageRange: "Early 30s",
         build: "Athletic, mobile handheld camera operator stance",
         hairFacial: "Tousled medium-length wavy brown hair, light natural stubble",
-        wardrobeProps: "Olive-green linen shirt or charcoal crew-neck tee, handheld cinema rig / iPhone 17 Pro Max ProRes Log cage, Sennheiser HD25 headphones, Zoom F8n / 9-channel wireless telemetry."
+        wardrobeProps: "Olive-green linen shirt or charcoal crew-neck tee, handheld cinema rig / iPhone 17 Pro Max ProRes Log cage + 2–3 re-angled set cameras (D012), Sennheiser HD25 headphones, Zoom F8n / 9-channel wireless telemetry."
       },
       psychology: {
-        need: "Bridge Rob Nilsson's raw Direct Action vérité with bulletproof technical sound, multi-room continuity, and invisible AI safety nets.",
-        want: "Dance with the actors through Buffalo Billiards, Lama Bar, and the downstairs room while capturing 9 isolated audio channels and D010 actor reference libraries.",
-        hate: "Dropped wireless RF channels, plastic AI look-at-camera artifacts, losing an unrepeatable take.",
+        need: "Bridge Rob Nilsson's raw Direct Action vérité with multi-angle editorial speed (2–3 set cameras + handheld), 9-channel wireless sound, and invisible AI safety nets.",
+        want: "Dance with the actors across Day 1 (Lama Bar), Day 2 (Buffalo Billiards back room w/ high-angle look-down windows), and Day 3 (Lama Restaurant) while PAs guard the set cameras.",
+        hate: "Dropped wireless RF channels, endless un-cuttable single-master pans, losing an unrepeatable take.",
         love: "Fluid handheld responsiveness, Kodak Vision3 500T color science, hybrid film + Google Flow pipelines."
       },
       defaultFlowPrompt: "Candid observational handheld 35mm cinema-verite medium shot inside Buffalo Billiards at night. A young cinematographer with tousled medium-length wavy brown hair and light stubble in an olive-green linen shirt moves fluidly with a compact handheld cinema rig in three-quarter profile, tracking between a green-felt pool table and a neon-lit bar doorway. Warm Kodak Vision3 500T tungsten-amber and deep slate-teal shadows, natural film grain, never looking into the lens.",
@@ -470,8 +474,8 @@ window.PRECIPICE_HUB_DATA = {
           prompt: "Candid handheld 35mm documentary medium close-up inside a Berkeley studio: a young producer-cinematographer with wavy brown hair wearing monitoring headphones checks levels on a multi-track field audio recorder beside Sennheiser wireless receivers and lavalier mics, warm tungsten work light."
         },
         {
-          label: "Beat 3: Pre-Scene D010 6-Angle Actor Capture",
-          prompt: "Candid handheld 35mm behind-the-scenes shot in a bar holding room: a young cinematographer with wavy brown hair captures reference stills and a 2-minute clean voice sample on a handheld recorder with an actor before stepping onto set."
+          label: "Beat 3 (Day 2): Framing High-Angle Look-Down Window Cutaways in Buffalo Billiards Back Room",
+          prompt: "Candid handheld 35mm behind-the-scenes shot inside the smaller back pool room of Buffalo Billiards at midnight: a young cinematographer with wavy brown hair frames a high-angle shot looking down through the rear dark window onto a street protest lot below while pool players chalk their cues behind him."
         }
       ]
     }
@@ -479,67 +483,121 @@ window.PRECIPICE_HUB_DATA = {
 
   tier2CastRoster: [
     // GROUP 1: BAR CORE (3)
-    { id: "CAST-01", name: "Rusty (Russ) Murphy", group: "Bar Core", role: "Anti-MAGA Contractor / Bar Protagonist (Tier 1 AI Actor Ready · Silver-grey hair, dark navy zip sweater)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite medium close-up of a 60-year-old contractor with swept-back silver-grey hair and sharp angular cheekbones in a dark navy zip sweater over a striped shirt sitting at Lama Bar in warm tungsten-amber light, three-quarter profile." },
-    { id: "CAST-02", name: "Ken Newman", group: "Bar Core", role: "Bar Magician / Social Catalyst / Con Man (Tier 1 AI Actor Ready · Bald, goatee, silver ear hoop, buffalo plaid shirt)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
-    { id: "CAST-03", name: "Mickey Disend", group: "Bar Core", role: "Bar Regular / Inner Circle Presence", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite portrait of a weathered Berkeley bar regular in a dark jacket nursing a drink at the corner of Lama Bar under warm tungsten neon light, three-quarter profile, natural film grain." },
+    { id: "CAST-01", name: "Rusty (Russ) Murphy", group: "Bar Core", role: "Anti-MAGA Contractor / Bar Protagonist (Day 2 Opening Pool-Hall Walk-Through · Day 1 'Save the House' & Anti-Trump Manuscript Diatribe D012 · Day 3 Upstairs Beating)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite medium close-up of a 60-year-old contractor with swept-back silver-grey hair and sharp angular cheekbones in a dark navy zip sweater over a striped shirt sitting at Lama Bar with an unbound book manuscript notebook in warm tungsten-amber light, three-quarter profile." },
+    { id: "CAST-02", name: "Ken Newman", group: "Bar Core", role: "Bar Magician / Con Man (Day 1 Apparent Agreement, French Drop Magic, Covert Nod w/ 1 ICE Guy in Lama Corridor & Basement Exit w/ Russ)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
+    { id: "CAST-03", name: "Mickey Disend", group: "Bar Core", role: "Buddhist Counterpoint at Bar / Recognized by Marianne Heath (Day 1 Lama Bar + Possible Day 3 Intrusion at Lama Restaurant)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite portrait of a weathered, philosophical Berkeley bar regular in a dark jacket bringing calm Buddhist observations into a heated political bar debate under warm tungsten neon light, three-quarter profile, natural film grain." },
 
     // GROUP 2: BARTENDERS & BAR PATRONS (5)
-    { id: "CAST-04", name: "Luis", group: "Bartenders & Patrons", role: "Bartender Candidate A (Lama Bar Spatial Anchor)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a seasoned Latino bartender wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage, warm amber practical light." },
-    { id: "CAST-05", name: "Rosa", group: "Bartenders & Patrons", role: "Bartender Candidate B (Lama Bar Spatial Anchor)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed Latina bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
+    { id: "CAST-04", name: "Luis", group: "Bartenders & Patrons", role: "Bartender Candidate A (Receives Russ's 'Save the House' Program & Anti-Trump Diatribe on Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a seasoned Latino bartender wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage while listening to Russ's manuscript pitch, warm amber practical light." },
+    { id: "CAST-05", name: "Rosa", group: "Bartenders & Patrons", role: "Bartender Candidate B (Lama Bar Spatial Anchor — Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed Latina bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
     { id: "CAST-06", name: "Woman from Lama (Whistle / Rhythm)", group: "Bartenders & Patrons", role: "Active Bar Environment / Whistle & Finger-Snapping Catalyst", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Kinetic handheld 35mm cinema-verite medium shot inside a lively Berkeley bar at night: a Black woman in vibrant evening attire blows a rhythm whistle and dances amid finger-snapping patrons before the street demonstration interrupts, warm amber and teal neon." },
-    { id: "CAST-07", name: "Bar Patron ('Person')", group: "Bartenders & Patrons", role: "Bar Patron / Door Closure Witness", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot of a bar patron turning sharply toward the frosted glass front door of a Berkeley bar as megaphone sirens echo outside at night." },
+    { id: "CAST-07", name: "Wounded Protestor / Bar Patron", group: "Bartenders & Patrons", role: "Wounded Character Brought into Lama Bar by ICE Guy on Day 1 (Women Rush to Help While Men Freeze)", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Urgent handheld 35mm cinema-verite shot inside Lama Bar at night: a wounded man from the street demonstration is brought through the doorway as the women academics immediately rush forward to tend his injuries while the men at the bar freeze in hesitation." },
     { id: "CAST-08", name: "'? Talker' (Bar Raconteur)", group: "Bartenders & Patrons", role: "Bar Talker / Overlapping Vérité Dialogue", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of an animated bar talker leaning over a crowded counter in three-quarter profile, overlapping dialogue texture, smoky tungsten light." },
 
     // GROUP 3: POOL TABLE — RIGGED HIGH-STAKES MATCH (3)
-    { id: "CAST-09", name: "Billy Aguero", group: "Pool Table", role: "Master Pool Player / Pool Coordinator (Brings Own Cue Stick)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite low-angle shot across the green baize of a regulation table at Buffalo Billiards: a focused veteran pool player lines up a high-stakes 9-ball bank shot with his own custom cue stick under an overhead pool lamp, three-quarter profile." },
-    { id: "CAST-10", name: "Don Bajema", group: "Pool Table", role: "The Money Man (Discovers Silicon Valley Rigging & Confronts Tech Crew)", contact: "[REDACTED — ON FILE · NYC TRAVEL]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Intense handheld 35mm cinema-verite medium close-up beside a dimly lit pool table: a sharp, fierce older money man in a dark coat watches the cue ball deflect unnaturally, his eyes narrowing as he realizes the Silicon Valley team is rigging the match, Kodak Vision3 500T." },
-    { id: "CAST-11", name: "Oscar Valdiviezo", group: "Pool Table", role: "Silicon Valley Pool Player (Skilled Competitor · Brings Own Cue Stick)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a composed, razor-sharp pool player chalking his custom cue stick beside a group of Silicon Valley tech men at Buffalo Billiards, cool slate-teal and warm overhead table light." },
+    { id: "CAST-09", name: "Billy Aguero", group: "Pool Table", role: "Master Pool Player / Coordinator (Day 1 Agrees on Game at Lama Bar Back Table · Day 2 High-Stakes Match vs Oscar in Back Pool Room)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite low-angle shot across the green baize of a regulation table in the smaller back room of Buffalo Billiards: a focused veteran pool player lines up a high-stakes 9-ball bank shot with his own custom cue stick against dark rear windows, three-quarter profile." },
+    { id: "CAST-10", name: "Don Bajema", group: "Pool Table", role: "Ex-Running & Football Coach / The Money Man (Day 1 Joins Russ & Mickey at Lama Bar · Day 2 Backs Billy vs Silicon Valley Crew)", contact: "[REDACTED — ON FILE · NYC TRAVEL]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Intense handheld 35mm cinema-verite medium close-up beside a dimly lit pool table: a sharp, fierce older money man and former football/running coach in a dark coat watches the cue ball deflect unnaturally, his eyes narrowing as he confronts the Silicon Valley team, Kodak Vision3 500T." },
+    { id: "CAST-11", name: "Oscar Valdiviezo", group: "Pool Table", role: "Pool Opponent vs Billy Aguero (Day 1 Lama Bar Back Table Agreement · Day 2 Back Room Match · Brings Own Cue Stick)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a composed, razor-sharp pool player chalking his custom cue stick beside a group of Silicon Valley tech men in the back room of Buffalo Billiards, television protest glow in background." },
 
     // GROUP 4: SILICON VALLEY TECH MEN (4)
-    { id: "CAST-12", name: "Andrei Tatarinov", group: "Silicon Valley Tech", role: "Silicon Valley Tech Lead / Rigged Pool Apparatus Operator", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up inside a pool hall alcove: a Silicon Valley tech founder in a minimalist dark bomber jacket glances subtly at a concealed tablet/sensor interface tracking the pool table geometry, cool screen glow on his face." },
-    { id: "CAST-13", name: "Silicon Valley Tech #2 (Vitaly Cameo / TBD)", group: "Silicon Valley Tech", role: "Tech Syndicate Member / High-Stakes Bettor", contact: "[CASTING / VITALY CAMEO OPTION]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot of a Silicon Valley tech investor in a sleek dark sweater leaning against the wall of Buffalo Billiards, exchanging a covert look with his syndicate partner during a rigged pool shot." },
-    { id: "CAST-14", name: "Silicon Valley Tech #3", group: "Silicon Valley Tech", role: "Tech Syndicate Member / Algorithm Spotter", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a young Silicon Valley engineer watching a high-stakes pool game from the shadows, subtle smirk in three-quarter profile." },
+    { id: "CAST-12", name: "Andrei Tatarinov", group: "Silicon Valley Tech", role: "Silicon Valley Tech Lead (Day 1 Watches Pool & Agrees on Game at Lama Bar · Day 2 Back Room Match vs Don Bajema)", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up inside a pool hall back room: a Silicon Valley tech founder in a minimalist dark bomber jacket glances subtly at a concealed sensor interface tracking the pool table geometry, cool screen glow on his face." },
+    { id: "CAST-13", name: "Silicon Valley Tech #2 (Vitaly Cameo / TBD)", group: "Silicon Valley Tech", role: "Tech Syndicate Member (Day 1 Lama Bar Pool Table → Day 2 Back Room Match; Sound 2 covers if Vitaly acts)", contact: "[CASTING / VITALY CAMEO OPTION]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot of a Silicon Valley tech investor in a sleek dark sweater leaning against the wall of Buffalo Billiards, exchanging a covert look with his syndicate partner during a rigged pool shot." },
+    { id: "CAST-14", name: "Silicon Valley Tech #3 (Ilya / TBD)", group: "Silicon Valley Tech", role: "Tech Syndicate Member / 360° Camera & Algorithm Spotter", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a young Silicon Valley engineer watching a high-stakes pool game from the shadows, subtle smirk in three-quarter profile." },
     { id: "CAST-15", name: "Silicon Valley Tech #4", group: "Silicon Valley Tech", role: "Tech Syndicate Member / Autonomous Vehicle ('Hoe-Mobile') Link", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot inside a sleek autonomous vehicle parked outside a Berkeley bar at night, dashboard telemetry glowing against rain-streaked glass." },
 
-    // GROUP 5: WOMEN ACADEMICS — UC FEMALE SEXUALITY SEMINAR & CLIMAX RESCUE (7)
-    { id: "CAST-16", name: "Lydia Becker", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot inside an adjacent warm party room in Berkeley: an expressive woman academic from a university seminar speaks candidly over wine before crossing through the connecting door toward the bar commotion." },
-    { id: "CAST-17", name: "Antonia Kao", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up in three-quarter profile of a poised woman academic listening intently in a warm candlelit lounge as distant protest sirens bleed through the window." },
-    { id: "CAST-18", name: "Marianne Heath", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a fearless woman academic stepping through a connecting doorway between a party room and a dim pool hall as tension erupts downstairs." },
-    { id: "CAST-19", name: "Tiger Lily", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Kinetic handheld 35mm cinema-verite shot of a charismatic woman in an ensemble of seven women academics pushing open a heavy downstairs door to intervene in a basement confrontation, raw Direct Action energy." },
-    { id: "CAST-20", name: "Mira Larkin", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite portrait in three-quarter profile of a woman academic in a lively seminar after-party room, laughter shifting to sudden alertness as a door slams in the next room." },
-    { id: "CAST-21", name: "Lana Sherhbacova", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a striking woman academic exchanging an urgent look with her colleagues before moving together toward the basement stairs, Kodak Vision3 500T." },
-    { id: "CAST-22", name: "Cathy Lerza", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party → Downstairs Rescue)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 22 / OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a seasoned woman academic speaking with grounded authority as the seven women confront the men downstairs." },
+    // GROUP 5: WOMEN ACADEMICS — EMERGENCY RESPONSE & DAY 3 LAMA RESTAURANT (7)
+    { id: "CAST-16", name: "Lydia Becker", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Rushes to Wounded Man · Day 3 Lama Restaurant Table w/ 5 ICE Guards at Windows & Upstairs/Side-Room Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot inside Lama Restaurant at night: an expressive woman academic sits at a long table debating academic ideas and personal stories while five plainclothes ICE agents guard the street windows behind her." },
+    { id: "CAST-17", name: "Antonia Kao", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Emergency Response · Day 2 Basement/Upstairs Option · Day 3 Lama Restaurant & ICE Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up in three-quarter profile of a poised woman academic inside Lama Restaurant looking toward the guarded windows as an agent blocks the exit to their car." },
+    { id: "CAST-18", name: "Marianne Heath", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Recognizes Mickey Disend at Lama Bar · Day 3 Lama Restaurant w/ Possible Mickey Intrusion & ICE Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a perceptive woman academic recognizing an old acquaintance (Mickey) across the smoky bar at Lama Bar before joining the women's table inside Lama Restaurant." },
+    { id: "CAST-19", name: "Tiger Lily", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Wounded Response · Day 2/3 Women & ICE Confrontation in Upstairs Storeroom or Side Room)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Kinetic handheld 35mm cinema-verite shot of a charismatic woman in an ensemble of women academics climbing the narrow stairs to the upstairs storeroom of Lama Restaurant after hearing commotion above, raw Direct Action energy." },
+    { id: "CAST-20", name: "Mira Larkin", group: "Women Academics", role: "Women Academics Ensemble (UC Seminar Party & Lama Restaurant Table)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite portrait in three-quarter profile of a woman academic at the Lama Restaurant table shifting from academic theory to a deeply personal story as commotion echoes upstairs." },
+    { id: "CAST-21", name: "Lana Sherhbacova", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Emergency Response · Day 2/3 Lama Restaurant Table & Upstairs/Side-Room Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a striking woman academic exchanging an urgent look with her colleagues at the Lama Restaurant table before confronting the five ICE agents guarding the windows, Kodak Vision3 500T." },
+    { id: "CAST-22", name: "Cathy Lerza", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Wounded Response · Day 2/3 Women & ICE Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a seasoned woman academic speaking with grounded authority as the women confront the ICE operatives in the side room of Lama Restaurant." },
 
-    // GROUP 6: DOWNSTAIRS ICE / MAGA DETENTION UNIT (6 — Jeff Kao + Lance + Brandon + 3 Recruits)
-    { id: "CAST-23", name: "Jeff Kao", group: "Downstairs ICE Unit", role: "Lead of ICE / Downstairs Bad Guys Unit (+ Lending 3 Sennheiser Wireless Sets)", contact: "[REDACTED — ON FILE · CALL VERIFIED OCT 20]", d010Status: "MEASUREMENTS TO NANCY HAYES", flowPrompt: "Claustrophobic handheld 35mm cinema-verite low-angle medium close-up inside a dim basement room: the commanding lead of an off-duty tactical detention unit stands under a harsh overhead tungsten bulb, arms crossed in three-quarter profile as the upstairs door opens." },
-    { id: "CAST-24", name: "Lance (Walker)", group: "Downstairs ICE Unit", role: "Downstairs ICE / Operative #2", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Gritty handheld 35mm cinema-verite shot inside a basement room sheltered from the street protest: a tense operative in dark tactical street clothes blocks the stairwell exit in deep slate-teal shadow." },
-    { id: "CAST-25", name: "Brandon", group: "Downstairs ICE Unit", role: "Downstairs ICE / Operative #3", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot in a cramped downstairs storage room: an operative watches the door with coiled intensity as footsteps descend the stairs." },
-    { id: "CAST-26", name: "ICE Recruit #4 (Nancy Hayes Outreach)", group: "Downstairs ICE Unit", role: "Downstairs Unit / Sheltered Operative #4", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite shot of a bruised off-duty operative sitting on a crate in a dim basement room after retreating from the street protest outside." },
-    { id: "CAST-27", name: "ICE Recruit #5 (Nancy Hayes Outreach)", group: "Downstairs ICE Unit", role: "Downstairs Unit / Sheltered Operative #5", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite over-the-shoulder shot in a basement confrontation room as five men surround a betrayed anti-MAGA contractor on a red rug." },
+    // GROUP 6: ICE / DETENTION UNIT (6 — Jeff Kao + Lance + Brandon + 3 Recruits)
+    { id: "CAST-23", name: "Jeff Kao", group: "Downstairs ICE Unit", role: "Lead ('Maitre d'') of ICE Unit (+ Lending 3 Sennheiser Wireless Sets · Day 1 Corridor/Wounded Beat · Day 3 Guards Lama Restaurant Windows)", contact: "[REDACTED — ON FILE · CALL VERIFIED OCT 20]", d010Status: "MEASUREMENTS TO NANCY HAYES", flowPrompt: "Claustrophobic handheld 35mm cinema-verite low-angle medium close-up inside Lama Restaurant at night: the commanding lead of a plainclothes ICE unit stands guarding the front window, telling the women academics they cannot leave to their car because of the demonstration down the street." },
+    { id: "CAST-24", name: "Lance (Walker)", group: "Downstairs ICE Unit", role: "ICE Operative #2 (Day 2 Brick Basement / Day 3 Lama Restaurant Window Guard & Storeroom Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Gritty handheld 35mm cinema-verite shot inside Lama Restaurant at night: a tense operative in dark street clothes guards the window in deep slate-teal shadow." },
+    { id: "CAST-25", name: "Brandon (Brendan)", group: "Downstairs ICE Unit", role: "ICE Operative #3 OR Day 1 Background Pool Shooter at Lama Bar (Per Oct 23 Note)", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot at the back pool table of Lama Bar: a man shoots pool casually in the background while Silicon Valley tech men and pool players negotiate a high-stakes game nearby." },
+    { id: "CAST-26", name: "ICE Recruit #4 (Stephen / Nancy Hayes Outreach)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #4 (Day 3 — One of 5 ICE Guys Guarding Lama Restaurant Windows)", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite shot of an off-duty operative standing watch by the frosted window of Lama Restaurant at night." },
+    { id: "CAST-27", name: "ICE Recruit #5 (Michael / Retiring Cop Outreach)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #5 (Day 3 — One of 5 ICE Guys Guarding Lama Restaurant Windows & Upstairs Commotion)", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite over-the-shoulder shot in the upstairs storeroom of Lama Restaurant as the women burst in to stop the assault on Russ." },
     { id: "CAST-28", name: "Young Anti-MAGA / Dylan / Valery Slot", group: "Bar Core", role: "Young Anti-MAGA Catalyst / Dylan Slot (Discussed in Dinner 17:32 & Sept 19 Notes)", contact: "[OPEN CASTING VERIFICATION — ROB & ZHAN]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite tracking shot of a young anti-MAGA activist bursting through the front door of Lama Bar from a chaotic night street demonstration in Berkeley, catching their breath under neon light." }
   ],
 
   videoSuggestions: [
     {
       id: "SUG-01",
-      title: "Three Connected Universes — Door Transition Pre-Viz",
-      sourceRef: "Sept 19 Meeting §3 + Oct 20 Venue Plan",
-      geography: "Buffalo Billiards → Lama Bar → Rob's Downstairs Room",
+      title: "Day 2 Opening Shot — Empty Pool Hall Walk-Through to Lama Bar Door",
+      sourceRef: "Oct 23 Outline (Day 2 Beat 1) + Sept 19 Meeting §3",
+      geography: "Buffalo Billiards (Empty Hall at Night) → Door into Lama Bar",
       characters: ["Russ Murphy", "Zhan Petrov (Camera A)"],
-      purpose: "Pre-visualize how a continuous handheld camera movement makes three physically separate Berkeley locations feel like one contiguous architectural labyrinth.",
-      prompt: "Unbroken handheld 35mm cinema-verite tracking shot following a 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater over a striped shirt from a spacious green-felt pool hall (Buffalo Billiards) through a heavy wooden connecting door directly into a cozy neon-and-tungsten neighborhood bar (Lama Bar), seamlessly matching eyelines and warm Kodak Vision3 500T lighting."
+      purpose: "Opening shot of the film (Oct 23 OCT23A01): Russ enters the empty pool hall at night with nobody around and walks through an interior door that leads directly into Lama Bar, establishing the contiguous geography.",
+      prompt: "Unbroken handheld 35mm cinema-verite opening shot inside an empty pool hall at night (Buffalo Billiards): nobody is around as a 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater over a striped shirt walks past silent green-felt tables and opens a heavy interior door leading directly into the warm neon-and-tungsten glow of Lama Bar."
     },
     {
       id: "SUG-02",
-      title: "No Kings Protest Exterior Plate & Window Bleed",
-      sourceRef: "Sept 19 Meeting §2 & §9 + Workshop #1 (18:02)",
-      geography: "San Pablo Ave Exterior / Lama Bar Frosted Windows",
-      characters: ["Protest Crowd", "Russ Murphy", "Luis / Rosa"],
-      purpose: "Approved AI/VFX evaluation candidate: augment night street demonstration scale, megaphone strobes, and signage seen through Lama Bar door openings.",
-      prompt: "Candid handheld 35mm cinema-verite shot from inside a dark Berkeley bar looking toward the front door and frosted shopfront windows at night: silhouettes of a 'No Kings' street demonstration pass outside with hand-painted signs, flashing red-and-blue emergency reflections, and megaphone distortion as a patron slams and bolts the door."
+      title: "Day 2 Tripod Wide & Tight Window Plates — AI Crowd & ICE Fighting",
+      sourceRef: "Oct 23 Outline (Day 2 Beat 2) + Sept 19 §9",
+      geography: "Buffalo Billiards Dark Hall Looking Toward Street Windows",
+      characters: ["AI Protest Crowd", "ICE Operatives"],
+      purpose: "Locked-off tripod wide shot and tighter window shots in the darkened pool hall with AI crowd and ICE fighting in the background windows — used as editorial cutaways whenever noise is heard inside Lama Bar.",
+      prompt: "Locked-off 35mm tripod wide shot looking through a darkened pool hall at night toward a row of street-level windows: outside the glass, a chaotic night demonstration and ICE confrontation unfolds with flashing red-and-blue emergency strobes, silhouettes, and protest signs bleeding into the dark billiard room."
     },
     {
       id: "SUG-03",
+      title: "Day 1 Lama Bar — Russ's Manuscript Diatribe, Mickey's Buddhism & Don Joins",
+      sourceRef: "Oct 23 Outline (Day 1 Beat 1 — D012)",
+      geography: "Lama Bar Counter",
+      characters: ["Russ Murphy", "Ken Newman", "Mickey Disend", "Don Bajema", "Marianne Heath", "Bartender"],
+      purpose: "Core anti-MAGA point of view on Day 1: Russ delivers his 'save the house' program and anti-Trump diatribe using his unfinished book manuscript/notebook (D012); Ken nods in apparent agreement while doing magic; Mickey brings Buddhist views; ex-coach Don joins; Marianne recognizes Mickey.",
+      prompt: "Candid handheld 35mm cinema-verite ensemble shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater gestures over an unbound stack of book manuscript pages to the bartender while a bald magician in a buffalo plaid shirt performs coin sleight-of-hand, a philosophical Buddhist regular speaks calmly, and a fierce former football coach leans in. Warm Kodak Vision3 500T amber light."
+    },
+    {
+      id: "SUG-04",
+      title: "Day 1 Lama Corridor — Ken's Covert Nod with 1 ICE Agent",
+      sourceRef: "Oct 23 Outline (Day 1 Beat 3)",
+      geography: "Lama Bar Corridor (Toward Restroom / Open Back Area) → Basement Door",
+      characters: ["Ken Newman", "1 ICE Guy", "Russ Murphy"],
+      purpose: "Plant the betrayal mystery ('What was Ken doing with the ICE guy?'): Ken leaves the bar table, exchanges a quiet acknowledgment with 1 ICE guy in the Lama Corridor, then returns and leads Russ to the basement ('I got some guys who want you to talk to').",
+      prompt: "Suspenseful handheld 35mm cinema-verite medium shot in a narrow dimly lit bar corridor leading toward the back patio open to the night sky: a bald 60-year-old man with a salt-and-pepper goatee in a black-and-white buffalo plaid shirt pauses to exchange a quiet, knowing nod with a plainclothes ICE operative in shadow before returning to the bar."
+    },
+    {
+      id: "SUG-05",
+      title: "Day 1 Lama Bar — ICE Guy Brings Wounded Man & Women Rush to Help",
+      sourceRef: "Oct 23 Outline (Day 1 Beat 4)",
+      geography: "Lama Bar Main Floor",
+      characters: ["1 ICE Guy", "Wounded Character", "Women Academics", "Bar Men"],
+      purpose: "Show that the women are the ones who know how to deal with real emergencies while the men freeze up and do nothing.",
+      prompt: "Urgent handheld 35mm cinema-verite shot inside Lama Bar at night: an operative brings a bleeding wounded man through the bar doorway; while the men at the counter freeze in stunned hesitation, the women academics immediately rush forward with towels and water to tend his injuries under warm tungsten practicals."
+    },
+    {
+      id: "SUG-06",
+      title: "Day 2 Back Pool Room — Billy vs. Oscar Match & Look-Down Window Cutaways",
+      sourceRef: "Oct 23 Outline (Day 2 Beat 3 — Buffalo Billiards Back Room)",
+      geography: "Buffalo Billiards Smaller Back Pool Room (w/ TV Set & Rear Windows)",
+      characters: ["Billy Aguero", "Oscar Valdiviezo", "Don Bajema", "Silicon Valley Guys"],
+      purpose: "Shoot 360° around the professional table in the smaller back room against dark glass (with protest footage on the TV set), plus high-angle look-down cutaways through the rear windows onto the rioters/ICE/women in the lot below.",
+      prompt: "Handheld 35mm cinema-verite medium shot inside a mysterious, intimate back pool room with a single overhead table lamp and a wall TV showing protest news: two master pool players (Billy and Oscar) trade shots watched by Silicon Valley tech men and money man Don Bajema, framed against dark rear windows overlooking a street lot below."
+    },
+    {
+      id: "SUG-07",
+      title: "Day 3 Lama Restaurant — 5 ICE Guys Guarding Windows & Mickey Intrusion",
+      sourceRef: "Oct 23 Outline (Day 3 Beat 1 — Lama Restaurant)",
+      geography: "Lama Restaurant Main Dining Table & Street Windows",
+      characters: ["Lydia Becker", "Antonia Kao", "Lana Sherhbacova", "Marianne Heath", "Tiger Lily", "5 ICE Guys", "Mickey Disend"],
+      purpose: "The women exit noisy Lama Bar into Lama Restaurant to talk alone, shifting from academic ideas to personal stories while 5 ICE guys guard the windows ('There's a demonstration down the street, you can't leave'), plus a possible Mickey intrusion talking to Marianne.",
+      prompt: "Candid handheld 35mm cinema-verite ensemble shot inside Lama Restaurant at night: five women academics sit around a dining table moving from intellectual debate to intimate personal stories while five plainclothes ICE agents stand guarding the street windows in the background, blocking the exit to their car."
+    },
+    {
+      id: "SUG-08",
+      title: "Day 3 Upstairs Storeroom / Side Room — Women & ICE Climax Confrontation",
+      sourceRef: "Oct 23 Outline (Day 3 Beat 2 — Lama Restaurant Upstairs or Side Room)",
+      geography: "Lama Restaurant Upstairs Storeroom OR Shut-Door Side Room",
+      characters: ["Women Academics", "5 ICE Guys", "Russ Murphy"],
+      purpose: "Compare the two Day 3 confrontation staging options: climbing the stairs to the upstairs storeroom after hearing ICE beating Russ above, OR staging inside the windowless right-hand Lama side room with its shut-down door.",
+      prompt: "Dynamic handheld 35mm cinema-verite climax shot inside an upstairs restaurant storeroom under harsh tungsten light: five women academics burst through the doorway after hearing a commotion above, confronting five ICE operatives surrounding a bruised silver-haired contractor and stopping the assault through collective solidarity."
+    },
+    {
+      id: "SUG-09",
       title: "Ken Newman's French Drop Bar Seduction",
       sourceRef: "Workshop #1 Chapters 16–20 (36:05–42:19)",
       geography: "Lama Bar Counter",
@@ -548,16 +606,16 @@ window.PRECIPICE_HUB_DATA = {
       prompt: "Candid handheld 35mm cinema-verite two-shot at Lama Bar at night: a charismatic bald 60-year-old magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid flannel shirt performs the French Drop coin vanish for a 60-year-old contractor with swept-back silver-grey hair in a dark navy zip sweater. Warm amber practical bar light, background patrons finger-snapping and dancing in soft focus."
     },
     {
-      id: "SUG-04",
-      title: "The Betrayal — 'Come Downstairs'",
-      sourceRef: "Workshop #1 Chapter 16 (36:05) + Sept 19 §2",
-      geography: "Lama Bar Back Door → Downstairs Basement",
+      id: "SUG-10",
+      title: "The Betrayal — 'I Got Some Guys Who Want You to Talk To'",
+      sourceRef: "Workshop #1 Chapter 16 (36:05) + Oct 23 Outline (Day 1 Beat 3)",
+      geography: "Lama Bar Back Door → Basement",
       characters: ["Ken Newman", "Russ Murphy", "Jeff Kao"],
-      purpose: "Test the lighting and emotional turn as Russ follows Ken through the back door and realizes the men waiting downstairs have been hired to stop him.",
+      purpose: "Test the lighting and emotional turn as Russ follows Ken through the back door and realizes the men waiting in the basement have been hired to stop him.",
       prompt: "Suspenseful handheld 35mm cinema-verite tracking shot descending a narrow wooden staircase into a dim basement room with a red Persian rug: a bald man with a goatee in a buffalo plaid shirt holds the door open at the top while a silver-haired man in a dark navy zip sweater steps into the room and freezes in three-quarter profile as three men in the shadows stand up."
     },
     {
-      id: "SUG-05",
+      id: "SUG-11",
       title: "Thirty Seconds of Silence — Downstairs Interrogation",
       sourceRef: "Workshop #1 Chapters 8–11 (22:56–29:49)",
       geography: "Downstairs Basement / Rob's Room",
@@ -566,31 +624,224 @@ window.PRECIPICE_HUB_DATA = {
       prompt: "Sustained handheld 35mm cinema-verite two-shot inside a claustrophobic basement storage room: a 60-year-old man with swept-back silver-grey hair in a dark navy zip sweater and a bald 60-year-old man with a salt-and-pepper goatee in a buffalo plaid shirt hold thirty seconds of intense, unblinking silence under a single overhead tungsten bulb."
     },
     {
-      id: "SUG-06",
-      title: "Rigged High-Stakes 9-Ball Match & Don Bajema's Discovery",
-      sourceRef: "Sept 19 §5 + Oct 14 / Oct 20 Cast Intake",
-      geography: "Buffalo Billiards Regulation Table",
-      characters: ["Billy Aguero", "Don Bajema", "Oscar Valdiviezo", "Andrei Tatarinov"],
-      purpose: "Pre-visualize the physics of the pool game and the exact moment Money Man Don Bajema realizes the Silicon Valley crew is technologically manipulating the match.",
-      prompt: "Handheld 35mm cinema-verite medium shot beside a green-felt regulation table at Buffalo Billiards: two skilled pool players trade shots while an intense older money man in a dark coat notices a Silicon Valley tech operative tapping a hidden sensor device, his expression hardening into genuine fury under the pool table lamp."
-    },
-    {
-      id: "SUG-07",
-      title: "The Seven Women Academics — Seminar Party to Climax Rescue",
-      sourceRef: "Oct 14 Rob Nilsson Email + Sept 19 §2",
-      geography: "Adjacent Party Room → Downstairs Confrontation",
-      characters: ["Lydia Becker", "Antonia Kao", "Marianne Heath", "Tiger Lily", "Mira Larkin", "Lana Sherhbacova", "Cathy Lerza"],
-      purpose: "Pre-visualize the group dynamic of the 7 Women Academics transitioning from candid post-seminar intimacy to collective intervention downstairs.",
-      prompt: "Dynamic handheld 35mm cinema-verite ensemble shot: seven women academics of varied ages move together from a warm, candlelit lounge through a connecting door down into a harsh tungsten-lit basement room, interrupting an assault and surrounding the men with fearless solidarity."
-    },
-    {
-      id: "SUG-08",
-      title: "Self-Reflexive Direct Action Crew — Rob & Zhan in the Dance",
-      sourceRef: "PRECIPICE Dossier + Sept 19 §7 + Oct 20 Intake",
+      id: "SUG-12",
+      title: "Self-Reflexive Direct Action Crew — 2–3 Set Cameras + Handheld Dance",
+      sourceRef: "Oct 23 Meeting (D012) + PRECIPICE Dossier + Sept 19 §7",
       geography: "Across All Three Connected Spaces",
       characters: ["Rob Nilsson", "Zhan Petrov", "Vitaly Ponomarev"],
-      purpose: "Visualize the signature self-reflexive crew presence where camera and sound move like partners in a living dance without breaking emotional immersion.",
-      prompt: "Candid 35mm cinema-verite mirror reflection shot inside a dim Berkeley bar: an 80-year-old director in a cap and black-rimmed glasses and a young cinematographer with wavy brown hair operating a handheld rig move fluidly alongside two improvising actors, Kodak Vision3 500T grain."
+      purpose: "Visualize the signature self-reflexive crew presence where Rob & Zhan's handheld iPhones work alongside 2–3 re-angled set cameras guarded by PAs.",
+      prompt: "Candid 35mm cinema-verite mirror reflection shot inside a dim Berkeley bar: an 80-year-old director in a cap and black-rimmed glasses and a young cinematographer with wavy brown hair operating a handheld rig move fluidly alongside two improvising actors while a compact tripod camera captures a cross-angle, Kodak Vision3 500T grain."
     }
-  ]
+  ],
+
+  shootingScheduleMindMap: {
+    updated: "2026-10-23",
+    sourceId: "OCT23A01",
+    sourceTitle: "Rob Nilsson Written 3-Day Outline & Oct 23 Production Meeting (Fifth St 13)",
+    rhythm: [
+      { id: "day1", step: "NIGHT 1 · SHOOT", title: "Day 1: Lama Bar", sub: "Universe 2 · 5 Beats · Free", kind: "shoot" },
+      { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
+      { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard", kind: "shoot" },
+      { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
+      { id: "day3", step: "NIGHT 3 · SHOOT", title: "Day 3: Lama Restaurant", sub: "Universe 3 · Women & 5 ICE · Free", kind: "shoot" }
+    ],
+    nodes: {
+      hub: {
+        id: "hub",
+        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01)",
+        title: "PRECIPICE — 3-Night Consolidated Schedule & 3-Universe Mind Map",
+        venue: "Lama Bar ↔ Buffalo Billiards (or Mallard Club) ↔ Lama Restaurant",
+        drefs: ["D001", "D011", "D012"],
+        summary: "Consolidates principal photography into 3 distinct night shoots connected by doors and stairs into one contiguous cinematic labyrinth, with mandatory rest days between midnight calls to protect senior cast and crew.",
+        craftServices: "Hidden out of 360° camera sightlines at all 3 venues",
+        cameraPlan: "2× handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs"
+      },
+      day1: {
+        id: "day1",
+        badge: "DAY 1 · SCENE 1 · UNIVERSE 2",
+        title: "Day 1 — Lama Bar (Free Venue · 5 Core Beats)",
+        venue: "Lama Bar (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
+        cast: "Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley Guys, Pool Players (+ optional Brendan), 1 ICE Guy, Wounded Character, Women Academics",
+        drefs: ["D001", "D011", "D012"],
+        summary: "Establishes the anti-MAGA point of view at the bar counter, clears the back pool players upstairs, plants Ken's covert corridor meeting with 1 ICE agent, and contrasts the women's immediate emergency response to a wounded man against the men freezing up.",
+        craftServices: "Outside in the back (completely clear of 360° bar interior)",
+        cameraPlan: "360° bar coverage + 2–3 set cameras + handheld iPhones; TV sets show street demonstration",
+        beats: [
+          {
+            num: "1.1",
+            title: "Russ's 'Save the House' Program & Anti-Trump Manuscript Diatribe",
+            detail: "Russ delivers his 'save the house' program to the bartender and launches into his anti-Trump diatribe using an unbound book manuscript/notebook (D012 — organic prop and in-scene cheat-sheet). Ken listens apparently in agreement and performs close-up magic tricks. Mickey (Disend) brings in his Buddhist views. Don (Bajema, ex-running and football coach who may know Russ) joins the fray. Marianne (Heath) recognizes Mickey.",
+            prompt: "Candid handheld 35mm cinema-verite medium shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater flips through an unfinished book manuscript notebook while delivering an anti-Trump monologue to the bartender as a bald magician performs a coin trick, a Buddhist bar regular listens calmly, and an ex-football coach joins in."
+          },
+          {
+            num: "1.2",
+            title: "Silicon Valley & Pool Players Agree on a Game — Exit Upstairs",
+            detail: "In the back of Lama Bar, the Silicon Valley guys and Pool players (plus optional Brendan shooting pool if not playing ICE) watch a casual game, agree on a high-stakes match, and exit toward the upstairs pool room — establishing the whole room and freeing the bar from shooting restrictions.",
+            prompt: "Candid handheld 35mm cinema-verite wide-to-medium shot toward the back pool table of Lama Bar: Silicon Valley tech men and pool sharks agree on a high-stakes game and exit through the interior door toward the upstairs pool hall, warm tungsten and neon reflections."
+          },
+          {
+            num: "1.3",
+            title: "Ken Meets 1 ICE Guy in Lama Corridor → Russ & Ken Exit for Basement",
+            detail: "Ken leaves the table and slips into the Lama Corridor (toward the women's restroom or out back open to the sky) to exchange a brief acknowledgment with 1 ICE guy ('What was Ken doing with the ICE guy?'). Separate shot later: Ken tells Russ ('I got some guys who want you to talk to') and Russ & Ken exit for the Basement.",
+            prompt: "Suspenseful handheld 35mm cinema-verite shot in the narrow Lama Bar corridor leading toward the back patio: a bald 60-year-old magician with a goatee in a buffalo plaid shirt exchanges a covert nod with a plainclothes ICE agent in shadow before returning to lead a silver-haired contractor toward the basement door."
+          },
+          {
+            num: "1.4",
+            title: "ICE Guy Brings in Wounded Man — Women Rush to Help",
+            detail: "The ICE guy brings a wounded man into Lama Bar. All the Women rush to help him while the men stand around not knowing what to do — demonstrating that the women know how to deal with real emergencies.",
+            prompt: "Urgent handheld 35mm cinema-verite shot inside Lama Bar: an operative brings a wounded protestor through the doorway; the women academics immediately rush forward to tend his injuries while the men at the bar freeze in hesitation."
+          },
+          {
+            num: "1.5",
+            title: "*Possible ICE / Women Encounter in Attic of Lama Restaurant",
+            detail: "Flagged in Rob Nilsson's Oct 23 written outline as an optional vertical staging space to inspect during the Lama walk-through.",
+            prompt: "Claustrophobic handheld 35mm cinema-verite shot in a low-ceilinged wooden attic storeroom above a restaurant at night: women academics confront plainclothes operatives under a bare tungsten bulb."
+          }
+        ]
+      },
+      day2a: {
+        id: "day2a",
+        badge: "OPTIONAL DAY 2 (OPTION A) · UNIVERSE 1",
+        title: "Day 2 (Option A) — Buffalo Billiards, Petaluma (12:00 AM Midnight Call · Free)",
+        venue: "Buffalo Billiards (Main Empty Hall, Smaller Back Pool Room w/ TV & Rear Windows, Brick Basement Storage)",
+        cast: "Russ, Billy Aguero, Oscar Valdiviezo, Don Bajema, Silicon Valley Guys (Vitaly, Andrei, Ilya, etc.), All Women, All ICE Guys",
+        drefs: ["D001", "D011", "D012"],
+        summary: "Confirmed free ($0) starting at 12:00 AM midnight. Captures the opening shot of the film, tripod window plates for AI protest/ICE cutaways, the Billy vs. Oscar match in the smaller back room (solving 360° window continuity while enabling look-down crowd cutaways), and the brick basement storage.",
+        craftServices: "Owner's Office (completely out of 360° pool hall & back room sightlines)",
+        cameraPlan: "Tripod wide/tight window plates + 360° handheld & set cameras in smaller back pool room (check overhead table light vs ugly general light)",
+        beats: [
+          {
+            num: "2A.1",
+            title: "Opening Shot of the Film — Russ Walks Through Empty Pool Hall into Lama Bar Door",
+            detail: "Russ enters the empty pool hall at night with nobody around and walks into an interior door that leads directly into Lama Bar — establishing how the spaces connect.",
+            prompt: "Unbroken handheld 35mm cinema-verite opening shot inside an empty pool hall at midnight: nobody is around as a 60-year-old silver-haired contractor in a dark navy zip sweater walks past darkened green-felt tables and opens a heavy door leading directly into Lama Bar."
+          },
+          {
+            num: "2A.2",
+            title: "Tripod Wide & Tight Window Shots — AI Crowd & ICE Fighting Cutaways",
+            detail: "Locked-off tripod wide shot and tighter window shots looking through the dark empty hall with AI demonstration crowd and ICE fighting in the background windows — cut to whenever noise is heard at Lama Bar.",
+            prompt: "Locked-off 35mm tripod wide shot looking through a dark empty billiard hall toward street windows at night: flashing red-and-blue strobes and silhouettes of protestors and ICE agents clashing outside bleed through the glass."
+          },
+          {
+            num: "2A.3",
+            title: "Billy vs. Oscar Match (SV vs. Don Bajema) in Smaller Back Pool Room + Look-Down Windows",
+            detail: "Shooting in the main empty hall creates a 360° window continuity problem. Moving to the smaller back room gives a pro table, a TV set (showing the protest, matching Lama Bar TVs), and rear windows looking down onto a lot below — allowing high-angle look-down cutaways of rioters/ICE/women below while keeping 360° table angles against dark glass.",
+            prompt: "Handheld 35mm cinema-verite medium shot inside the intimate back pool room of Buffalo Billiards: Billy Aguero and Oscar Valdiviezo play high-stakes 9-ball watched by Don Bajema and Silicon Valley tech men under a table lamp, with a wall TV showing protest footage and dark rear windows overlooking a street lot below."
+          },
+          {
+            num: "2A.4",
+            title: "Women & ICE in Brick Basement Storage Underneath",
+            detail: "Brick basement storage room underneath Buffalo Billiards available for the underground Women & ICE confrontation.",
+            prompt: "Claustrophobic handheld 35mm cinema-verite shot inside a raw brick basement storage room beneath a pool hall: women academics confront off-duty ICE operatives under low tungsten work lights."
+          }
+        ]
+      },
+      day2b: {
+        id: "day2b",
+        badge: "OPTIONAL DAY 2 (OPTION B) · UNIVERSE 1",
+        title: "Day 2 (Option B) — Mallard Club (Albany) or Tap Haus (Petaluma)",
+        venue: "Mallard Club 2nd-Floor Pool Room & Discrete Upstairs Rooms (or Tap Haus)",
+        cast: "Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily (+ Pool & ICE Units)",
+        drefs: ["D011", "D012"],
+        summary: "Closer East Bay alternative to Buffalo Billiards: 2nd-floor pool room allows looking down from upstairs windows onto the crowd below, plus discrete upstairs rooms for the Women/ICE confrontation. Trade-off: 2 PM–2 AM hours, paid fee, and unresponsive management.",
+        craftServices: "Staged in adjacent non-shooting room out of 360° sightlines",
+        cameraPlan: "High-angle 2nd-floor window look-down plate + discrete upstairs room coverage",
+        beats: [
+          {
+            num: "2B.1",
+            title: "2nd-Floor Window Look-Down Crowd Plate & Pool Room Match",
+            detail: "Establish the protest crowd by looking down from the second-floor pool room windows while shooting the pool match upstairs without needing the bar downstairs.",
+            prompt: "High-angle handheld 35mm cinema-verite shot looking down from a second-floor pool room window at night onto a street demonstration below, then panning back to a green-felt pool table inside."
+          },
+          {
+            num: "2B.2",
+            title: "Women / ICE Confrontation in Discrete Upstairs Pool Room",
+            detail: "Stage the Women Academics (Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily) and ICE confrontation inside one of the discrete upstairs rooms.",
+            prompt: "Handheld 35mm cinema-verite shot inside a discrete second-floor room: six women academics confront plainclothes ICE agents in tense close-quarters improvisation."
+          }
+        ]
+      },
+      day3: {
+        id: "day3",
+        badge: "DAY 3 · UNIVERSE 3 · LAMA RESTAURANT",
+        title: "Day 3 — Women Academics at Lama Restaurant (Free Venue · 2 Core Beats)",
+        venue: "Lama Restaurant (Main Dining Room Table, Guarded Street Windows, Side Room w/ Shut Door, Upstairs Storeroom)",
+        cast: "Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy, Mira), 5 ICE Guys, Possible Mickey Intrusion, Russ",
+        drefs: ["D001", "D011", "D012"],
+        summary: "The women exit noisy Lama Bar through the door and enter Lama Restaurant (via front door or back restroom door) to talk alone. 5 ICE guys guard the windows and trap them inside while their conversation shifts from academic ideas to personal stories, culminating in the upstairs storeroom or side-room confrontation.",
+        craftServices: "Low inside the Kitchen OR inside the Right-Hand Side Room (if confrontation is shot upstairs)",
+        cameraPlan: "2–3 set cameras (re-angled) + handheld iPhones guarded by PAs; zero window restrictions if using the shut-door side room",
+        beats: [
+          {
+            num: "3.1",
+            title: "Table Scene w/ 5 ICE Guys Guarding Windows: Academic Ideas → Personal Stories (+ Mickey Intrusion)",
+            detail: "Sitting at a table in the main dining room with 5 ICE guys guarding the windows (when the women try to go to their car, ICE blocks them: 'There's a demonstration down the street, you can't leave'). Conversation evolves from academic ideas to personal stories, with a possible Mickey Disend intrusion talking to Marianne.",
+            prompt: "Candid handheld 35mm cinema-verite ensemble shot inside Lama Restaurant at night: women academics sit around a dining table sharing academic ideas and personal stories while five plainclothes ICE agents stand guarding the street windows behind them, blocking the exit."
+          },
+          {
+            num: "3.2",
+            title: "Women / ICE Confrontation: Upstairs Storeroom vs. Lama Side Room",
+            detail: "Two staging options inside Lama Restaurant: (A) Upstairs Storeroom — the women hear commotion upstairs (ICE beating the shit out of Russ) and climb the stairs to intervene; OR (B) Lama Side Room (right as you enter) — has a shut-down door with zero exterior window continuity restrictions.",
+            prompt: "Dynamic handheld 35mm cinema-verite climax shot: women academics climb narrow stairs into an upstairs restaurant storeroom after hearing an assault above, surrounding five ICE operatives to rescue a bruised silver-haired contractor."
+          }
+        ]
+      },
+      rules: {
+        id: "rules",
+        badge: "STAGING & CAMERA RULES · D011 & D012",
+        title: "360° Camera Access, 2–3 Set Cameras & Senior Cast Rest Rhythm",
+        venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard Club, Lama Restaurant)",
+        drefs: ["D001", "D010", "D011", "D012"],
+        summary: "Operational rules agreed by Rob Nilsson & Zhan Petrov on Oct 23 (OCT23A01) to protect senior cast/crew across midnight shoots and ensure fast multi-angle editorial cutting without cluttering 360° frames.",
+        craftServices: "Lama Bar: Outside in Back · Buffalo Billiards: Owner's Office · Lama Restaurant: Kitchen Low or Right-Hand Room",
+        cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras from being knocked over",
+        beats: [
+          {
+            num: "R.1",
+            title: "Staggered Night Schedule w/ Mandatory Rest Days (D011)",
+            detail: "Because Buffalo Billiards (12 AM midnight), Lama Bar, and Lama Restaurant are late-night shoots, never stack 3 consecutive all-nighters. Alternate Shoot Night 1 → Rest Day(s) → Shoot Night 2 → Rest Day(s) → Shoot Night 3 to protect Rob, Rusty, Ken, Mickey, and Nancy.",
+            prompt: "Candid handheld 35mm behind-the-scenes cinema-verite shot of an independent film crew and senior actors reviewing a three-night shooting schedule board under warm tungsten light in a Berkeley bar."
+          },
+          {
+            num: "R.2",
+            title: "2–3 Set Cameras + Handheld & PA Tripod Guards (D012)",
+            detail: "Deploy 2–3 set cameras (periodically re-angled) alongside Rob and Zhan's handheld iPhones so editorial can cut rapidly between angles instead of relying on slow panning masters. PAs stand guard near set cameras so actors don't knock them over.",
+            prompt: "Candid handheld 35mm behind-the-scenes shot inside Lama Restaurant at night: two production assistants guard compact tripod-mounted cinema cameras at the corners of the room while two handheld operators move fluidly around the table."
+          }
+        ]
+      }
+    },
+    verbatimOutline: `PRECIPICE
+SCENE 1- CHARACTERS: Russ, Ken, Bartender, Mickey, Don, Marianne
+
+DAY 1- LOCATION LAMA BAR
+CHARACTERS: Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley guys, 1 ICE guy, wounded character, Women
+
+1. Russ delivers his save the house program to the bartender and begins his Diatribe against Trump. Maybe writing a book about it [carries an unfinished manuscript/notebook as a prop & organic cheat-sheet]. Ken listens and responds apparently in agreement. Mickey brings in his more Buddhist views. Ken does magic tricks. Maybe Don [ex-running & football coach] comes over to join the fray. Marianne recognizes Mickey.
+2. Silicon Valley and Pool players agree on a game- Exit [to upstairs pool room; optional Brendan shooting pool in background]
+3. Ken leaves and talks to ICE guy in Lama Corridor and returns- Russ and Ken Exit for Basement
+4. Ice Guy brings in wounded- women come in to him [showing the women know how to deal with emergencies while the men do nothing]
+5. *POSSIBLE ICE/WOMEN ENCOUNTER IN ATTIC OF LAMA RESTAURANT
+
+OPTIONAL- DAY 2- LOCATION- BUFFALO BILLIARDS- [12:00 AM Midnight Call · Free]
+CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya, etc.), all women, all ICE guys
+
+1. Russ enters empty pool hall night- nobody around- walks into a door* This leads to the Lama Bar [Opening Shot of the Film]
+2. WS for use in empty hall with AI crowd and ICE fighting in the background [tripod wide & tighter window shots for Lama Bar noise cutaways]
+3. Match between Billy/Oscar takes place either in the empty hall or in the smaller pool room with Silicon Valley guys vs. Bajema [smaller back room has TV set + rear windows looking down onto lot below for crowd cutaways]
+4. Women and ICE in their basement [brick basement storage underneath]
+
+OR
+
+OPTIONAL: DO DAY TWO IN MALLARD CLUB/TAP HAUS
+Characters: Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily
+1. Shot women/ICE confrontation either in the side / discrete upstairs pool room + 2nd-floor look-down window onto crowd
+
+DAY 3- WOMEN ACADEMICS- LAMA RESTAURANT [Free Venue]
+Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys
+
+1. They sit at a table with ICE GUYS guarding the windows. All academic ideas and now personal stories. Possible Mickey intrusion.
+2. WOMEN/ICE confrontation in either Lama side room [shut-down door, no window restrictions] or upstairs storeroom [women hear ICE beating Russ upstairs and climb the stairs].`
+  }
 };
+

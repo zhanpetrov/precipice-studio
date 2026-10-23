@@ -18,6 +18,7 @@
   const ACTORS = DATA.tier1Actors;
   const CAST = DATA.tier2CastRoster;
   const SUGGESTIONS = DATA.videoSuggestions;
+  const MINDMAP = DATA.shootingScheduleMindMap;
   const BRIDGE_BASE = "http://127.0.0.1:8788";
   const STORE_KEY = "precipice-studio-choices";
 
@@ -33,6 +34,7 @@
   let chapIdx = 0;
   let choices = loadChoices();
   let lastPayload = null;
+  let activeMmKey = "ALL";
   const openMore = { ideas: true, files: false };
 
   function fmt(sec) {
@@ -68,7 +70,7 @@
 
   // ---------- Views: each menu item shows its own sections ----------
   const VIEW_OF_HASH = { "": "workshop", top: "workshop", workshop: "workshop", "every-moment": "workshop",
-    actors: "actors", suggestions: "video", cast: "cast", how: "how" };
+    story: "story", actors: "actors", suggestions: "video", cast: "cast", how: "how" };
 
   function showView(view, scrollTarget) {
     document.querySelectorAll("[data-view]").forEach((sec) => { sec.hidden = sec.dataset.view !== view; });
@@ -400,6 +402,229 @@
     `;
   }
 
+  // ---------- Story & 3 Universes: Interactive Shooting Schedule Mind Map ----------
+  function renderMindMapInspectorHtml(key) {
+    if (!MINDMAP || !MINDMAP.nodes) return "";
+    const nodeKey = key === "ALL" || !MINDMAP.nodes[key] ? "hub" : key;
+    const n = MINDMAP.nodes[nodeKey];
+    const drefHtml = (n.drefs || []).map((id) => dref(id)).join(" ");
+    return `
+      <div class="st-mm-inspector-top">
+        <div>
+          <span class="st-mm-day-kicker">${esc(n.badge)}</span>
+          <h3>${esc(n.title)}</h3>
+        </div>
+        <div>${drefHtml}</div>
+      </div>
+      <p>${esc(n.summary)}</p>
+      <div class="st-mm-meta-row">
+        <span class="st-mm-meta-chip">Venue: ${esc(n.venue)}</span>
+        <span class="st-mm-meta-chip">360° Craft Services: ${esc(n.craftServices)}</span>
+        <span class="st-mm-meta-chip">Cameras: ${esc(n.cameraPlan)}</span>
+      </div>
+    `;
+  }
+
+  function renderStoryMindMap() {
+    const root = $("story-mindmap-root");
+    if (!root || !MINDMAP) return;
+
+    const filterDefs = [
+      { key: "ALL", label: "All 3 Universes & Days" },
+      { key: "day1", label: "Day 1 · Lama Bar" },
+      { key: "day2a", label: "Day 2A · Buffalo Billiards" },
+      { key: "day2b", label: "Day 2B · Mallard / Tap Haus" },
+      { key: "day3", label: "Day 3 · Lama Restaurant" },
+      { key: "rules", label: "360° & Set Camera Rules" }
+    ];
+
+    const dayOrder = ["day1", "day2a", "day2b", "day3", "rules"];
+    const dayCardsHtml = dayOrder.map((k) => {
+      const node = MINDMAP.nodes[k];
+      if (!node) return "";
+      const drefsHtml = (node.drefs || []).map((id) => dref(id)).join(" ");
+      const beatsHtml = (node.beats || []).map((b) => `
+        <div class="st-mm-beat">
+          <div class="st-mm-beat-top">
+            <span class="st-mm-beat-title"><span class="st-mm-beat-num">Beat ${esc(b.num)}</span>${esc(b.title)}</span>
+            <button type="button" class="pill-btn" data-generate-mm-beat="${esc(b.num)}" data-title="${esc(node.badge)} · Beat ${esc(b.num)} ${esc(b.title)}" data-prompt="${esc(b.prompt)}" style="padding:5px 12px;font-size:12px;">
+              <svg viewBox="0 0 24 24" style="width:13px;height:13px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Start to Generate
+            </button>
+          </div>
+          <p class="st-mm-beat-desc">${esc(b.detail)}</p>
+        </div>
+      `).join("");
+
+      return `
+        <article class="st-mm-day-card" data-st-mm-card="${esc(k)}" ${ k === "rules" ? 'style="grid-column: 1 / -1;"' : "" }>
+          <div class="st-mm-day-head">
+            <div>
+              <div class="st-mm-day-kicker">${esc(node.badge)}</div>
+              <h3 class="st-mm-day-title">${esc(node.title)}</h3>
+            </div>
+            <div>${drefsHtml}</div>
+          </div>
+          <div class="st-mm-meta-row">
+            <span class="st-mm-meta-chip">Venue: ${esc(node.venue)}</span>
+            <span class="st-mm-meta-chip">360° Craft Services: ${esc(node.craftServices)}</span>
+            <span class="st-mm-meta-chip">Camera Plan: ${esc(node.cameraPlan)}</span>
+          </div>
+          ${beatsHtml}
+        </article>
+      `;
+    }).join("");
+
+    root.innerHTML = `
+      <div class="st-mm-shell">
+        <div class="st-mm-toolbar">
+          <div class="st-mm-pills">
+            ${filterDefs.map((f) => `
+              <button type="button" class="st-mm-pill ${f.key === activeMmKey ? "on" : ""}" data-st-mm-filter="${esc(f.key)}">${esc(f.label)}</button>
+            `).join("")}
+          </div>
+          <div style="font:600 11.5px/1.4 var(--mono);color:var(--text-2);">Source: ${esc(MINDMAP.sourceId)} · Updated ${esc(MINDMAP.updated)}</div>
+        </div>
+
+        <div class="st-mm-rhythm">
+          ${(MINDMAP.rhythm || []).map((r, idx) => `
+            <button type="button" class="st-mm-step ${r.kind === "rest" ? "rest" : ""} ${idx === 0 ? "on" : ""}" data-st-mm-rhythm="${esc(r.id)}">
+              <div class="st-mm-step-kicker">${esc(r.step)}</div>
+              <div class="st-mm-step-title">${esc(r.title)}</div>
+              <div class="st-mm-step-sub">${esc(r.sub)}</div>
+            </button>
+          `).join("")}
+        </div>
+
+        <div class="st-mm-canvas-wrap">
+          <svg class="st-mm-svg" viewBox="0 0 1060 440" role="img" aria-label="Interactive Mind Map of the PRECIPICE 3-Day Shooting Schedule and 3 Connected Universes">
+            <defs>
+              <linearGradient id="st-hub-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0071e3" stop-opacity="0.16" />
+                <stop offset="100%" stop-color="#30b0c7" stop-opacity="0.16" />
+              </linearGradient>
+              <marker id="st-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 9 5 L 0 9 z" fill="#0071e3" />
+              </marker>
+            </defs>
+
+            <!-- Connectors -->
+            <path d="M 380 205 C 310 205, 310 95, 250 95" fill="none" stroke="#ff9500" stroke-width="2.2" />
+            <path d="M 380 230 C 310 230, 310 315, 250 315" fill="none" stroke="#5856d6" stroke-width="2" stroke-dasharray="5 4" />
+            <path d="M 530 165 L 530 100" fill="none" stroke="#0071e3" stroke-width="2.4" />
+            <path d="M 680 215 C 745 215, 745 145, 810 145" fill="none" stroke="#34c759" stroke-width="2.4" />
+            <path d="M 530 255 L 530 330" fill="none" stroke="#30b0c7" stroke-width="2.2" />
+            <path d="M 250 68 C 350 22, 410 22, 405 48" fill="none" stroke="#0071e3" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#st-arrow)" />
+            <text x="325" y="26" text-anchor="middle" font-size="10" font-weight="600" fill="#0071e3">Door Walk-Through (Opening Shot)</text>
+            <path d="M 655 58 C 735 58, 765 95, 810 115" fill="none" stroke="#34c759" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#st-arrow)" />
+            <text x="748" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#34c759">Women Exit Door → Restaurant</text>
+
+            <!-- Center Hub -->
+            <g class="st-node on" data-st-mm-node="hub">
+              <rect x="380" y="165" width="300" height="90" rx="18" fill="url(#st-hub-grad)" stroke="#0071e3" stroke-width="2.4" />
+              <text x="530" y="191" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0071e3">PRECIPICE · OCT 23 MIND MAP (OCT23A01)</text>
+              <text x="530" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">3-Night Schedule &amp; 3 Universes</text>
+              <text x="530" y="233" text-anchor="middle" font-size="11" fill="#6e6e73">Shoot Night → Rest Day(s) → Shoot Night (D011)</text>
+              <text x="530" y="248" text-anchor="middle" font-size="10" fill="#6e6e73">2–3 Set Cameras + Handheld · 360° Clear (D012)</text>
+            </g>
+
+            <!-- Day 1: Lama Bar -->
+            <g class="st-node" data-st-mm-node="day1">
+              <rect x="375" y="12" width="310" height="88" rx="15" fill="rgba(0,113,227,0.08)" stroke="#0071e3" stroke-width="2" />
+              <text x="530" y="34" text-anchor="middle" font-size="10" font-weight="700" fill="#0071e3">DAY 1 · UNIVERSE 2 · LAMA BAR (FREE)</text>
+              <text x="530" y="53" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Scene 1: Bar Core, Corridor &amp; Wounded</text>
+              <text x="530" y="71" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Russ Manuscript + Mickey Buddhism + Don + Marianne</text>
+              <text x="530" y="87" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) SV/Pool Exit · 3) Ken/ICE Corridor · 4) Wounded + Women</text>
+            </g>
+
+            <!-- Day 2A: Buffalo Billiards -->
+            <g class="st-node" data-st-mm-node="day2a">
+              <rect x="14" y="42" width="236" height="108" rx="15" fill="rgba(255,149,0,0.08)" stroke="#ff9500" stroke-width="2" />
+              <text x="132" y="64" text-anchor="middle" font-size="10" font-weight="700" fill="#ff9500">DAY 2 (OPT A) · UNIVERSE 1</text>
+              <text x="132" y="83" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Buffalo Billiards (12 AM)</text>
+              <text x="132" y="101" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Opening Shot: Russ Empty Hall → Door</text>
+              <text x="132" y="117" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Tripod WS: AI Crowd &amp; ICE in Windows</text>
+              <text x="132" y="133" text-anchor="middle" font-size="10.5" fill="#6e6e73">3) Back Room Match + Look-Down · 4) Brick Bsmt</text>
+            </g>
+
+            <!-- Day 2B: Mallard Club / Tap Haus -->
+            <g class="st-node" data-st-mm-node="day2b">
+              <rect x="14" y="264" width="236" height="96" rx="15" fill="rgba(88,86,214,0.08)" stroke="#5856d6" stroke-width="1.8" stroke-dasharray="5 3" />
+              <text x="132" y="286" text-anchor="middle" font-size="10" font-weight="700" fill="#5856d6">DAY 2 (OPT B) · ALTERNATIVE</text>
+              <text x="132" y="305" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Mallard Club / Tap Haus</text>
+              <text x="132" y="323" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Closer 2nd-Floor Look-Down Window</text>
+              <text x="132" y="339" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Women/ICE in Discrete Upstairs Room</text>
+            </g>
+
+            <!-- Day 3: Lama Restaurant -->
+            <g class="st-node" data-st-mm-node="day3">
+              <rect x="810" y="88" width="236" height="114" rx="15" fill="rgba(52,199,89,0.08)" stroke="#34c759" stroke-width="2" />
+              <text x="928" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#34c759">DAY 3 · UNIVERSE 3 · FREE</text>
+              <text x="928" y="129" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Lama Restaurant (Women)</text>
+              <text x="928" y="147" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) 5 ICE Guard Windows ("Can't Leave")</text>
+              <text x="928" y="163" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Academic Ideas → Personal (+ Mickey)</text>
+              <text x="928" y="179" text-anchor="middle" font-size="10.5" fill="#6e6e73">3) Confrontation: Upstairs vs Side Room</text>
+            </g>
+
+            <!-- Rules Node -->
+            <g class="st-node" data-st-mm-node="rules">
+              <rect x="330" y="330" width="400" height="94" rx="15" fill="rgba(48,176,199,0.08)" stroke="#30b0c7" stroke-width="2" />
+              <text x="530" y="352" text-anchor="middle" font-size="10" font-weight="700" fill="#30b0c7">360° STAGING, CRAFT SERVICES &amp; CAMERA RULES (D012)</text>
+              <text x="530" y="371" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Craft Services Out of Sightlines · 2–3 Set Cameras + PA Guards</text>
+              <text x="530" y="390" text-anchor="middle" font-size="10.5" fill="#6e6e73">Lama Bar: Outside Back · Buffalo Billiards: Owner's Office · Restaurant: Kitchen / Side Room</text>
+              <text x="530" y="407" text-anchor="middle" font-size="10.5" fill="#6e6e73">PAs Guard Set Cameras · TV Sets Show Protest at Lama Bar &amp; Buffalo Billiards</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="st-mm-inspector" id="st-mm-inspector">
+          ${renderMindMapInspectorHtml(activeMmKey)}
+        </div>
+      </div>
+
+      <div class="st-mm-days-grid" id="st-mm-days-grid">
+        ${dayCardsHtml}
+      </div>
+
+      <details class="ch" open>
+        <summary>
+          <span class="num">★</span>
+          <span>
+            <div class="ct">Verbatim Oct 23 Written 3-Day Shooting Schedule Outline (Rob Nilsson)</div>
+            <div class="cs">Source: OCT23A01 · Scene 1 / Day 1 Lama Bar, Optional Day 2 Buffalo Billiards or Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant</div>
+          </span>
+          <span class="count">Verbatim Note <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+        </summary>
+        <div style="padding:16px 18px;">
+          <div class="st-mm-outline-box">${esc(MINDMAP.verbatimOutline)}</div>
+        </div>
+      </details>
+    `;
+  }
+
+  function selectStudioMindMapKey(key) {
+    activeMmKey = key;
+    document.querySelectorAll("[data-st-mm-filter]").forEach((b) => {
+      b.classList.toggle("on", b.dataset.stMmFilter === key);
+    });
+    document.querySelectorAll(".st-mm-svg .st-node").forEach((n) => {
+      const nk = n.dataset.stMmNode;
+      n.classList.toggle("on", key === "ALL" ? nk === "hub" : nk === key);
+    });
+    const insp = $("st-mm-inspector");
+    if (insp) insp.innerHTML = renderMindMapInspectorHtml(key);
+    document.querySelectorAll("[data-st-mm-card]").forEach((c) => {
+      const ck = c.dataset.stMmCard;
+      if (key === "ALL" || key === "hub") {
+        c.hidden = false;
+        c.classList.remove("focus");
+      } else {
+        c.hidden = ck !== key;
+        c.classList.toggle("focus", ck === key);
+      }
+    });
+  }
+
   // ---------- Tier 1 AI Actors ----------
   function renderActors() {
     const stack = $("actors-stack");
@@ -548,7 +773,7 @@
             <span class="num">${gIdx + 1}</span>
             <span>
               <div class="ct">${esc(g)}</div>
-              <div class="cs">D010 Pre-Scene Protocol: 6-Angle Photos + 2-Minute Clean Voice Sample</div>
+              <div class="cs">D010 Pre-Scene Protocol: 6-Angle Photos + 2-Minute Clean Voice Sample · Updated Oct 23 (OCT23A01)</div>
             </span>
             <span class="count">${members.length} cast <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
           </summary>
@@ -613,6 +838,41 @@
 
   // ---------- Event Delegation ----------
   document.addEventListener("click", (e) => {
+    // Story & 3 Universes Mind Map filter pill
+    const mmFilterBtn = e.target.closest("[data-st-mm-filter]");
+    if (mmFilterBtn) {
+      selectStudioMindMapKey(mmFilterBtn.dataset.stMmFilter);
+      return;
+    }
+
+    // Story & 3 Universes SVG node click
+    const mmSvgNode = e.target.closest("[data-st-mm-node]");
+    if (mmSvgNode) {
+      const k = mmSvgNode.dataset.stMmNode;
+      selectStudioMindMapKey(k === "hub" ? "ALL" : k);
+      return;
+    }
+
+    // Story & 3 Universes rhythm step click
+    const mmRhythmBtn = e.target.closest("[data-st-mm-rhythm]");
+    if (mmRhythmBtn) {
+      document.querySelectorAll("[data-st-mm-rhythm]").forEach((s) => s.classList.toggle("on", s === mmRhythmBtn));
+      selectStudioMindMapKey(mmRhythmBtn.dataset.stMmRhythm);
+      return;
+    }
+
+    // Generate from a Mind Map beat button
+    const genMmBeatBtn = e.target.closest("[data-generate-mm-beat]");
+    if (genMmBeatBtn) {
+      triggerFlowGeneration({
+        id: `mm_beat_${genMmBeatBtn.dataset.generateMmBeat}_${Date.now()}`,
+        title: genMmBeatBtn.dataset.title,
+        prompt: genMmBeatBtn.dataset.prompt,
+        mode: "video",
+      });
+      return;
+    }
+
     // Cut switch between Workshop #1 and Dinner
     const vidBtn = e.target.closest("#video-switch [data-vid]");
     if (vidBtn) {
@@ -793,7 +1053,7 @@
   let scope = "all";
   let searchItems = [];
   let sel = 0;
-  const TRY_TERMS = ["Russ Murphy", "Ken Newman", "French Drop", "Downstairs", "Billy Aguero", "Don Bajema", "Women Academics", "Jeff Kao"];
+  const TRY_TERMS = ["Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman", "Mickey Disend", "Don Bajema", "360"];
 
   function openSearch(q) {
     sheet.hidden = false;
@@ -844,6 +1104,26 @@
     let html = "";
     if (!q) {
       html += `<div class="res-group">Try</div><div class="suggest">${TRY_TERMS.map((t) => `<button type="button" data-suggest="${esc(t)}">${esc(t)}</button>`).join("")}</div>`;
+    }
+
+    if (want("story") && MINDMAP && MINDMAP.nodes) {
+      const mmRows = [];
+      Object.values(MINDMAP.nodes).forEach((node) => {
+        (node.beats || []).forEach((b) => {
+          if (match(`${node.badge} ${node.title} ${node.venue} ${b.num} ${b.title} ${b.detail}`)) {
+            mmRows.push({ nodeId: node.id, nodeBadge: node.badge, b });
+          }
+        });
+      });
+      if (mmRows.length) {
+        html += `<div class="res-group">Story &amp; 3 Universes · Shooting Schedule Mind Map</div>`;
+        mmRows.forEach(({ nodeId, nodeBadge, b }) => {
+          html += `<button type="button" class="res noimg" data-res-idx="${searchItems.length}">
+            <span><div class="rt">Beat ${esc(b.num)} · ${esc(b.title)} (${esc(nodeBadge)})</div><div class="rs">${esc(b.detail)}</div></span>
+          </button>`;
+          searchItems.push({ type: "story", nodeId });
+        });
+      }
     }
 
     if (want("actors")) {
@@ -926,7 +1206,10 @@
     const item = searchItems[Number(resBtn.dataset.resIdx)];
     closeSearch();
     if (!item) return;
-    if (item.type === "moment") {
+    if (item.type === "story") {
+      goTo("story");
+      selectStudioMindMapKey(item.nodeId || "ALL");
+    } else if (item.type === "moment") {
       seekToChapter(item.vI, item.cI, true);
     } else if (item.type === "actor") {
       goTo(`actor-card-${item.id}`);
@@ -940,6 +1223,7 @@
   // ---------- Init ----------
   renderChaptersBar();
   setChapter(0);
+  renderStoryMindMap();
   renderActors();
   renderSuggestions();
   renderCastBible();

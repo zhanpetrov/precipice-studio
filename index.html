@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
   <title>Precipice · 220 Studio</title>
-  <link rel="stylesheet" href="styles/apple.css?v=1" />
+  <link rel="stylesheet" href="styles/apple.css?v=4" />
 </head>
 <body>
 
@@ -19,6 +19,7 @@
       </button>
       <nav class="bar-nav">
         <a class="bar-link on" href="#workshop" data-view-link="workshop">Workshop</a>
+        <a class="bar-link" href="#story" data-view-link="story">Story &amp; 3 Universes</a>
         <a class="bar-link" href="#actors" data-view-link="actors">AI Actors</a>
         <a class="bar-link" href="#cast" data-view-link="cast">Cast (28)</a>
         <a class="bar-link" href="#suggestions" data-view-link="video">AI Video</a>
@@ -33,7 +34,7 @@
       <p class="hero-kicker">Film Workspace · Direct Action &amp; AI Actor Studio</p>
       <h1>Precipice</h1>
       <p class="byline">A film by Rob Nilsson · Co-Produced &amp; Photographed by Zhan Petrov</p>
-      <p class="lede">One night in connected Berkeley bar and pool rooms during a No Kings protest — built from Acting Workshop #1 into a live AI Actor and scene generation workspace.</p>
+      <p class="lede">One night in connected Berkeley bar, pool hall, and restaurant spaces during a No Kings protest — built from Acting Workshop #1 and the Oct 23 3-Night Shooting Schedule into a live AI Actor and scene generation workspace.</p>
     </section>
 
     <!-- PLAYER -->
@@ -87,22 +88,32 @@
       <article class="shot-card" id="shot-card"></article>
     </section>
 
+    <!-- STORY & 3 UNIVERSES — INTERACTIVE SHOOTING SCHEDULE MIND MAP -->
+    <section class="monitor-section" data-view="story" id="story" aria-label="Story &amp; 3 Universes — Shooting Schedule Mind Map">
+      <div class="section-head">
+        <p class="eyebrow">Oct 23 Intake (OCT23A01) · <span data-dref="D011">D011</span> &amp; <span data-dref="D012">D012</span></p>
+        <h2>Story &amp; 3 Universes · Shooting Schedule Mind Map</h2>
+        <p>Interactive 3-Night Consolidated Shooting Schedule &amp; 3-Universe architectural mind map (Day 1 Lama Bar, Optional Day 2 Buffalo Billiards vs. Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant). Click any node in the mind map to inspect beats or generate pre-viz scenes in Google Flow.</p>
+      </div>
+      <div id="story-mindmap-root"></div>
+    </section>
+
     <!-- AI ACTORS -->
     <section class="monitor-section" data-view="actors" id="actors" aria-label="AI Actors">
       <div class="section-head">
-        <p class="eyebrow">Tier 1 · Built from Acting Workshop #1 &amp; Dinner Masters</p>
+        <p class="eyebrow">Tier 1 · Built from Acting Workshop #1, Dinner Masters &amp; Oct 23 Scene Breakdown</p>
         <h2>AI Actors</h2>
-        <p>Full character profiles, multi-angle 1080p stills, 4-angle turnaround sheets, clean voice stems (D010), and 1-click Google Flow generation.</p>
+        <p>Full character profiles, multi-angle 1080p stills, 4-angle turnaround sheets, clean voice stems (<span data-dref="D010">D010</span>), Oct 23 scene presets (<span data-dref="D012">D012</span>), and 1-click Google Flow generation.</p>
       </div>
       <div class="actors-stack" id="actors-stack"></div>
     </section>
 
-    <!--AI VIDEO SUGGESTIONS -->
+    <!-- AI VIDEO SUGGESTIONS -->
     <section class="list-section" data-view="video" id="suggestions" aria-label="AI Video Generation Suggestions">
       <div class="section-head">
-        <p class="eyebrow">Google Flow Veo 3.1 Pre-Visualization</p>
-        <h2>Suggested AI Video Generations</h2>
-        <p>Eight production-ready scene recipes derived from Workshop #1 and the Three Connected Universes plan. Press Start to Generate on any scene.</p>
+        <p class="eyebrow">Google Flow Veo 3.1 Pre-Visualization · Updated Oct 23 (OCT23A01)</p>
+        <h2>Suggested AI Video Generations (12 Scenes)</h2>
+        <p>Twelve production-ready scene recipes derived from the Oct 23 3-Day Shooting Schedule Outline (Day 1 Lama Bar, Day 2 Buffalo Billiards/Mallard Club, Day 3 Lama Restaurant) and Workshop #1. Press Start to Generate on any scene.</p>
       </div>
       <div class="shot-list" id="suggestions-list"></div>
     </section>
@@ -110,9 +121,9 @@
     <!-- FULL 28-CAST CHARACTER BIBLE -->
     <section class="list-section" data-view="cast" id="cast" aria-label="Character Bible — All 28 Cast Members">
       <div class="section-head">
-        <p class="eyebrow">Tier 2 · Oct 14 &amp; Oct 20 Production Roster + D010 Intake Matrix</p>
+        <p class="eyebrow">Tier 2 · Oct 14, Oct 20 &amp; Oct 23 Production Roster + <span data-dref="D010">D010</span> Intake Matrix</p>
         <h2>Character Bible (28 Cast)</h2>
-        <p>Browse all 28 cast members across the 6 connected groups. Every profile includes a pre-configured Google Flow prompt and Start to Generate button.</p>
+        <p>Browse all 28 cast members across the 6 connected groups, updated with the Oct 23 scene breakdown (Russ's manuscript, Mickey's Buddhist views, Don's ex-coach backstory, Marianne recognizing Mickey, 5 ICE guys at Lama Restaurant windows). Every profile includes a pre-configured Google Flow prompt.</p>
       </div>
       <div class="shot-list" id="cast-list"></div>
     </section>
@@ -130,8 +141,8 @@
     <section class="how-section" data-view="how" id="how" aria-label="How it works">
       <div class="section-head">
         <p class="eyebrow">How 220 Studio works on Precipice</p>
-        <h2>Built around Direct Action &amp; AI Actors.</h2>
-        <p>220 Studio connects Rob Nilsson’s live <em>Direct Action</em> rehearsal workshops with Zhan Petrov’s camera, 9-channel wireless sound, and Google Flow AI Actor pipelines.</p>
+        <h2>Built around Direct Action, 3 Universes &amp; AI Actors.</h2>
+        <p>220 Studio connects Rob Nilsson’s live <em>Direct Action</em> rehearsal workshops and the Oct 23 3-Night Shooting Schedule with Zhan Petrov’s multi-camera setup, 9-channel wireless sound, and Google Flow AI Actor pipelines.</p>
       </div>
 
       <div class="how-grid">
@@ -139,26 +150,26 @@
           <h3>Available now</h3>
           <ul>
             <li><b>Watch</b> Acting Workshop #1 (50:54) and Dinner After the Workshop (33:08) by chapter and dramatic beat.</li>
-            <li><b>Inspect</b> 4 deep AI Actor profiles (Russ Murphy, Ken Newman, Rob Nilsson, Zhan Petrov) with 38 extracted 1080p stills, 4-angle sheets, and clean voice stems.</li>
-            <li><b>Press Start to Generate</b> on any actor, chapter, or cast card to inject the prompt into Google Flow in Chrome and start generation.</li>
-            <li><b>Track</b> the full 28-cast Character Bible and D010 pre-scene intake protocol (6-angle photos + 2-minute clean voice sample).</li>
+            <li><b>Explore Story &amp; 3 Universes</b> — an interactive Apple-designed Mind Map of the Oct 23 3-Night Shooting Schedule (Day 1 Lama Bar, Optional Day 2 Buffalo Billiards vs. Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant) with 1-click Google Flow scene generation on every beat.</li>
+            <li><b>Inspect</b> 4 deep AI Actor profiles (Russ Murphy, Ken Newman, Rob Nilsson, Zhan Petrov) with 38 extracted 1080p stills, 4-angle sheets, clean voice stems, and Oct 23 scene presets.</li>
+            <li><b>Track</b> the full 28-cast Character Bible and <span data-dref="D010">D010</span> pre-scene intake protocol (6-angle photos + 2-minute clean voice sample).</li>
           </ul>
-          <p class="how-foot">Rule <span data-dref="D001">D001</span>: Capture authentic vérité first; AI never alters Russ Murphy’s recognizable appearance.</p>
+          <p class="how-foot">Rules <span data-dref="D001">D001</span>, <span data-dref="D011">D011</span> &amp; <span data-dref="D012">D012</span>: Capture authentic vérité first; stagger rest days between midnight shoots; stage craft services out of 360° sightlines and guard the 2–3 set cameras.</p>
         </article>
         <article class="how-card">
           <h3>Production strategy &amp; next milestones</h3>
-          <p>From Workshop #1 discovery to the projected 5-day mid-November shoot ($51,500 expanded working plan):</p>
+          <p>From Workshop #1 discovery to the mid-November 3-Night Consolidated Schedule (<span data-dref="D011">D011</span>) &amp; 5-day working budget ($51,500):</p>
           <ul>
-            <li><b>Phase 1 (Done):</b> 1080p HLG→BT.709 master frame extraction, 4-angle turnaround sheets &amp; D010 voice stems.</li>
-            <li><b>Phase 2 (Done):</b> 2-Tier AI Actor &amp; 28-Cast Character Bible with live Google Flow Chrome automation bridge.</li>
-            <li><b>Phase 3 (Oct 26 &amp; Oct 28):</b> Women Academics Workshop intake + Wed Oct 28 11:00 AM 9-mic sound check with Vitaly Ponomarev &amp; Jeff Kao’s 3 Sennheisers.</li>
-            <li><b>Phase 4 (Mid-Nov 2026):</b> Staggered 5-day shoot across Buffalo Billiards, Lama Bar, and the Downstairs Room.</li>
+            <li><b>Phase 1 (Done):</b> 1080p HLG→BT.709 master frame extraction, 4-angle turnaround sheets &amp; <span data-dref="D010">D010</span> voice stems.</li>
+            <li><b>Phase 2 (Done):</b> 2-Tier AI Actor &amp; 28-Cast Character Bible + Interactive 3-Universe &amp; 3-Day Shooting Schedule Mind Map (`OCT23A01`).</li>
+            <li><b>Phase 3 (Oct 26 &amp; Oct 28):</b> Women Academics Workshop (Mon Oct 26, 2 PM) + Wed Oct 28 (11 AM–12 PM) 9-mic sound check with Vitaly Ponomarev &amp; Jeff Kao’s 3 Sennheisers.</li>
+            <li><b>Phase 4 (From Nov 16, 2026):</b> Staggered 3-night shoot (`Night 1 Lama Bar → Rest → Night 2 Pool Hall → Rest → Night 3 Lama Restaurant`) with 2–3 set cameras + handheld iPhones (<span data-dref="D012">D012</span>).</li>
           </ul>
         </article>
       </div>
 
       <ol class="how-flow" aria-label="The workflow">
-        <li>Workshop</li><li>Extract Stills &amp; Voice</li><li>Profile AI Actor</li><li>Start to Generate</li><li>Pre-Viz Scene</li><li>Shoot Vérité</li>
+        <li>Workshop</li><li>3-Universe Mind Map</li><li>Profile AI Actor</li><li>Start to Generate</li><li>Pre-Viz Scene</li><li>Shoot Vérité</li>
       </ol>
       <p class="how-close"><em>Precipice</em> joins <em>Search for Her</em> inside the 220 Studio filmmaking system.</p>
     </section>
@@ -182,11 +193,12 @@
     <div class="sheet" role="dialog" aria-modal="true" aria-label="Search Precipice">
       <div class="sheet-field">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input type="search" id="search-input" placeholder="Search actors, moments, cast, magic, pool or a timecode" autocomplete="off" />
+        <input type="search" id="search-input" placeholder="Search schedule, actors, moments, cast, manuscript, pool or a timecode" autocomplete="off" />
         <button type="button" class="sheet-close" id="close-search">Cancel</button>
       </div>
       <div class="scopes" id="scopes" role="tablist">
         <button type="button" role="tab" data-scope="all" class="on">All</button>
+        <button type="button" role="tab" data-scope="story">Story &amp; Schedule</button>
         <button type="button" role="tab" data-scope="actors">AI Actors</button>
         <button type="button" role="tab" data-scope="moments">Moments</button>
         <button type="button" role="tab" data-scope="cast">Cast (28)</button>
@@ -209,8 +221,8 @@
     </div>
   </div>
 
-  <script src="data/hub_data.js?v=3"></script>
-  <script src="scripts/app.js?v=3"></script>
+  <script src="data/hub_data.js?v=4"></script>
+  <script src="scripts/app.js?v=4"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
