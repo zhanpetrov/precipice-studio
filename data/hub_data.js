@@ -832,10 +832,29 @@ window.PRECIPICE_HUB_DATA = {
       }
     },
     verbatimOutline: `ROSA MOORE LAMA BAR BARTENDER LOCK & WEEKLY SHIFT / DAY-OFF SCHEDULE (OCT 23, 2026 · OCT23A05 / D016)
-- Role: Real working bartender at Lama Bar confirmed for Day 1 / Scene 1 opposite Russ Murphy ("because where I really want to use you in a movie? Yeah." — Rosa: "Yeah."). Contact (email + phone) verified on file Oct 23 ([REDACTED — ON FILE]).
+- Role: Real working bartender at Lama Bar confirmed for Day 1 / Scene 1 opposite Russ Murphy. Contact (email + phone) verified on file Oct 23 ([REDACTED — ON FILE]).
 - Days Off (Best Shooting Days for Rosa): Tuesday & Thursday ("I have day off on Tuesday. And Thursday ['And 37']... So I bet, if you want me on a day off, it's Tuesday or Thursday.").
 - Weekly Lama Bar Shifts: Sunday, Monday & Wednesday until ~1:00 AM ("on Monday, so, like, on Wednesday, about 1 [a.m.]... Sunday, on Monday until 1 [a.m.]") · Friday & Saturday until 3:00 AM ("On Friday and Saturday, we do work until 3 a.m.").
-- Shoot Hours & Day 1 Convergence: Zhan noted production will shoot at night "but not night-night, because we have some older people in the cast and then director, we try to pursue, like, something in there... normal levels, so they're not gonna die in the shoot." Tuesday, Nov 24 (Window A) triple-aligns Rosa's day off + Ken Newman + Brendan O’Malley (or Tue Dec 1 / Thu Dec 3 in Window B).
+- Shoot Hours & Day 1 Convergence: Tuesday, Nov 24 (Window A) triple-aligns Rosa's day off + Ken Newman + Brendan O’Malley (or Tue Dec 1 / Thu Dec 3 in Window B).
+- Verbatim On-Site Conversation (Zhan Petrov & Rosa Moore at Lama Bar):
+  Zhan: "So, you work at Lama until 2 AM, yeah?"
+  Rosa: "Yes."
+  Zhan: "Every night?"
+  Rosa: "No."
+  Zhan: "And what days?"
+  Rosa: "On Friday and Saturday, we do work until 3 a.m. And on Monday, so, like, on Wednesday, about 1 [a.m.]. Sunday, on Monday until 1 [a.m.]."
+  Zhan: "Okay, and, uh, do you have any day off?"
+  Rosa: "I have day off on Tuesday. And Thursday ['And 37']."
+  Zhan: "Okay, because we probably will be shooting probably at night."
+  Rosa: "Okay."
+  Zhan: "But not night, night, because we have some older people in the cast and then director, we try to pursue, like, something in there."
+  Rosa: "Of course."
+  Zhan: "You know, normal levels, so they're not gonna die in the shoot. So that's why I'm thinking about, because where I really want to use you in a movie? Yeah."
+  Rosa: "Yeah. So I bet, if you want me on a day off, it's Tuesday or Thursday."
+  Zhan: "Yeah. That's why now we're in a process to build that schedule and my way of doing that, just record the conversation with the people... Send everybody emails when they're available."
+  Rosa: "So you have my info, so just... Reach out."
+  Zhan: "Correct. Yeah, and now I know your availability. Thank you."
+  Rosa: "You're welcome. Thank you. Okay."
 
 ---
 
