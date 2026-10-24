@@ -486,32 +486,32 @@
           <div style="font:600 11.5px/1.4 var(--mono);color:var(--text-2);">Source: ${esc(MINDMAP.sourceId)} · Updated ${esc(MINDMAP.updated)}</div>
         </div>
 
-        <!-- KEN NEWMAN (OCT23A03 / D014) & BRENDAN O'MALLEY (OCT23A04 / D015) OCT 23 SCHEDULE & WARDROBE BANNER -->
+        <!-- KEN NEWMAN (OCT23A03 / D014), BRENDAN O'MALLEY (OCT23A04 / D015) & ROSA MOORE (OCT23A05 / D016) OCT 23 SCHEDULE & WARDROBE BANNER -->
         <div class="st-mm-sched-banner">
           <div class="st-mm-sched-head">
             <div>
-              <span class="st-mm-sched-badge">NEW · KEN NEWMAN &amp; BRENDAN O’MALLEY OCT 23 DISPATCHES (OCT23A03 + OCT23A04 · D014 / D015)</span>
-              <strong class="st-mm-sched-title">Ken Newman (SAG) &amp; Brendan O’Malley (ICE Unit Lock + Wardrobe) November &amp; Early December Shoot Windows</strong>
+              <span class="st-mm-sched-badge">NEW · KEN NEWMAN, BRENDAN O’MALLEY &amp; ROSA MOORE OCT 23 DISPATCHES (OCT23A03–OCT23A05 · D014–D016)</span>
+              <strong class="st-mm-sched-title">Rosa Moore (Lama Bartender Off Tue &amp; Thu), Ken Newman (SAG) &amp; Brendan O’Malley (ICE Unit Lock + Wardrobe) Shoot Windows</strong>
             </div>
-            <div>${dref("D015")} ${dref("D014")} ${dref("D011")}</div>
+            <div>${dref("D016")} ${dref("D015")} ${dref("D014")} ${dref("D011")}</div>
           </div>
           <div class="st-mm-sched-windows">
             <div class="st-mm-win st-mm-win-blocked">
-              <div class="st-mm-win-tag">BLOCKED · NOV 17–22, 2026</div>
-              <div><strong>Moscone Center &amp; Music Gigs:</strong> Week of Nov 17 Ken is at Moscone Center doing a tradeshow &amp; magician work plus music gigs — <strong>all wraps Sun Nov 22</strong>.</div>
+              <div class="st-mm-win-tag">ROSA MOORE · LAMA BARTENDER SHIFTS (D016)</div>
+              <div><strong>Days Off: Tuesday &amp; Thursday</strong> (<em>“if you want me on a day off, it’s Tuesday or Thursday”</em>). Works <strong>Sun/Mon/Wed until ~1:00 AM</strong> &amp; <strong>Fri/Sat until 3:00 AM</strong>.</div>
             </div>
             <div class="st-mm-win st-mm-win-open">
-              <div class="st-mm-win-tag">WINDOW A · SUN NOV 22 (NIGHT)–TUE NOV 24 &amp; FRI NOV 27</div>
-              <div><strong>Thanksgiving Week Overlap:</strong> Ken has <strong>Nov 23–27</strong> (flies to <strong>Zihuatanejo Sat Nov 28</strong>); <strong>Brendan O’Malley</strong> (ICE Unit · 100% locked) is open <strong>Sun Nov 22, Mon Nov 23–Tue Nov 24 &amp; Fri Nov 27</strong> (<em>Wed Nov 25 &amp; Thu Nov 26 blocked for Thanksgiving</em>).</div>
+              <div class="st-mm-win-tag">WINDOW A · PRIME TARGET: TUE NOV 24 (NOV 22–24 &amp; 27)</div>
+              <div><strong>Triple-Alignment on Tue Nov 24:</strong> <strong>Rosa Moore</strong> is off + <strong>Ken Newman</strong> is open (wraps Moscone Nov 22; flies Sat Nov 28) + <strong>Brendan O’Malley</strong> is open (blocks Nov 25–26 Thanksgiving).</div>
             </div>
             <div class="st-mm-win st-mm-win-dec">
-              <div class="st-mm-win-tag">WINDOW B (1ST WK DEC) + BRENDAN WARDROBE (D015)</div>
-              <div><strong>1st Wk of Dec Option:</strong> Ken can check with the airlines to extend another week. <strong>Brendan’s ICE Wardrobe (Nancy Hayes):</strong> <strong>40W×32L</strong> pants · <strong>16¼&quot;</strong> neck · <strong>42–44</strong> chest · <strong>XXL</strong> ICE tee.</div>
+              <div class="st-mm-win-tag">WINDOW B (TUE DEC 1 / THU DEC 3) + WARDROBE (D015)</div>
+              <div><strong>1st Wk of Dec Option:</strong> <strong>Tue Dec 1 &amp; Thu Dec 3</strong> are Rosa’s days off. <strong>Brendan’s ICE Wardrobe (Nancy Hayes):</strong> <strong>40W×32L</strong> · <strong>16¼&quot;</strong> neck · <strong>42–44</strong> chest · <strong>XXL</strong> tee.</div>
             </div>
           </div>
           <blockquote class="st-mm-sched-quote">
-            “No, no, no, I’m in. I’m in… One day in one place, one day in another place, and one day in another place… One place in Petaluma. If you count on me, I will [not] let you down… 40 waist, 32 length… 16 and a quarter [neck]… 42 range, I’ll take 44… Double XL [ICE T-shirt] for sure. We got it.”
-            <span>— Brendan O’Malley &amp; Rob Nilsson (Oct 23, 2026 · <code>OCT23A04</code> / D015) · Plus Ken Newman Schedule Dispatch (<code>OCT23A03</code> / D014)</span>
+            “On Friday and Saturday, we do work until 3 a.m. and on Monday, so, like, on Wednesday, about 1 [a.m.]… Sunday, on Monday until 1 [a.m.]… I have day off on Tuesday. And Thursday… So I bet, if you want me on a day off, it’s Tuesday or Thursday.”
+            <span>— Rosa Moore (Lama Bar Bartender) &amp; Zhan Petrov (Oct 23, 2026 · <code>OCT23A05</code> / D016) · Plus Brendan O’Malley (<code>OCT23A04</code> / D015) &amp; Ken Newman (<code>OCT23A03</code> / D014)</span>
           </blockquote>
         </div>
 
@@ -559,18 +559,18 @@
             <!-- COLUMN 2: UNIVERSE 2 · DAY 1 (LAMA BAR) -->
             <div class="st-mm-col" data-st-mm-col="day1">
               <div class="st-mm-col-head" data-st-mm-node="day1">
-                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (WIN A: NOV 22–24/27 · WIN B: 1ST WK DEC)</div>
-                <h4 class="st-mm-col-title">Lama Bar · Main Counter, Back Pool Table &amp; Corridor</h4>
-                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG · D014), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
+                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (PRIME: TUE NOV 24 OR TUE DEC 1 / THU DEC 3)</div>
+                <h4 class="st-mm-col-title">Lama Bar · Main Counter (Rosa Moore), Back Pool Table &amp; Corridor</h4>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG · D014), Mickey, Don, Marianne, Rosa Moore (Lama Bartender · Off Tue &amp; Thu · D016), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
               </div>
               <div class="st-mm-col-nodes">
                 <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
                   <div class="st-mm-node-top">
-                    <span class="st-mm-node-tag">BEAT 1.1 · BAR CORE, BOOK &amp; “5TH AMENDMENT” JOKE (D012 / D013 / D014)</span>
+                    <span class="st-mm-node-tag">BEAT 1.1 · BAR CORE, ROSA MOORE (OFF TUE/THU) &amp; “5TH AMEND.” JOKE (D012–D016)</span>
                     <span class="st-mm-portal-pill">← From Pool Hall Door</span>
                   </div>
-                  <div class="st-mm-node-title">Russ’s Calm Contractor Precision, Book Manuscript &amp; “5th Amendment” Joke</div>
-                  <p class="st-mm-node-desc">Longtime regular who has worked w/ the female bartender (target: powerful-looking Black woman). With calm contractor precision, Russ names real tools &amp; materials to save his friend’s cliffside house, quotes his unfinished book (<em>“Why can’t I be a writer as well?”</em>), and tells the Trump <strong>5th Amendment / 400x</strong> joke. Ken (SAG · available Nov 23–25/27 or 1st Wk Dec) does French Drop magic; Mickey brings Buddhism; Don (ex-coach) joins; Marianne recognizes Mickey.</p>
+                  <div class="st-mm-node-title">Russ’s Calm Contractor Precision to Bartender Rosa Moore, Book &amp; “5th Amendment” Joke</div>
+                  <p class="st-mm-node-desc">Longtime regular opposite real Lama Bar bartender <strong>Rosa Moore</strong> (locked <code>D016</code>: off <strong>Tue &amp; Thu</strong>; works Sun/Mon/Wed to 1 AM, Fri/Sat to 3 AM). With calm contractor precision, Russ names real tools &amp; materials to save his friend’s cliffside house, quotes his unfinished book (<em>“Why can’t I be a writer as well?”</em>), and tells the Trump <strong>5th Amendment / 400x</strong> joke. Ken (SAG) does French Drop magic; Mickey brings Buddhism; Don (ex-coach) joins; Marianne recognizes Mickey.</p>
                 </div>
 
                 <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
@@ -617,11 +617,11 @@
           <!-- FULL-WIDTH BOTTOM RULES BAR -->
           <div class="st-mm-node-card st-mm-rules-bar" data-st-mm-node="rules" tabindex="0" role="button">
             <div class="st-mm-node-top">
-              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PAs · CRAFT SERVICES · KEN &amp; BRENDAN WINDOWS + WARDROBE (D011–D015)</span>
+              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PAs · CRAFT SERVICES · ROSA, KEN &amp; BRENDAN WINDOWS + WARDROBE (D011–D016)</span>
               <span class="st-mm-portal-pill">All 3 Universes · Click to Inspect Rules</span>
             </div>
             <div class="st-mm-rules-grid">
-              <div><strong>1. Ken &amp; Brendan Windows (D014 / D015):</strong> Nov 17–22 blocked (Moscone). <strong>Window A:</strong> Sun Nov 22 (night), Mon Nov 23–Tue Nov 24 &amp; Fri Nov 27 (Nov 25–26 blocked for Thanksgiving; Sat Zihuatanejo flight). <strong>Window B:</strong> 1st Wk of Dec.</div>
+              <div><strong>1. Rosa, Ken &amp; Brendan Windows (D014–D016):</strong> <strong>Rosa Moore (Lama Bartender)</strong> is off <strong>Tue &amp; Thu</strong> (works Sun/Mon/Wed to 1 AM, Fri/Sat to 3 AM). <strong>Tue Nov 24</strong> triple-aligns Rosa + Ken + Brendan (or <strong>Tue Dec 1 / Thu Dec 3</strong> in Window B).</div>
               <div><strong>2. Brendan ICE Wardrobe (D015) &amp; Craft Services:</strong> <strong>Brendan O’Malley:</strong> <code>40W×32L</code> · <code>16¼"</code> neck · <code>42–44</code> chest · <code>XXL</code> ICE tee. Craft Services hidden outside/office/kitchen.</div>
               <div><strong>3. 2–3 Set Cameras + PAs (D012):</strong> 2 Handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs; protest video on venue TVs.</div>
               <div><strong>4. SAG &amp; Book Rules (D013):</strong> Only <strong>2 SAG actors</strong> (Ken Newman + 1 SAG ICE actor); any Zionism/AIPAC critique stays strictly in Russ’s book &amp; separated from Jewish people.</div>
@@ -642,8 +642,8 @@
         <summary>
           <span class="num">★</span>
           <span>
-            <div class="ct">Verbatim Brendan O’Malley ICE Intake (OCT23A04), Ken Newman Dispatch (OCT23A03) &amp; Rob Nilsson 3-Day Outline</div>
-            <div class="cs">Source: OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04 · Brendan O’Malley ICE Lock &amp; Wardrobe (D015) + Ken Newman Windows (D014) + 3-Day Outline</div>
+            <div class="ct">Verbatim Rosa Moore Bartender Schedule (OCT23A05), Brendan O’Malley ICE Intake (OCT23A04), Ken Newman Dispatch (OCT23A03) &amp; 3-Day Outline</div>
+            <div class="cs">Source: OCT23A01–OCT23A05 · Rosa Moore Bartender Schedule (D016) + Brendan O’Malley ICE Lock (D015) + Ken Newman Windows (D014) + 3-Day Outline</div>
           </span>
           <span class="count">Verbatim Note <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
         </summary>
@@ -867,7 +867,7 @@
             <span class="num">${gIdx + 1}</span>
             <span>
               <div class="ct">${esc(g)}</div>
-              <div class="cs">D010 Pre-Scene Protocol: 6-Angle Photos + 2-Minute Clean Voice Sample · Updated Oct 23 (OCT23A01)</div>
+              <div class="cs">D010 Pre-Scene Protocol: 6-Angle Photos + 2-Minute Clean Voice Sample · Updated Oct 23 (OCT23A01–OCT23A05 · D016 Rosa Moore)</div>
             </span>
             <span class="count">${members.length} cast <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
           </summary>
@@ -1147,7 +1147,7 @@
   let scope = "all";
   let searchItems = [];
   let sel = 0;
-  const TRY_TERMS = ["Brendan O’Malley", "Doug Miller", "Nov 23", "Moscone", "Zihuatanejo", "Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman"];
+  const TRY_TERMS = ["Rosa Moore", "Brendan O’Malley", "Nov 24", "Doug Miller", "Moscone", "Zihuatanejo", "Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "Russ Murphy", "Ken Newman"];
 
   function openSearch(q) {
     sheet.hidden = false;

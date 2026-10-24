@@ -13,7 +13,7 @@ window.PRECIPICE_HUB_DATA = {
     coProducerDP: "Zhan Petrov",
     soundMixer: "Vitaly Ponomarev (Sound Check Locked: Wed Oct 28, 2026 @ 11:00 AM)",
     wardrobe: "Nancy Hayes",
-    shootWindow: "Window A: Sun Nov 22 (Night)–Tue Nov 24 & Fri Nov 27 (Nov 17–22 Moscone Blocked · Nov 25–26 Thanksgiving Blocked · Sat Nov 28 Zihuatanejo Flight) OR Window B: 1st Wk of Dec (D014 / D015)",
+    shootWindow: "Prime Day 1 Lama Bar Target: Tue Nov 24 (Window A: Sun Nov 22 Night–Tue Nov 24 & Fri Nov 27) OR Tue Dec 1 / Thu Dec 3 (Window B: 1st Wk of Dec · Rosa Moore Off Tue & Thu · D014–D016)",
     flowProjectUrl: "https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe",
     controlTowerUrl: "https://zhanpetrov.github.io/precipice/",
     controlTowerRepo: "https://github.com/zhanpetrov/precipice",
@@ -42,6 +42,11 @@ window.PRECIPICE_HUB_DATA = {
         code: "D015",
         name: "Brendan O’Malley ICE Unit Lock, Wardrobe Sizes & Mallard Club / Doug Miller Intel (OCT23A04)",
         desc: "Agreed Oct 23, 2026 (OCT23A04): Brendan O’Malley is 100% locked for the ICE Agent Unit across the 3-day / 3-venue shoot (available Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27; Nov 25–26 blocked for Thanksgiving). Wardrobe sizes for Nancy Hayes: 40W×32L pants, 16¼\" neck, 42–44 chest, XXL ICE T-shirt. Mallard Club owner Doug Miller (Tap Haus) remains unreachable despite receptive son Kyle/Todd & Oct 23 diagram; Brendan & Tina will assist in person."
+      },
+      {
+        code: "D016",
+        name: "Rosa Moore Lama Bar Bartender Lock & Shift / Day-Off Schedule (OCT23A05)",
+        desc: "Agreed Oct 23, 2026 (OCT23A05): Real Lama Bar bartender Rosa Moore is confirmed for Day 1 / Scene 1 opposite Russ Murphy (email & phone verified on file Oct 23). Weekly Lama Bar schedule: Days Off on Tuesday & Thursday ('if you want me on a day off, it's Tuesday or Thursday'); works Sun/Mon/Wed until ~1:00 AM and Fri/Sat until 3:00 AM — making Tuesday, Nov 24 (Window A) or Tue Dec 1 / Thu Dec 3 (Window B) the prime Day 1 Lama Bar convergence dates."
       },
       {
         code: "PROMPT-LOCK",
@@ -503,8 +508,8 @@ window.PRECIPICE_HUB_DATA = {
     { id: "CAST-03", name: "Mickey Disend", group: "Bar Core", role: "Buddhist Counterpoint at Bar / Recognized by Marianne Heath (Day 1 Lama Bar + Possible Day 3 Intrusion at Lama Restaurant)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite portrait of a weathered, philosophical Berkeley bar regular in a dark jacket bringing calm Buddhist observations into a heated political bar debate under warm tungsten neon light, three-quarter profile, natural film grain." },
 
     // GROUP 2: BARTENDERS & BAR PATRONS (5)
-    { id: "CAST-04", name: "Female Bartender (Powerful Black Woman Target / Rosa / Luis)", group: "Bartenders & Patrons", role: "Lama Bar Bartender · Longtime Friend Who Has Worked w/ Russ ('How you doing with the house?') · Target: Powerful-Looking Black Woman (OCT23A02 / D013)", contact: "[CASTING TARGET LOCKED — ROB]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a powerful Black female bartender wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage while asking a silver-haired contractor 'How you doing with the house?' under warm amber practical light." },
-    { id: "CAST-05", name: "Rosa / Luis (Alternate Bar Counter Support)", group: "Bartenders & Patrons", role: "Alternate / Second Bartender Candidate (Lama Bar Spatial Anchor — Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
+    { id: "CAST-04", name: "Rosa Moore (Lama Bar Bartender)", group: "Bartenders & Patrons", role: "Real Working Bartender at Lama Bar · Confirmed Oct 23 (OCT23A05 / D016) for Day 1 / Scene 1 Opposite Russ ('because where I really want to use you in a movie? Yeah.' — Rosa: 'Yeah.') · Weekly Lama Bar Schedule: Days Off Tuesday & Thursday (Prime Day 1 Shoot Days: Tue Nov 24 or Tue Dec 1 / Thu Dec 3); Works Sun, Mon & Wed until ~1:00 AM; Works Fri & Sat until 3:00 AM", contact: "[REDACTED — ON FILE · VERIFIED OCT 23]", d010Status: "CONFIRMED LAMA BARTENDER · OFF TUE & THU (SUN/MON/WED TO 1 AM · FRI/SAT TO 3 AM · D016)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of real Lama Bar bartender Rosa Moore wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage while asking a silver-haired contractor 'How you doing with the house?' under warm amber practical light, Kodak Vision3 500T." },
+    { id: "CAST-05", name: "Female Bartender Alternate (Powerful Black Woman Option) / Luis", group: "Bartenders & Patrons", role: "Alternate / Second Bartender Option (Rob's Powerful-Looking Black Woman Option D013 / Luis Spatial Support — Day 1)", contact: "[ALTERNATE OPTION — ROB & ZHAN]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
     { id: "CAST-06", name: "Woman from Lama (Whistle / Rhythm)", group: "Bartenders & Patrons", role: "Active Bar Environment / Whistle & Finger-Snapping Catalyst", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Kinetic handheld 35mm cinema-verite medium shot inside a lively Berkeley bar at night: a Black woman in vibrant evening attire blows a rhythm whistle and dances amid finger-snapping patrons before the street demonstration interrupts, warm amber and teal neon." },
     { id: "CAST-07", name: "Wounded Protestor / Bar Patron", group: "Bartenders & Patrons", role: "Wounded Character Brought into Lama Bar by ICE Guy on Day 1 (Women Rush to Help While Men Freeze)", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Urgent handheld 35mm cinema-verite shot inside Lama Bar at night: a wounded man from the street demonstration is brought through the doorway as the women academics immediately rush forward to tend his injuries while the men at the bar freeze in hesitation." },
     { id: "CAST-08", name: "'? Talker' (Bar Raconteur)", group: "Bartenders & Patrons", role: "Bar Talker / Overlapping Vérité Dialogue", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of an animated bar talker leaning over a crowded counter in three-quarter profile, overlapping dialogue texture, smoky tungsten light." },
@@ -651,10 +656,10 @@ window.PRECIPICE_HUB_DATA = {
 
   shootingScheduleMindMap: {
     updated: "2026-10-23",
-    sourceId: "OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04",
-    sourceTitle: "Rob Nilsson 3-Day Outline (OCT23A01), Russ/Rob Call (OCT23A02), Ken Newman Schedule Dispatch (OCT23A03) & Brendan O’Malley ICE Lock / Wardrobe / Mallard Club Intake (OCT23A04)",
+    sourceId: "OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04 + OCT23A05",
+    sourceTitle: "Rob Nilsson 3-Day Outline (OCT23A01), Russ/Rob Call (OCT23A02), Ken Newman Schedule Dispatch (OCT23A03), Brendan O’Malley ICE Lock / Wardrobe / Mallard Club Intake (OCT23A04) & Rosa Moore Lama Bar Bartender Schedule (OCT23A05)",
     rhythm: [
-      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Win A: Sun Nov 22–Tue Nov 24 / Fri Nov 27 · Win B: 1st Wk Dec (D014/D015)", kind: "shoot" },
+      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Prime Target: Tue Nov 24 or Tue Dec 1 / Thu Dec 3 (Rosa Off Tue/Thu · D014–D016)", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
       { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard / Tap Haus", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
@@ -663,30 +668,30 @@ window.PRECIPICE_HUB_DATA = {
     nodes: {
       hub: {
         id: "hub",
-        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04)",
+        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01–OCT23A05 · D011–D016)",
         title: "PRECIPICE — 3–4 Spaced Nights & 3-Universe Mind Map",
-        venue: "Lama Bar ↔ Buffalo Billiards (or Mallard / Tap Haus) ↔ Lama Restaurant ('Lama Bean')",
-        drefs: ["D001", "D011", "D012", "D013", "D014", "D015"],
-        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Per Ken Newman (OCT23A03 / D014) & Brendan O’Malley (OCT23A04 / D015): Nov 17–22 is blocked (Ken at Moscone Center wrapping Sun Nov 22). Window A opens Sun Nov 22 (Night)–Tue Nov 24 & Fri Nov 27 (Brendan & Rob block Wed Nov 25 & Thu Nov 26 for Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket.",
+        venue: "Lama Bar (Rosa Moore) ↔ Buffalo Billiards (or Mallard / Tap Haus) ↔ Lama Restaurant ('Lama Bean')",
+        drefs: ["D001", "D011", "D012", "D013", "D014", "D015", "D016"],
+        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Per Ken Newman (OCT23A03 / D014), Brendan O’Malley (OCT23A04 / D015) & real Lama Bar bartender Rosa Moore (OCT23A05 / D016): Rosa has days off on Tuesday & Thursday (works Sun/Mon/Wed until ~1:00 AM, Fri/Sat until 3:00 AM) — making Tuesday, Nov 24 (in Window A, where Rosa is off and both Ken & Brendan are open before Wed Nov 25–Thu Nov 26 Thanksgiving) or Tuesday, Dec 1 / Thursday, Dec 3 (in Window B) the prime Day 1 Lama Bar convergence dates.",
         craftServices: "Hidden out of 360° camera sightlines at all 3 venues",
         cameraPlan: "2× handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs"
       },
       day1: {
         id: "day1",
-        badge: "DAY 1 · SCENE 1 · UNIVERSE 2",
-        title: "Day 1 — Lama Bar (Free Working-Man's Bar · 5 Core Beats)",
-        venue: "Lama Bar on San Pablo Ave (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
-        cast: "Russ, Ken (SAG · Nov 23–25/27 or 1st Wk Dec), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
-        drefs: ["D001", "D011", "D012", "D013", "D014", "D015"],
-        summary: "Target Maiden Voyage Night (Window A: Sun Nov 22 Night / Mon Nov 23–Tue Nov 24 / Fri Nov 27 OR Window B: 1st Week of Dec per D014 & D015). Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
+        badge: "DAY 1 · SCENE 1 · UNIVERSE 2 · ROSA MOORE (OFF TUE & THU · D016)",
+        title: "Day 1 — Lama Bar (Free Working-Man's Bar · Bartender Rosa Moore · 5 Core Beats)",
+        venue: "Lama Bar on San Pablo Ave (Main Counter w/ Bartender Rosa Moore, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
+        cast: "Russ, Ken (SAG · Nov 23–25/27 or 1st Wk Dec), Mickey, Don, Marianne, Rosa Moore (Lama Bar Bartender · Off Tue & Thu · D016), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
+        drefs: ["D001", "D011", "D012", "D013", "D014", "D015", "D016"],
+        summary: "Prime Maiden Voyage Night: Tuesday, Nov 24 (Window A triple-alignment: Rosa Moore off + Ken Newman open + Brendan O’Malley open) OR Tuesday, Dec 1 / Thursday, Dec 3 (Window B per D014–D016). Real Lama Bar bartender Rosa Moore is confirmed for Scene 1 opposite Russ (off Tue & Thu; works Sun/Mon/Wed until 1 AM, Fri/Sat until 3 AM; Zhan noted shooting 'not night-night' to protect senior cast & director). Russ lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013).",
         craftServices: "Outside in the back (completely clear of 360° bar interior)",
         cameraPlan: "360° bar coverage + 2–3 set cameras + handheld iPhones; TV sets show street demonstration",
         beats: [
           {
             num: "1.1",
-            title: "Russ's Calm Contractor Precision, Book Manuscript & Trump '5th Amendment' Joke (D012 / D013)",
-            detail: "Russ is a longtime regular who has worked with the female bartender (she asks 'How you doing with the house?'; Rob is eyeing a powerful-looking Black woman). With calm, explicit contractor precision ('because you're outraged, you want to be explicit'), Russ lays out specific names of construction tools, materials, and structural engineering methods to save his friend's cliffside house before quoting passages from his unfinished book ('Why can't I be a writer as well?') and telling the Trump 'Fifth Amendment / 400 times in one day' joke. Ken (SAG) listens apparently in agreement and does magic tricks; Mickey brings in Buddhist views; Don (ex-running and football coach) joins; Marianne recognizes Mickey.",
-            prompt: "Candid handheld 35mm cinema-verite medium shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater calmly explains structural house-saving materials to a powerful Black female bartender while holding an unfinished book manuscript notebook as a bald magician performs a coin trick, a Buddhist bar regular listens calmly, and an ex-football coach joins in."
+            title: "Russ's Calm Contractor Precision to Bartender Rosa Moore, Book Manuscript & Trump '5th Amendment' Joke (D012 / D013 / D016)",
+            detail: "Russ is a longtime regular who has worked with the female bartender — real Lama Bar bartender Rosa Moore confirmed Oct 23 in OCT23A05 / D016 (days off Tuesday & Thursday; works Sun/Mon/Wed until 1 AM, Fri/Sat until 3 AM; alongside Rob's option of a powerful-looking Black woman). With calm, explicit contractor precision, Russ lays out specific names of construction tools, materials, and structural engineering methods to save his friend's cliffside house before quoting passages from his unfinished book ('Why can't I be a writer as well?') and telling the Trump 'Fifth Amendment / 400 times in one day' joke. Ken (SAG) listens apparently in agreement and does magic tricks; Mickey brings in Buddhist views; Don (ex-running and football coach) joins; Marianne recognizes Mickey.",
+            prompt: "Candid handheld 35mm cinema-verite medium shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater calmly explains structural house-saving materials to real Lama Bar bartender Rosa Moore while holding an unfinished book manuscript notebook as a bald magician performs a coin trick, a Buddhist bar regular listens calmly, and an ex-football coach joins in."
           },
           {
             num: "1.2",
@@ -803,18 +808,18 @@ window.PRECIPICE_HUB_DATA = {
       },
       rules: {
         id: "rules",
-        badge: "STAGING, CAMERA, SAG, SCHEDULE & WARDROBE RULES · D011–D015",
-        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster, Ken/Brendan Windows & Wardrobe",
+        badge: "STAGING, CAMERA, SAG, SCHEDULE & WARDROBE RULES · D011–D016",
+        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster, Ken/Brendan/Rosa Windows & Wardrobe",
         venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard / Tap Haus, Lama Restaurant)",
-        drefs: ["D001", "D010", "D011", "D012", "D013", "D014", "D015"],
-        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01–OCT23A04) to protect senior cast/crew across spaced midnight shoots, map Ken Newman's & Brendan O’Malley's Nov 22–27 & early Dec shoot windows (D014 / D015), lock Brendan's ICE wardrobe sizes for Nancy Hayes (40W×32L · 16¼\" neck · 42–44 chest · XXL tee), ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
+        drefs: ["D001", "D010", "D011", "D012", "D013", "D014", "D015", "D016"],
+        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01–OCT23A05) to protect senior cast/crew across spaced evening/night shoots, map Ken Newman's, Brendan O’Malley's & Rosa Moore's Nov 22–27 & early Dec shoot windows (D014–D016), lock Brendan's ICE wardrobe sizes for Nancy Hayes (40W×32L · 16¼\" neck · 42–44 chest · XXL tee), ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
         craftServices: "Lama Bar: Outside in Back · Buffalo Billiards: Owner's Office · Lama Restaurant: Kitchen Low or Right-Hand Room",
         cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras; only 2 SAG actors (Ken Newman + 1 SAG ICE actor)",
         beats: [
           {
             num: "R.1",
-            title: "Ken Newman & Brendan O’Malley Nov 22–27 & Early Dec Shoot Windows + Staggered Rest Days (D011 / D014 / D015)",
-            detail: "Per Ken Newman's Oct 23 message (OCT23A03 / D014) & Brendan O’Malley's Oct 23 call (OCT23A04 / D015): Nov 17–22 is blocked (Ken at Moscone Center wrapping Sun Nov 22). Window A: Brendan is open Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27 (blocking Wed Nov 25 & Thu Nov 26 for Thanksgiving), while Ken has Nov 23–25 & Nov 27 before his Sat Nov 28 Zihuatanejo flight — making Sun Nov 22 (night), Mon Nov 23, Tue Nov 24 & Fri Nov 27 the primary Thanksgiving-week overlap. Window B opens First Week of December if Ken extends his airline ticket.",
+            title: "Rosa Moore (Lama Bartender Off Tue & Thu), Ken Newman & Brendan O’Malley Schedule Convergence (D011 / D014–D016)",
+            detail: "Per Oct 23 dispatches (OCT23A03–OCT23A05): Real Lama Bar bartender Rosa Moore (D016) is off on Tuesday & Thursday (works Sun/Mon/Wed until ~1:00 AM, Fri/Sat until 3:00 AM). Ken Newman (D014) wraps SF Moscone Center gigs Sun Nov 22 and is open Nov 23–27 (flies Sat Nov 28 to Zihuatanejo) or 1st Wk of Dec. Brendan O’Malley (D015) is open Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27 (blocking Wed Nov 25–Thu Nov 26 for Thanksgiving). This makes Tuesday, Nov 24 (Window A) or Tuesday, Dec 1 / Thursday, Dec 3 (Window B) the prime Day 1 Lama Bar convergence dates.",
             prompt: "Candid handheld 35mm behind-the-scenes cinema-verite shot of an independent film crew and senior actors reviewing a three-night shooting schedule board under warm tungsten light in a Berkeley bar."
           },
           {
@@ -826,7 +831,15 @@ window.PRECIPICE_HUB_DATA = {
         ]
       }
     },
-    verbatimOutline: `BRENDAN O’MALLEY ICE UNIT LOCK, WARDROBE MEASUREMENTS & MALLARD CLUB / DOUG MILLER CALL (OCT 23, 2026 · OCT23A04 / D015)
+    verbatimOutline: `ROSA MOORE LAMA BAR BARTENDER LOCK & WEEKLY SHIFT / DAY-OFF SCHEDULE (OCT 23, 2026 · OCT23A05 / D016)
+- Role: Real working bartender at Lama Bar confirmed for Day 1 / Scene 1 opposite Russ Murphy ("because where I really want to use you in a movie? Yeah." — Rosa: "Yeah."). Contact (email + phone) verified on file Oct 23 ([REDACTED — ON FILE]).
+- Days Off (Best Shooting Days for Rosa): Tuesday & Thursday ("I have day off on Tuesday. And Thursday ['And 37']... So I bet, if you want me on a day off, it's Tuesday or Thursday.").
+- Weekly Lama Bar Shifts: Sunday, Monday & Wednesday until ~1:00 AM ("on Monday, so, like, on Wednesday, about 1 [a.m.]... Sunday, on Monday until 1 [a.m.]") · Friday & Saturday until 3:00 AM ("On Friday and Saturday, we do work until 3 a.m.").
+- Shoot Hours & Day 1 Convergence: Zhan noted production will shoot at night "but not night-night, because we have some older people in the cast and then director, we try to pursue, like, something in there... normal levels, so they're not gonna die in the shoot." Tuesday, Nov 24 (Window A) triple-aligns Rosa's day off + Ken Newman + Brendan O’Malley (or Tue Dec 1 / Thu Dec 3 in Window B).
+
+---
+
+BRENDAN O’MALLEY ICE UNIT LOCK, WARDROBE MEASUREMENTS & MALLARD CLUB / DOUG MILLER CALL (OCT 23, 2026 · OCT23A04 / D015)
 - Commitment: "No, no, no, I'm in. I'm in... If you count on me, I will [not] let you down." (3-day / 3-venue shoot: Lama Bar, Buffalo Billiards in Petaluma, Lama Restaurant).
 - Thanksgiving Week Availability: Open Sunday Nov 22 (possible night shoot), Mon Nov 23 – Tue Nov 24, and Friday Nov 27; Wed Nov 25 & Thu Nov 26 (Thanksgiving) blocked.
 - Wardrobe Measurements for Nancy Hayes (ICE Uniform): Pants: 40W × 32L ("40 waist, 32 length") · Neck: ~16¼" ("16 and a quarter") · Chest/Jacket: 42–44 ("42 range... I'll take 44, of course") · ICE T-Shirt: XXL ("Double XL for sure. We got it.").
@@ -841,12 +854,12 @@ which means I would have some time the 23rd to 24th the 25th and the 26th and th
 ---
 
 PRECIPICE — ROB NILSSON WRITTEN 3-DAY OUTLINE (OCT 23, 2026 · OCT23A01 + OCT23A02)
-SCENE 1- CHARACTERS: Russ, Ken, Bartender, Mickey, Don, Marianne
+SCENE 1- CHARACTERS: Russ, Ken, Bartender [Rosa Moore — D016], Mickey, Don, Marianne
 
 DAY 1- LOCATION LAMA BAR
-CHARACTERS: Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley guys, 1 ICE guy, wounded character, Women
+CHARACTERS: Russ, Ken, Mickey, Don, Marianne, Bartender [Rosa Moore], Silicon Valley guys, 1 ICE guy, wounded character, Women
 
-1. Russ delivers his save the house program to the bartender [longtime regular who worked w/ the female bartender; calm contractor precision naming real tools & materials] and begins his Diatribe against Trump. Maybe writing a book about it [carries an unfinished manuscript/notebook as "all our arrows in the quiver" + tells the Trump "5th Amendment / 400 times in one day" joke — D013]. Ken listens and responds apparently in agreement. Mickey brings in his more Buddhist views. Ken does magic tricks. Maybe Don [ex-running & football coach] comes over to join the fray. Marianne recognizes Mickey.
+1. Russ delivers his save the house program to the bartender [Rosa Moore — off Tue & Thu; longtime regular who worked w/ the female bartender; calm contractor precision naming real tools & materials] and begins his Diatribe against Trump. Maybe writing a book about it [carries an unfinished manuscript/notebook as "all our arrows in the quiver" + tells the Trump "5th Amendment / 400 times in one day" joke — D013]. Ken listens and responds apparently in agreement. Mickey brings in his more Buddhist views. Ken does magic tricks. Maybe Don [ex-running & football coach] comes over to join the fray. Marianne recognizes Mickey.
 2. Silicon Valley and Pool players agree on a game- Exit [to upstairs pool room; optional Brendan shooting pool in background]
 3. Ken leaves and talks to ICE guy in Lama Corridor and returns- Russ and Ken Exit for Basement
 4. Ice Guy brings in wounded- women come in to him [showing the women know how to deal with emergencies while the men do nothing]
