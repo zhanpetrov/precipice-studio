@@ -486,14 +486,14 @@
           <div style="font:600 11.5px/1.4 var(--mono);color:var(--text-2);">Source: ${esc(MINDMAP.sourceId)} · Updated ${esc(MINDMAP.updated)}</div>
         </div>
 
-        <!-- KEN NEWMAN OCT 23 SCHEDULE & AVAILABILITY BANNER (OCT23A03 / D014) -->
+        <!-- KEN NEWMAN (OCT23A03 / D014) & BRENDAN O'MALLEY (OCT23A04 / D015) OCT 23 SCHEDULE & WARDROBE BANNER -->
         <div class="st-mm-sched-banner">
           <div class="st-mm-sched-head">
             <div>
-              <span class="st-mm-sched-badge">NEW · KEN NEWMAN SCHEDULE DISPATCH (OCT23A03 · D014)</span>
-              <strong class="st-mm-sched-title">Ken Newman (SAG-AFTRA) November &amp; Early December Shoot Windows</strong>
+              <span class="st-mm-sched-badge">NEW · KEN NEWMAN &amp; BRENDAN O’MALLEY OCT 23 DISPATCHES (OCT23A03 + OCT23A04 · D014 / D015)</span>
+              <strong class="st-mm-sched-title">Ken Newman (SAG) &amp; Brendan O’Malley (ICE Unit Lock + Wardrobe) November &amp; Early December Shoot Windows</strong>
             </div>
-            <div>${dref("D014")} ${dref("D011")}</div>
+            <div>${dref("D015")} ${dref("D014")} ${dref("D011")}</div>
           </div>
           <div class="st-mm-sched-windows">
             <div class="st-mm-win st-mm-win-blocked">
@@ -501,17 +501,17 @@
               <div><strong>Moscone Center &amp; Music Gigs:</strong> Week of Nov 17 Ken is at Moscone Center doing a tradeshow &amp; magician work plus music gigs — <strong>all wraps Sun Nov 22</strong>.</div>
             </div>
             <div class="st-mm-win st-mm-win-open">
-              <div class="st-mm-win-tag">WINDOW A · MON NOV 23 – WED NOV 25 (&amp; FRI NOV 27)</div>
-              <div><strong>Early Week of Nov 23 Open:</strong> Ken has time <strong>Nov 23, 24, 25, 26, 27</strong> (<em>Thu Nov 26 is Thanksgiving</em>; scheduled to fly to <strong>Zihuatanejo on Sat Nov 28</strong>).</div>
+              <div class="st-mm-win-tag">WINDOW A · SUN NOV 22 (NIGHT)–TUE NOV 24 &amp; FRI NOV 27</div>
+              <div><strong>Thanksgiving Week Overlap:</strong> Ken has <strong>Nov 23–27</strong> (flies to <strong>Zihuatanejo Sat Nov 28</strong>); <strong>Brendan O’Malley</strong> (ICE Unit · 100% locked) is open <strong>Sun Nov 22, Mon Nov 23–Tue Nov 24 &amp; Fri Nov 27</strong> (<em>Wed Nov 25 &amp; Thu Nov 26 blocked for Thanksgiving</em>).</div>
             </div>
             <div class="st-mm-win st-mm-win-dec">
-              <div class="st-mm-win-tag">WINDOW B · FIRST WEEK OF DECEMBER 2026</div>
-              <div><strong>Optional Airline Extension:</strong> Ken can check with the airlines to extend another week, giving production the <strong>first week of December</strong> as well.</div>
+              <div class="st-mm-win-tag">WINDOW B (1ST WK DEC) + BRENDAN WARDROBE (D015)</div>
+              <div><strong>1st Wk of Dec Option:</strong> Ken can check with the airlines to extend another week. <strong>Brendan’s ICE Wardrobe (Nancy Hayes):</strong> <strong>40W×32L</strong> pants · <strong>16¼&quot;</strong> neck · <strong>42–44</strong> chest · <strong>XXL</strong> ICE tee.</div>
             </div>
           </div>
           <blockquote class="st-mm-sched-quote">
-            “hey there great to hear from you. Yeah November has gotten pretty crazy. The week of the 17th I am at the Moscone center doing a tradeshow and doing Magican stuff and I have a bunch of music gigs but that all wraps on the 22nd. which means I would have some time the 23rd to 24th the 25th and the 26th and the 27th. That might create a problem for some people because Thursday is Thanksgiving. And I’m supposed to leave on Saturday for Zihuatanejo. It’s possible I have to check with the Airlines but I might be able to extend another week which would give us the first week of December as well but let me know if any of those days early the week of the 23rd might work. Look forward to seeing you and really looking forward to getting started”
-            <span>— Ken Newman to Rob Nilsson (Oct 23, 2026 · <code>OCT23A03</code>)</span>
+            “No, no, no, I’m in. I’m in… One day in one place, one day in another place, and one day in another place… One place in Petaluma. If you count on me, I will [not] let you down… 40 waist, 32 length… 16 and a quarter [neck]… 42 range, I’ll take 44… Double XL [ICE T-shirt] for sure. We got it.”
+            <span>— Brendan O’Malley &amp; Rob Nilsson (Oct 23, 2026 · <code>OCT23A04</code> / D015) · Plus Ken Newman Schedule Dispatch (<code>OCT23A03</code> / D014)</span>
           </blockquote>
         </div>
 
@@ -533,7 +533,7 @@
               <div class="st-mm-col-head" data-st-mm-node="day2a">
                 <div class="st-mm-col-kicker">UNIVERSE 1 · NIGHT 2 — POOL HALL (12:00 AM MIDNIGHT)</div>
                 <h4 class="st-mm-col-title">Buffalo Billiards (Opt A · Free) or Mallard / Tap Haus (Opt B)</h4>
-                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Billy Aguero, Oscar, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys, All Women, All ICE</p>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Billy Aguero, Oscar, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys, All Women, All ICE (Incl. Brendan O’Malley · D015)</p>
               </div>
               <div class="st-mm-col-nodes">
                 <div class="st-mm-node-card on" data-st-mm-node="day2a" tabindex="0" role="button">
@@ -542,16 +542,16 @@
                     <span class="st-mm-portal-pill">Door Portal #1 → Lama Bar</span>
                   </div>
                   <div class="st-mm-node-title">1) Opening Shot · 2) AI Window Plates · 3) Back Room Match · 4) Brick Basement</div>
-                  <p class="st-mm-node-desc"><strong>1. Opening Shot:</strong> Russ walks through empty pool hall at night into a door leading directly to Lama Bar.<br/><strong>2. Tripod Window Plates:</strong> AI protest crowd &amp; ICE fighting behind glass.<br/><strong>3. Back Pool Room:</strong> Billy vs. Oscar match (SV “tech boys” w/ co-producer <strong>Ilya Fomin</strong>, ex-YouTube/Google head engineer, vs. Don Bajema) + TV + rear look-down windows.<br/><strong>4. Brick Basement:</strong> ICE beats Russ &amp; Women rescue him.</p>
+                  <p class="st-mm-node-desc"><strong>1. Opening Shot:</strong> Russ walks through empty pool hall at night into a door leading directly to Lama Bar.<br/><strong>2. Tripod Window Plates:</strong> AI protest crowd &amp; ICE fighting behind glass.<br/><strong>3. Back Pool Room:</strong> Billy vs. Oscar match (SV “tech boys” w/ co-producer <strong>Ilya Fomin</strong>, ex-YouTube/Google head engineer, vs. Don Bajema) + TV + rear look-down windows.<br/><strong>4. Brick Basement:</strong> ICE (incl. <strong>Brendan O’Malley</strong> · D015) beats Russ &amp; Women rescue him.</p>
                 </div>
 
                 <div class="st-mm-node-card" data-st-mm-node="day2b" tabindex="0" role="button">
                   <div class="st-mm-node-top">
-                    <span class="st-mm-node-tag">DAY 2 (OPTION B) · BERKELEY / ALBANY ALTERNATIVE</span>
-                    <span class="st-mm-portal-pill">2nd-Floor Look-Down</span>
+                    <span class="st-mm-node-tag">DAY 2 (OPTION B) · DOUG MILLER &amp; SON KYLE/TODD (D015)</span>
+                    <span class="st-mm-portal-pill">Oct 23 Diagram + Brendan/Tina</span>
                   </div>
-                  <div class="st-mm-node-title">Mallard Club (San Pablo) OR Tap Haus (Regent St near Telegraph)</div>
-                  <p class="st-mm-node-desc"><strong>Mallard Club:</strong> ~2 blocks from Lama Bar (2 full pool rooms + top/bottom bars, 2nd-floor look-down window).<br/><strong>Tap Haus:</strong> Regent St near Telegraph Ave in downtown Berkeley (run by father of Mallard operator; both currently unreachable).</p>
+                  <div class="st-mm-node-title">Mallard Club (San Pablo) OR Tap Haus (Regent St · Owner Doug Miller)</div>
+                  <p class="st-mm-node-desc"><strong>Mallard Club:</strong> ~2 blocks from Lama Bar; Rob met <strong>Kyle (or Todd) Miller</strong> (receptive son of owner <strong>Doug Miller</strong>) and left a <strong>visual diagram of the shooting situation on Oct 23</strong>.<br/><strong>Tap Haus / Outreach:</strong> Father <strong>Doug Miller</strong> makes the final call and hasn’t replied in a month (even w/ Buffalo Billiards owner’s intro). <strong>Brendan O’Malley</strong> knows the bartenders &amp; <strong>Tina</strong> and offered to go in person (<em>“bring in my muscle”</em>).</p>
                 </div>
               </div>
             </div>
@@ -559,7 +559,7 @@
             <!-- COLUMN 2: UNIVERSE 2 · DAY 1 (LAMA BAR) -->
             <div class="st-mm-col" data-st-mm-col="day1">
               <div class="st-mm-col-head" data-st-mm-node="day1">
-                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (WIN A: NOV 23–25/27 · WIN B: 1ST WK DEC)</div>
+                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (WIN A: NOV 22–24/27 · WIN B: 1ST WK DEC)</div>
                 <h4 class="st-mm-col-title">Lama Bar · Main Counter, Back Pool Table &amp; Corridor</h4>
                 <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG · D014), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
               </div>
@@ -579,7 +579,7 @@
                     <span class="st-mm-portal-pill">Portals #2 &amp; #3</span>
                   </div>
                   <div class="st-mm-node-title">SV/Pool Exit Upstairs · Ken/ICE Corridor Nod · Women Treat Wounded Man</div>
-                  <p class="st-mm-node-desc"><strong>1.2:</strong> SV &amp; Pool players (+ optional Brendan) agree on a game in back &amp; exit upstairs.<br/><strong>1.3:</strong> Ken exchanges a covert nod w/ 1 ICE guy in Lama Corridor, then exits to Basement w/ Russ.<br/><strong>1.4–1.5:</strong> ICE brings in wounded man — Women take charge while men freeze (+ optional Lama Attic).</p>
+                  <p class="st-mm-node-desc"><strong>1.2:</strong> SV &amp; Pool players (+ optional Brendan O’Malley) agree on a game in back &amp; exit upstairs.<br/><strong>1.3:</strong> Ken exchanges a covert nod w/ 1 ICE guy in Lama Corridor, then exits to Basement w/ Russ.<br/><strong>1.4–1.5:</strong> ICE brings in wounded man — Women take charge while men freeze (+ optional Lama Attic).</p>
                 </div>
               </div>
             </div>
@@ -589,16 +589,16 @@
               <div class="st-mm-col-head" data-st-mm-node="day3">
                 <div class="st-mm-col-kicker">UNIVERSE 3 · NIGHT 3 — LAMA RESTAURANT (“LAMA BEAN” · FREE)</div>
                 <h4 class="st-mm-col-title">Lama Restaurant · Dining Table, Pull-Down Door &amp; Storeroom</h4>
-                <p class="st-mm-col-sub"><strong>Cast:</strong> Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy/Mira), 5 Tough ICE Guys (Nancy Hayes · 1 SAG), Mickey, Russ</p>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy/Mira), 5 Tough ICE Guys (Jeff Kao, Lance, Brendan O’Malley [D015] + Nancy’s Recruits incl. 1 SAG), Mickey, Russ</p>
               </div>
               <div class="st-mm-col-nodes">
                 <div class="st-mm-node-card" data-st-mm-node="day3" tabindex="0" role="button">
                   <div class="st-mm-node-top">
-                    <span class="st-mm-node-tag">BEAT 3.1 · TABLE UNDER 5-ICE WINDOW LOCKDOWN</span>
+                    <span class="st-mm-node-tag">BEAT 3.1 · TABLE UNDER 5-ICE WINDOW LOCKDOWN (INCL. BRENDAN · D015)</span>
                     <span class="st-mm-portal-pill">Door Portal #4 → Restaurant</span>
                   </div>
                   <div class="st-mm-node-title">Women Exit Noisy Bar → Academic Ideas to Personal Stories + Mickey Intrusion</div>
-                  <p class="st-mm-node-desc">Owned by the same friendly family as Lama Bar. Women sit at a dining table while <strong>5 tough-looking ICE guys</strong> (recruited by Nancy Hayes at a low rate; includes 1 SAG actor) guard the windows and block them from leaving (<em>“Demonstration down the street, you can’t leave”</em>). Talk shifts from academic ideas to personal stories, plus a possible <strong>Mickey Disend intrusion</strong> talking to Marianne.</p>
+                  <p class="st-mm-node-desc">Owned by the same friendly family as Lama Bar. Women sit at a dining table while <strong>5 tough-looking ICE guys</strong> (Jeff Kao, Lance, <strong>Brendan O’Malley</strong> [100% locked Oct 23 · <code>40W×32L</code> pants, <code>16¼"</code> neck, <code>42–44</code> chest, <code>XXL</code> ICE tee] + Nancy Hayes’s recruits incl. 1 SAG actor) guard the windows and block them from leaving. Talk shifts from academic ideas to personal stories, plus a possible <strong>Mickey Disend intrusion</strong>.</p>
                 </div>
 
                 <div class="st-mm-node-card" data-st-mm-node="day3" tabindex="0" role="button">
@@ -617,12 +617,12 @@
           <!-- FULL-WIDTH BOTTOM RULES BAR -->
           <div class="st-mm-node-card st-mm-rules-bar" data-st-mm-node="rules" tabindex="0" role="button">
             <div class="st-mm-node-top">
-              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PA GUARDS · CRAFT SERVICES · KEN WINDOWS &amp; BOOK BOUNDARY (D011 / D012 / D013 / D014)</span>
+              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PAs · CRAFT SERVICES · KEN &amp; BRENDAN WINDOWS + WARDROBE (D011–D015)</span>
               <span class="st-mm-portal-pill">All 3 Universes · Click to Inspect Rules</span>
             </div>
             <div class="st-mm-rules-grid">
-              <div><strong>1. Ken Newman Windows (D011 / D014):</strong> Nov 17–22 blocked (Moscone). <strong>Window A:</strong> Mon Nov 23–Wed Nov 25 / Fri Nov 27 (Thu Thanksgiving; Sat Zihuatanejo flight). <strong>Window B:</strong> 1st Wk of Dec.</div>
-              <div><strong>2. Hidden Craft Services (D012):</strong> <strong>Lama Bar:</strong> Outside in back · <strong>Buffalo Billiards:</strong> Owner’s office · <strong>Lama Restaurant:</strong> Low in kitchen or right-hand side room.</div>
+              <div><strong>1. Ken &amp; Brendan Windows (D014 / D015):</strong> Nov 17–22 blocked (Moscone). <strong>Window A:</strong> Sun Nov 22 (night), Mon Nov 23–Tue Nov 24 &amp; Fri Nov 27 (Nov 25–26 blocked for Thanksgiving; Sat Zihuatanejo flight). <strong>Window B:</strong> 1st Wk of Dec.</div>
+              <div><strong>2. Brendan ICE Wardrobe (D015) &amp; Craft Services:</strong> <strong>Brendan O’Malley:</strong> <code>40W×32L</code> · <code>16¼"</code> neck · <code>42–44</code> chest · <code>XXL</code> ICE tee. Craft Services hidden outside/office/kitchen.</div>
               <div><strong>3. 2–3 Set Cameras + PAs (D012):</strong> 2 Handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs; protest video on venue TVs.</div>
               <div><strong>4. SAG &amp; Book Rules (D013):</strong> Only <strong>2 SAG actors</strong> (Ken Newman + 1 SAG ICE actor); any Zionism/AIPAC critique stays strictly in Russ’s book &amp; separated from Jewish people.</div>
             </div>
@@ -642,8 +642,8 @@
         <summary>
           <span class="num">★</span>
           <span>
-            <div class="ct">Verbatim Ken Newman Schedule Message (OCT23A03) &amp; Rob Nilsson 3-Day Outline</div>
-            <div class="cs">Source: OCT23A01 + OCT23A02 + OCT23A03 · Ken Newman Nov 23–27 &amp; Early Dec Windows (D014) + Day 1 Lama Bar, Day 2 Pool Hall, Day 3 Lama Restaurant</div>
+            <div class="ct">Verbatim Brendan O’Malley ICE Intake (OCT23A04), Ken Newman Dispatch (OCT23A03) &amp; Rob Nilsson 3-Day Outline</div>
+            <div class="cs">Source: OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04 · Brendan O’Malley ICE Lock &amp; Wardrobe (D015) + Ken Newman Windows (D014) + 3-Day Outline</div>
           </span>
           <span class="count">Verbatim Note <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
         </summary>
@@ -1147,7 +1147,7 @@
   let scope = "all";
   let searchItems = [];
   let sel = 0;
-  const TRY_TERMS = ["Nov 23", "Moscone", "Zihuatanejo", "Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman", "Mickey Disend", "360"];
+  const TRY_TERMS = ["Brendan O’Malley", "Doug Miller", "Nov 23", "Moscone", "Zihuatanejo", "Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman"];
 
   function openSearch(q) {
     sheet.hidden = false;

@@ -13,7 +13,7 @@ window.PRECIPICE_HUB_DATA = {
     coProducerDP: "Zhan Petrov",
     soundMixer: "Vitaly Ponomarev (Sound Check Locked: Wed Oct 28, 2026 @ 11:00 AM)",
     wardrobe: "Nancy Hayes",
-    shootWindow: "Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 (Nov 17–22 Moscone Blocked · Thu Nov 26 Thanksgiving · Sat Nov 28 Zihuatanejo Flight) OR Window B: 1st Wk of Dec (D014)",
+    shootWindow: "Window A: Sun Nov 22 (Night)–Tue Nov 24 & Fri Nov 27 (Nov 17–22 Moscone Blocked · Nov 25–26 Thanksgiving Blocked · Sat Nov 28 Zihuatanejo Flight) OR Window B: 1st Wk of Dec (D014 / D015)",
     flowProjectUrl: "https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe",
     controlTowerUrl: "https://zhanpetrov.github.io/precipice/",
     controlTowerRepo: "https://github.com/zhanpetrov/precipice",
@@ -37,6 +37,11 @@ window.PRECIPICE_HUB_DATA = {
         code: "D014",
         name: "Ken Newman's Nov 23–27 & Early Dec Shoot Windows (OCT23A03)",
         desc: "Dispatched Oct 23, 2026 (OCT23A03): Ken Newman is booked Nov 17–22 at Moscone Center (tradeshow magician + music gigs wrapping Nov 22). Window A: Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B: First Week of December (if Ken extends his airline ticket)."
+      },
+      {
+        code: "D015",
+        name: "Brendan O’Malley ICE Unit Lock, Wardrobe Sizes & Mallard Club / Doug Miller Intel (OCT23A04)",
+        desc: "Agreed Oct 23, 2026 (OCT23A04): Brendan O’Malley is 100% locked for the ICE Agent Unit across the 3-day / 3-venue shoot (available Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27; Nov 25–26 blocked for Thanksgiving). Wardrobe sizes for Nancy Hayes: 40W×32L pants, 16¼\" neck, 42–44 chest, XXL ICE T-shirt. Mallard Club owner Doug Miller (Tap Haus) remains unreachable despite receptive son Kyle/Todd & Oct 23 diagram; Brendan & Tina will assist in person."
       },
       {
         code: "PROMPT-LOCK",
@@ -524,10 +529,10 @@ window.PRECIPICE_HUB_DATA = {
     { id: "CAST-21", name: "Lana Sherhbacova", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Emergency Response · Day 2/3 Lama Restaurant Table & Upstairs/Side-Room Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a striking woman academic exchanging an urgent look with her colleagues at the Lama Restaurant table before confronting the five ICE agents guarding the windows, Kodak Vision3 500T." },
     { id: "CAST-22", name: "Cathy Lerza", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Wounded Response · Day 2/3 Women & ICE Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a seasoned woman academic speaking with grounded authority as the women confront the ICE operatives in the side room of Lama Restaurant." },
 
-    // GROUP 6: ICE / DETENTION UNIT (6 — Jeff Kao + Lance + Brandon + Nancy Hayes's Tough Hombres incl. 1 SAG)
+    // GROUP 6: ICE / DETENTION UNIT (6 — Jeff Kao + Lance + Brendan O'Malley + Nancy Hayes's Tough Hombres incl. 1 SAG)
     { id: "CAST-23", name: "Jeff Kao", group: "Downstairs ICE Unit", role: "Lead ('Maitre d'') of ICE Unit (+ Lending 3 Sennheiser Wireless Sets · Day 1 Corridor/Wounded Beat · Day 3 Guards Lama Restaurant Windows)", contact: "[REDACTED — ON FILE · CALL VERIFIED OCT 20]", d010Status: "MEASUREMENTS TO NANCY HAYES", flowPrompt: "Claustrophobic handheld 35mm cinema-verite low-angle medium close-up inside Lama Restaurant at night: the commanding lead of a plainclothes ICE unit stands guarding the front window, telling the women academics they cannot leave to their car because of the demonstration down the street." },
     { id: "CAST-24", name: "Lance (Walker)", group: "Downstairs ICE Unit", role: "ICE Operative #2 (Day 2 Brick Basement / Day 3 Lama Restaurant Window Guard & Storeroom Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Gritty handheld 35mm cinema-verite shot inside Lama Restaurant at night: a tense operative in dark street clothes guards the window in deep slate-teal shadow." },
-    { id: "CAST-25", name: "Brandon (Brendan)", group: "Downstairs ICE Unit", role: "ICE Operative #3 OR Day 1 Background Pool Shooter at Lama Bar (Per Oct 23 Note)", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot at the back pool table of Lama Bar: a man shoots pool casually in the background while Silicon Valley tech men and pool players negotiate a high-stakes game nearby." },
+    { id: "CAST-25", name: "Brendan O’Malley", group: "Downstairs ICE Unit", role: "ICE Operative #3 (100% Locked Oct 23 in OCT23A04 · 'If you count on me, I will not let you down' · Open Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27; Nov 25–26 Blocked for Thanksgiving · Wardrobe for Nancy Hayes: 40W×32L Pants, 16¼\" Neck, 42–44 Chest, XXL ICE Tee · Also knows Mallard Club bartenders & Tina to reach owner Doug Miller)", contact: "[REDACTED — ON FILE · VERIFIED OCT 23]", d010Status: "CONFIRMED ICE UNIT · WARDROBE LOCKED (40W×32L · 16¼\" NECK · 42–44 CHEST · XXL TEE · D015)", flowPrompt: "Gritty handheld 35mm cinema-verite medium shot inside Lama Restaurant at night: a solid, physically imposing ICE operative in an XXL black tactical ICE tee and 42–44 jacket stands watch by the front window while the women academics debate at the table, Kodak Vision3 500T." },
     { id: "CAST-26", name: "ICE Recruit #4 (Nancy Hayes's SAG ICE Actor)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #4 · 2nd SAG Actor on Roster (Recruited by Nancy Hayes at low rate · Day 3 Guards Lama Restaurant Windows)", contact: "[NANCY HAYES CASTING — CONFIRMED OCT 23]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite shot of a tough-looking plainclothes operative standing watch by the frosted window of Lama Restaurant at night." },
     { id: "CAST-27", name: "ICE Recruit #5 (Nancy Hayes's Tough-Looking Hombre)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #5 (Recruited by Nancy Hayes at low rate · Day 3 Lama Restaurant Window Guard & Upstairs Storeroom Beating)", contact: "[NANCY HAYES CASTING — CONFIRMED OCT 23]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite over-the-shoulder shot in the upstairs storeroom of Lama Restaurant as the women burst in to stop the assault on Russ." },
     { id: "CAST-28", name: "Young Anti-MAGA / Dylan / Valery Slot", group: "Bar Core", role: "Young Anti-MAGA Catalyst / Dylan Slot (Discussed in Dinner 17:32 & Sept 19 Notes)", contact: "[OPEN CASTING VERIFICATION — ROB & ZHAN]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite tracking shot of a young anti-MAGA activist bursting through the front door of Lama Bar from a chaotic night street demonstration in Berkeley, catching their breath under neon light." }
@@ -646,23 +651,23 @@ window.PRECIPICE_HUB_DATA = {
 
   shootingScheduleMindMap: {
     updated: "2026-10-23",
-    sourceId: "OCT23A01 + OCT23A02 + OCT23A03",
-    sourceTitle: "Rob Nilsson 3-Day Outline, Fifth St 13 Meeting (OCT23A01), Russ/Rob Call (OCT23A02) & Ken Newman Schedule Dispatch (OCT23A03)",
+    sourceId: "OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04",
+    sourceTitle: "Rob Nilsson 3-Day Outline (OCT23A01), Russ/Rob Call (OCT23A02), Ken Newman Schedule Dispatch (OCT23A03) & Brendan O’Malley ICE Lock / Wardrobe / Mallard Club Intake (OCT23A04)",
     rhythm: [
-      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Win A: Nov 23–25/27 · Win B: 1st Wk Dec (D014)", kind: "shoot" },
+      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Win A: Sun Nov 22–Tue Nov 24 / Fri Nov 27 · Win B: 1st Wk Dec (D014/D015)", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
       { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard / Tap Haus", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
-      { id: "day3", step: "NIGHT 3 · SHOOT", title: "Day 3: Lama Restaurant", sub: "Universe 3 · 'Lama Bean' · Women & 5 ICE", kind: "shoot" }
+      { id: "day3", step: "NIGHT 3 · SHOOT", title: "Day 3: Lama Restaurant", sub: "Universe 3 · 'Lama Bean' · Women & 5 ICE (Incl. Brendan)", kind: "shoot" }
     ],
     nodes: {
       hub: {
         id: "hub",
-        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02 + OCT23A03)",
+        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02 + OCT23A03 + OCT23A04)",
         title: "PRECIPICE — 3–4 Spaced Nights & 3-Universe Mind Map",
         venue: "Lama Bar ↔ Buffalo Billiards (or Mallard / Tap Haus) ↔ Lama Restaurant ('Lama Bean')",
-        drefs: ["D001", "D011", "D012", "D013", "D014"],
-        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Per Ken Newman's Oct 23 dispatch (OCT23A03 / D014): Nov 17–22 is blocked (Moscone Center tradeshow magician + music gigs wrapping Nov 22). Window A opens Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket.",
+        drefs: ["D001", "D011", "D012", "D013", "D014", "D015"],
+        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Per Ken Newman (OCT23A03 / D014) & Brendan O’Malley (OCT23A04 / D015): Nov 17–22 is blocked (Ken at Moscone Center wrapping Sun Nov 22). Window A opens Sun Nov 22 (Night)–Tue Nov 24 & Fri Nov 27 (Brendan & Rob block Wed Nov 25 & Thu Nov 26 for Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket.",
         craftServices: "Hidden out of 360° camera sightlines at all 3 venues",
         cameraPlan: "2× handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs"
       },
@@ -672,8 +677,8 @@ window.PRECIPICE_HUB_DATA = {
         title: "Day 1 — Lama Bar (Free Working-Man's Bar · 5 Core Beats)",
         venue: "Lama Bar on San Pablo Ave (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
         cast: "Russ, Ken (SAG · Nov 23–25/27 or 1st Wk Dec), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
-        drefs: ["D001", "D011", "D012", "D013", "D014"],
-        summary: "Target Maiden Voyage Night (Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 OR Window B: 1st Week of Dec per OCT23A03 / D014). Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
+        drefs: ["D001", "D011", "D012", "D013", "D014", "D015"],
+        summary: "Target Maiden Voyage Night (Window A: Sun Nov 22 Night / Mon Nov 23–Tue Nov 24 / Fri Nov 27 OR Window B: 1st Week of Dec per D014 & D015). Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
         craftServices: "Outside in the back (completely clear of 360° bar interior)",
         cameraPlan: "360° bar coverage + 2–3 set cameras + handheld iPhones; TV sets show street demonstration",
         beats: [
@@ -686,7 +691,7 @@ window.PRECIPICE_HUB_DATA = {
           {
             num: "1.2",
             title: "Silicon Valley & Pool Players Agree on a Game — Exit Upstairs",
-            detail: "In the back of Lama Bar, the Silicon Valley guys and Pool players (plus optional Brendan shooting pool if not playing ICE) watch a casual game, agree on a high-stakes match, and exit toward the upstairs pool room — establishing the whole room and freeing the bar from shooting restrictions.",
+            detail: "In the back of Lama Bar, the Silicon Valley guys and Pool players (plus optional Brendan O’Malley shooting pool if not in ICE scene) watch a casual game, agree on a high-stakes match, and exit toward the upstairs pool room — establishing the whole room and freeing the bar from shooting restrictions.",
             prompt: "Candid handheld 35mm cinema-verite wide-to-medium shot toward the back pool table of Lama Bar: Silicon Valley tech men and pool sharks agree on a high-stakes game and exit through the interior door toward the upstairs pool hall, warm tungsten and neon reflections."
           },
           {
@@ -714,9 +719,9 @@ window.PRECIPICE_HUB_DATA = {
         badge: "OPTIONAL DAY 2 (OPTION A) · UNIVERSE 1",
         title: "Day 2 (Option A) — Buffalo Billiards, Petaluma (12:00 AM Midnight Call · Free)",
         venue: "Buffalo Billiards (Main Empty Hall, Smaller Back Pool Room w/ TV & Rear Windows, Brick Basement Storage)",
-        cast: "Russ, Billy Aguero, Oscar Valdiviezo, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys (Vitaly, Andrei), All Women, All ICE Guys",
-        drefs: ["D001", "D004", "D011", "D012"],
-        summary: "Confirmed free ($0) starting at 12:00 AM midnight (where Billy Aguero works). Captures the opening shot of the film, tripod window plates for AI protest/ICE cutaways, the Billy vs. Oscar match in the smaller back room w/ co-producer Ilya Fomin (former head engineer at YouTube/Google) among the SV 'tech boys', and the brick basement underneath where ICE beats Russ and the women rescue him.",
+        cast: "Russ, Billy Aguero, Oscar Valdiviezo, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys (Vitaly, Andrei), All Women, All ICE Guys (Incl. Brendan O’Malley · D015)",
+        drefs: ["D001", "D004", "D011", "D012", "D015"],
+        summary: "Confirmed free ($0) starting at 12:00 AM midnight (where Billy Aguero works). Captures the opening shot of the film, tripod window plates for AI protest/ICE cutaways, the Billy vs. Oscar match in the smaller back room w/ co-producer Ilya Fomin (former head engineer at YouTube/Google) among the SV 'tech boys', and the brick basement underneath where ICE (including Brendan O’Malley · 40W×32L / 42–44 / XXL) beats Russ and the women rescue him.",
         craftServices: "Owner's Office (completely out of 360° pool hall & back room sightlines)",
         cameraPlan: "Tripod wide/tight window plates + 360° handheld & set cameras in smaller back pool room (check overhead table light vs ugly general light)",
         beats: [
@@ -741,26 +746,26 @@ window.PRECIPICE_HUB_DATA = {
           {
             num: "2A.4",
             title: "Brick Basement Underneath — ICE Beats Russ & Women Rescue Him",
-            detail: "Brick basement storage room underneath Buffalo Billiards where Russ gets the hell beaten out of him by the ICE guys and the women come to his rescue (arranging overnight lodging or next-day rest after the Petaluma schlep).",
+            detail: "Brick basement storage room underneath Buffalo Billiards where Russ gets the hell beaten out of him by the ICE guys (including Brendan O’Malley · D015) and the women come to his rescue (arranging overnight lodging or next-day rest after the Petaluma schlep).",
             prompt: "Claustrophobic handheld 35mm cinema-verite shot inside a raw brick basement storage room beneath a pool hall: women academics burst in to confront plainclothes ICE operatives and rescue a bruised silver-haired contractor under low tungsten work lights."
           }
         ]
       },
       day2b: {
         id: "day2b",
-        badge: "OPTIONAL DAY 2 (OPTION B) · UNIVERSE 1",
-        title: "Day 2 (Option B) — Mallard Club (San Pablo) or Tap Haus (Regent St near Telegraph, Berkeley)",
-        venue: "Mallard Club (2 Pool Rooms + Top/Bottom Bars) OR Tap Haus (Regent St, half a block from Telegraph Ave)",
-        cast: "Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily (+ Pool & ICE Units)",
-        drefs: ["D011", "D012"],
-        summary: "Closer East Bay alternatives if not driving to Buffalo Billiards at midnight: Mallard Club (~2 blocks from Lama Bar on San Pablo Ave: two full pool rooms + top-floor bar + bottom-floor bar) is run by the son of the man who runs Tap Haus (on Regent St, half a block from Telegraph Ave in downtown Berkeley). Both father and son remain unreachable despite Rob's calls and letter.",
+        badge: "OPTIONAL DAY 2 (OPTION B) · UNIVERSE 1 · DOUG MILLER & SON KYLE/TODD (D015)",
+        title: "Day 2 (Option B) — Mallard Club (San Pablo) or Tap Haus (Regent St · Owner Doug Miller)",
+        venue: "Mallard Club (2 Pool Rooms + Top/Bottom Bars · Son Kyle/Todd Miller) OR Tap Haus (Regent St · Owner Doug Miller)",
+        cast: "Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily (+ Pool & ICE Units incl. Brendan O’Malley)",
+        drefs: ["D011", "D012", "D015"],
+        summary: "Closer East Bay alternatives if not driving to Buffalo Billiards at midnight: Mallard Club (~2 blocks from Lama Bar on San Pablo Ave: two full pool rooms + top-floor bar + bottom-floor bar) is run by Kyle (or Todd) Miller, the very receptive son of owner Doug Miller (who runs Tap Haus on Regent St near Telegraph Ave and makes the final decision). On the afternoon of Oct 23, Rob visited the Mallard Club, met two bartenders, and left a visual picture/diagram of the shooting situation, though Doug Miller hasn't responded in a month even after the Buffalo Billiards owner tried to set up a connection. Brendan O’Malley knows the Mallard bartenders and knows Tina (who knows the owners), and offered to go in person with Rob ('bring in my muscle') to reach Doug Miller (OCT23A04 / D015).",
         craftServices: "Staged in adjacent non-shooting room out of 360° sightlines",
         cameraPlan: "High-angle 2nd-floor window look-down plate + discrete upstairs room coverage",
         beats: [
           {
             num: "2B.1",
-            title: "2nd-Floor Window Look-Down Crowd Plate & Pool Room Match",
-            detail: "Establish the protest crowd by looking down from the second-floor pool room windows while shooting the pool match upstairs without needing the bar downstairs.",
+            title: "Owner Doug Miller & Son Kyle/Todd Outreach + Brendan O’Malley & 'Tina' Connection (D015)",
+            detail: "Rob met Kyle/Todd Miller (Doug Miller's son) who was very receptive, and returned on Oct 23 afternoon to leave a visual picture/diagram of the shooting situation. Father Doug Miller (final decision-maker) hasn't replied in a month even with the Buffalo Billiards owner's intro. Brendan O’Malley knows the bartenders and Tina, and offered to go in person with Rob & Tina to reach Doug Miller.",
             prompt: "High-angle handheld 35mm cinema-verite shot looking down from a second-floor pool room window at night onto a street demonstration below, then panning back to a green-felt pool table inside."
           },
           {
@@ -776,16 +781,16 @@ window.PRECIPICE_HUB_DATA = {
         badge: "DAY 3 · UNIVERSE 3 · LAMA RESTAURANT ('LAMA BEAN')",
         title: "Day 3 — Women Academics at Lama Restaurant ('Lama Bean' · Free Venue)",
         venue: "Lama Restaurant ('Lama Bean': Main Dining Table, Guarded Windows, Right Side Room w/ Pull-Down Metal Door, Upstairs Stairway & Storeroom)",
-        cast: "Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy, Mira), 5 Tough ICE Guys (Nancy Hayes · 1 SAG), Possible Mickey Intrusion, Russ",
-        drefs: ["D001", "D011", "D012"],
-        summary: "Owned by the same friendly family as Lama Bar. The women exit noisy Lama Bar through the door and enter Lama Restaurant ('Lama Bean') to talk alone. 5 tough-looking ICE guys (recruited by Nancy Hayes at a low rate; includes 1 SAG actor) guard the windows and trap them inside while their conversation shifts from academic ideas to personal stories, culminating in the pull-down metal door side room or upstairs storeroom confrontation.",
+        cast: "Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy, Mira), 5 Tough ICE Guys (Jeff Kao, Lance, Brendan O’Malley [40W×32L · 16¼\" neck · 42–44 chest · XXL tee] + Nancy Hayes's Tough Hombres incl. 1 SAG), Possible Mickey Intrusion, Russ",
+        drefs: ["D001", "D011", "D012", "D015"],
+        summary: "Owned by the same friendly family as Lama Bar. The women exit noisy Lama Bar through the door and enter Lama Restaurant ('Lama Bean') to talk alone. 5 tough-looking ICE guys (Jeff Kao, Lance, Brendan O’Malley [100% locked Oct 23 in OCT23A04 · 40W×32L pants, 16¼\" neck, 42–44 chest, XXL ICE tee] + Nancy Hayes's recruits including 1 SAG actor) guard the windows and trap them inside while their conversation shifts from academic ideas to personal stories, culminating in the pull-down metal door side room or upstairs storeroom confrontation.",
         craftServices: "Low inside the Kitchen OR inside the Right-Hand Side Room (if confrontation is shot upstairs)",
         cameraPlan: "2–3 set cameras (re-angled) + handheld iPhones guarded by PAs; zero window restrictions in the pull-down metal door side room",
         beats: [
           {
             num: "3.1",
-            title: "Table Scene w/ 5 Tough ICE Guys Guarding Windows: Academic Ideas → Personal Stories (+ Mickey Intrusion)",
-            detail: "Sitting at a table in the main dining room with 5 tough-looking ICE guys (recruited by Nancy Hayes) guarding the windows (when the women try to go to their car, ICE blocks them: 'There's a demonstration down the street, you can't leave'). Conversation evolves from academic ideas to personal stories, with a possible Mickey Disend intrusion talking to Marianne.",
+            title: "Table Scene w/ 5 Tough ICE Guys (Incl. Brendan O’Malley · D015) Guarding Windows: Academic Ideas → Personal Stories (+ Mickey Intrusion)",
+            detail: "Sitting at a table in the main dining room with 5 tough-looking ICE guys (Jeff Kao, Lance, Brendan O’Malley [40W×32L / 16¼\" neck / 42–44 chest / XXL tee] + Nancy Hayes's recruits) guarding the windows (when the women try to go to their car, ICE blocks them: 'There's a demonstration down the street, you can't leave'). Conversation evolves from academic ideas to personal stories, with a possible Mickey Disend intrusion talking to Marianne.",
             prompt: "Candid handheld 35mm cinema-verite ensemble shot inside Lama Restaurant at night: women academics sit around a dining table sharing academic ideas and personal stories while five tough-looking plainclothes ICE agents stand guarding the street windows behind them, blocking the exit."
           },
           {
@@ -798,30 +803,38 @@ window.PRECIPICE_HUB_DATA = {
       },
       rules: {
         id: "rules",
-        badge: "STAGING, CAMERA, SAG & SCHEDULE RULES · D011, D012, D013 & D014",
-        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster, Russ Book & Ken Windows",
+        badge: "STAGING, CAMERA, SAG, SCHEDULE & WARDROBE RULES · D011–D015",
+        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster, Ken/Brendan Windows & Wardrobe",
         venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard / Tap Haus, Lama Restaurant)",
-        drefs: ["D001", "D010", "D011", "D012", "D013", "D014"],
-        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01, OCT23A02 & OCT23A03) to protect senior cast/crew across spaced midnight shoots, map Ken Newman's Nov 23–27 & early Dec shoot windows (D014), ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
+        drefs: ["D001", "D010", "D011", "D012", "D013", "D014", "D015"],
+        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01–OCT23A04) to protect senior cast/crew across spaced midnight shoots, map Ken Newman's & Brendan O’Malley's Nov 22–27 & early Dec shoot windows (D014 / D015), lock Brendan's ICE wardrobe sizes for Nancy Hayes (40W×32L · 16¼\" neck · 42–44 chest · XXL tee), ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
         craftServices: "Lama Bar: Outside in Back · Buffalo Billiards: Owner's Office · Lama Restaurant: Kitchen Low or Right-Hand Room",
         cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras; only 2 SAG actors (Ken Newman + 1 SAG ICE actor)",
         beats: [
           {
             num: "R.1",
-            title: "Ken Newman's Nov 23–27 & Early Dec Shoot Windows + Staggered Rest Days (D011 / D014)",
-            detail: "Per Ken Newman's Oct 23 message (OCT23A03 / D014): Nov 17–22 is blocked (Moscone Center tradeshow magician + music gigs wrapping Nov 22). Window A opens Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket. Shoot Night → Rest Day(s) → Shoot Night protects senior cast/crew (Rob [87], Russ [retiring Feb 2027], Ken, Mickey, Nancy).",
+            title: "Ken Newman & Brendan O’Malley Nov 22–27 & Early Dec Shoot Windows + Staggered Rest Days (D011 / D014 / D015)",
+            detail: "Per Ken Newman's Oct 23 message (OCT23A03 / D014) & Brendan O’Malley's Oct 23 call (OCT23A04 / D015): Nov 17–22 is blocked (Ken at Moscone Center wrapping Sun Nov 22). Window A: Brendan is open Sun Nov 22, Mon Nov 23–Tue Nov 24 & Fri Nov 27 (blocking Wed Nov 25 & Thu Nov 26 for Thanksgiving), while Ken has Nov 23–25 & Nov 27 before his Sat Nov 28 Zihuatanejo flight — making Sun Nov 22 (night), Mon Nov 23, Tue Nov 24 & Fri Nov 27 the primary Thanksgiving-week overlap. Window B opens First Week of December if Ken extends his airline ticket.",
             prompt: "Candid handheld 35mm behind-the-scenes cinema-verite shot of an independent film crew and senior actors reviewing a three-night shooting schedule board under warm tungsten light in a Berkeley bar."
           },
           {
             num: "R.2",
-            title: "2–3 Set Cameras + PA Guards, 2 SAG Actors & Book Boundary (D012 / D013)",
-            detail: "Deploy 2–3 set cameras (guarded by PAs) + 2 handheld iPhones for rapid cutting. Nancy Hayes cast tough-looking ICE guys at a low rate (only 2 SAG actors total on film: Ken Newman + 1 SAG ICE actor). Any critique of political Zionism/Netanyahu/AIPAC stays strictly in Russ's book and explicitly separated from Jewish people.",
+            title: "Brendan O’Malley ICE Wardrobe Sizes (D015), 2–3 Set Cameras + PA Guards, 2 SAG Actors & Book Boundary (D012 / D013)",
+            detail: "Brendan O’Malley is 100% locked for the ICE Agent Unit ('If you count on me, I will not let you down') with verified wardrobe sizes for Nancy Hayes: 40W×32L pants, 16¼\" neck, 42–44 chest, XXL ICE T-shirt. Deploy 2–3 set cameras (guarded by PAs) + 2 handheld iPhones for rapid cutting. Only 2 SAG actors total on film (Ken Newman + 1 SAG ICE actor). Any critique of political Zionism/Netanyahu/AIPAC stays strictly in Russ's book and explicitly separated from Jewish people.",
             prompt: "Candid handheld 35mm behind-the-scenes shot inside Lama Restaurant at night: two production assistants guard compact tripod-mounted cinema cameras at the corners of the room while two handheld operators move fluidly around the table."
           }
         ]
       }
     },
-    verbatimOutline: `KEN NEWMAN SCHEDULE & AVAILABILITY MESSAGE TO ROB NILSSON (OCT 23, 2026 · OCT23A03 / D014)
+    verbatimOutline: `BRENDAN O’MALLEY ICE UNIT LOCK, WARDROBE MEASUREMENTS & MALLARD CLUB / DOUG MILLER CALL (OCT 23, 2026 · OCT23A04 / D015)
+- Commitment: "No, no, no, I'm in. I'm in... If you count on me, I will [not] let you down." (3-day / 3-venue shoot: Lama Bar, Buffalo Billiards in Petaluma, Lama Restaurant).
+- Thanksgiving Week Availability: Open Sunday Nov 22 (possible night shoot), Mon Nov 23 – Tue Nov 24, and Friday Nov 27; Wed Nov 25 & Thu Nov 26 (Thanksgiving) blocked.
+- Wardrobe Measurements for Nancy Hayes (ICE Uniform): Pants: 40W × 32L ("40 waist, 32 length") · Neck: ~16¼" ("16 and a quarter") · Chest/Jacket: 42–44 ("42 range... I'll take 44, of course") · ICE T-Shirt: XXL ("Double XL for sure. We got it.").
+- Mallard Club / Tap Haus Intel: Rob met Kyle (or Todd) Miller, the very receptive son of owner Doug Miller (Tap Haus), and left a visual picture/diagram of the shooting situation at Mallard Club on Oct 23 afternoon. Father Doug Miller hasn't responded in a month even with the Buffalo Billiards owner's intro. Brendan knows the Mallard bartenders and Tina (who knows the owners) and offered to go in person ("bring in my muscle") to reach Doug Miller.
+
+---
+
+KEN NEWMAN SCHEDULE & AVAILABILITY MESSAGE TO ROB NILSSON (OCT 23, 2026 · OCT23A03 / D014)
 "hey there great to hear from you. Yeah November has gotten pretty crazy. The week of the 17th I am at the Moscone center doing a tradeshow and doing Magican stuff and I have a bunch of music gigs but that all wraps on the 22nd.
 which means I would have some time the 23rd to 24th the 25th and the 26th and the 27th. That might create a problem for some people because Thursday is Thanksgiving. And I’m supposed to leave on Saturday for Zihuatanejo. It’s possible I have to check with the Airlines but I might be able to extend another week which would give us the first week of December as well but let me know if any of those days early the week of the 23rd might work. Look forward to seeing you and really looking forward to getting started"
 
@@ -840,7 +853,7 @@ CHARACTERS: Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley guys, 1 
 5. *POSSIBLE ICE/WOMEN ENCOUNTER IN ATTIC OF LAMA RESTAURANT
 
 OPTIONAL- DAY 2- LOCATION- BUFFALO BILLIARDS- [12:00 AM Midnight Call · Free]
-CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya [Fomin — ex-YouTube/Google head engineer], etc.), all women, all ICE guys
+CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya [Fomin — ex-YouTube/Google head engineer], etc.), all women, all ICE guys [incl. Brendan O’Malley]
 
 1. Russ enters empty pool hall night- nobody around- walks into a door* This leads to the Lama Bar [Opening Shot of the Film]
 2. WS for use in empty hall with AI crowd and ICE fighting in the background [tripod wide & tighter window shots for Lama Bar noise cutaways]
@@ -849,12 +862,12 @@ CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya [Fomin — ex-YouTu
 
 OR
 
-OPTIONAL: DO DAY TWO IN MALLARD CLUB/TAP HAUS [Father & Son Operators in Berkeley/Albany — Currently Unreachable]
+OPTIONAL: DO DAY TWO IN MALLARD CLUB/TAP HAUS [Owner Doug Miller & Receptive Son Kyle/Todd — Oct 23 Diagram Left + Brendan/Tina Outreach (D015)]
 Characters: Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily
 1. Shot women/ICE confrontation either in the side / discrete upstairs pool room + 2nd-floor look-down window onto crowd
 
 DAY 3- WOMEN ACADEMICS- LAMA RESTAURANT ["Lama Bean" · Free Venue]
-Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys [Recruited by Nancy Hayes · Incl. 1 SAG Actor]
+Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys [Jeff Kao, Lance, Brendan O’Malley (40W×32L · 16¼" neck · 42–44 chest · XXL tee) + Nancy Hayes's Tough Hombres incl. 1 SAG Actor]
 
 1. They sit at a table with ICE GUYS guarding the windows. All academic ideas and now personal stories. Possible Mickey intrusion.
 2. WOMEN/ICE confrontation in either Lama side room [right-hand side room w/ pull-down metal door, no window restrictions] or upstairs storeroom [stairway up to storeroom where women hear ICE beating Russ and climb stairs to rescue him].`
