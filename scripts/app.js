@@ -496,85 +496,108 @@
           `).join("")}
         </div>
 
-        <div class="st-mm-canvas-wrap">
-          <svg class="st-mm-svg" viewBox="0 0 1060 440" role="img" aria-label="Interactive Mind Map of the PRECIPICE 3-Day Shooting Schedule and 3 Connected Universes">
-            <defs>
-              <linearGradient id="st-hub-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#0071e3" stop-opacity="0.16" />
-                <stop offset="100%" stop-color="#30b0c7" stop-opacity="0.16" />
-              </linearGradient>
-              <marker id="st-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 1 L 9 5 L 0 9 z" fill="#0071e3" />
-              </marker>
-            </defs>
+        <div class="st-mm-board" role="region" aria-label="Interactive Mind Map of the PRECIPICE 3-Day Shooting Schedule and 3 Connected Universes">
+          <div class="st-mm-board-cols">
 
-            <!-- Connectors -->
-            <path d="M 380 205 C 310 205, 310 95, 250 95" fill="none" stroke="#ff9500" stroke-width="2.2" />
-            <path d="M 380 230 C 310 230, 310 315, 250 315" fill="none" stroke="#5856d6" stroke-width="2" stroke-dasharray="5 4" />
-            <path d="M 530 165 L 530 100" fill="none" stroke="#0071e3" stroke-width="2.4" />
-            <path d="M 680 215 C 745 215, 745 145, 810 145" fill="none" stroke="#34c759" stroke-width="2.4" />
-            <path d="M 530 255 L 530 330" fill="none" stroke="#30b0c7" stroke-width="2.2" />
-            <path d="M 250 68 C 350 22, 410 22, 405 48" fill="none" stroke="#0071e3" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#st-arrow)" />
-            <text x="325" y="26" text-anchor="middle" font-size="10" font-weight="600" fill="#0071e3">Door Walk-Through (Opening Shot)</text>
-            <path d="M 655 58 C 735 58, 765 95, 810 115" fill="none" stroke="#34c759" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#st-arrow)" />
-            <text x="748" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#34c759">Women Exit Door → Restaurant</text>
+            <!-- COLUMN 1: UNIVERSE 1 · DAY 2 (POOL HALL) -->
+            <div class="st-mm-col" data-st-mm-col="day2a day2b">
+              <div class="st-mm-col-head" data-st-mm-node="day2a">
+                <div class="st-mm-col-kicker">UNIVERSE 1 · NIGHT 2 — POOL HALL (12:00 AM MIDNIGHT)</div>
+                <h4 class="st-mm-col-title">Buffalo Billiards (Opt A · Free) or Mallard / Tap Haus (Opt B)</h4>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Billy Aguero, Oscar, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys, All Women, All ICE</p>
+              </div>
+              <div class="st-mm-col-nodes">
+                <div class="st-mm-node-card on" data-st-mm-node="day2a" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">DAY 2 (OPTION A) · BUFFALO BILLIARDS (12 AM · FREE)</span>
+                    <span class="st-mm-portal-pill">Door Portal #1 → Lama Bar</span>
+                  </div>
+                  <div class="st-mm-node-title">1) Opening Shot · 2) AI Window Plates · 3) Back Room Match · 4) Brick Basement</div>
+                  <p class="st-mm-node-desc"><strong>1. Opening Shot:</strong> Russ walks through empty pool hall at night into a door leading directly to Lama Bar.<br/><strong>2. Tripod Window Plates:</strong> AI protest crowd &amp; ICE fighting behind glass.<br/><strong>3. Back Pool Room:</strong> Billy vs. Oscar match (SV “tech boys” w/ co-producer <strong>Ilya Fomin</strong>, ex-YouTube/Google head engineer, vs. Don Bajema) + TV + rear look-down windows.<br/><strong>4. Brick Basement:</strong> ICE beats Russ &amp; Women rescue him.</p>
+                </div>
 
-            <!-- Center Hub -->
-            <g class="st-node on" data-st-mm-node="hub">
-              <rect x="380" y="165" width="300" height="90" rx="18" fill="url(#st-hub-grad)" stroke="#0071e3" stroke-width="2.4" />
-              <text x="530" y="191" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0071e3">PRECIPICE · OCT 23 MIND MAP (OCT23A01)</text>
-              <text x="530" y="213" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">3-Night Schedule &amp; 3 Universes</text>
-              <text x="530" y="233" text-anchor="middle" font-size="11" fill="#6e6e73">Shoot Night → Rest Day(s) → Shoot Night (D011)</text>
-              <text x="530" y="248" text-anchor="middle" font-size="10" fill="#6e6e73">2–3 Set Cameras + Handheld · 360° Clear (D012)</text>
-            </g>
+                <div class="st-mm-node-card" data-st-mm-node="day2b" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">DAY 2 (OPTION B) · BERKELEY / ALBANY ALTERNATIVE</span>
+                    <span class="st-mm-portal-pill">2nd-Floor Look-Down</span>
+                  </div>
+                  <div class="st-mm-node-title">Mallard Club (San Pablo) OR Tap Haus (Regent St near Telegraph)</div>
+                  <p class="st-mm-node-desc"><strong>Mallard Club:</strong> ~2 blocks from Lama Bar (2 full pool rooms + top/bottom bars, 2nd-floor look-down window).<br/><strong>Tap Haus:</strong> Regent St near Telegraph Ave in downtown Berkeley (run by father of Mallard operator; both currently unreachable).</p>
+                </div>
+              </div>
+            </div>
 
-            <!-- Day 1: Lama Bar -->
-            <g class="st-node" data-st-mm-node="day1">
-              <rect x="375" y="12" width="310" height="88" rx="15" fill="rgba(0,113,227,0.08)" stroke="#0071e3" stroke-width="2" />
-              <text x="530" y="34" text-anchor="middle" font-size="10" font-weight="700" fill="#0071e3">DAY 1 · UNIVERSE 2 · LAMA BAR (FREE)</text>
-              <text x="530" y="53" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Scene 1: Bar Core, Corridor &amp; Wounded</text>
-              <text x="530" y="71" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Russ Manuscript + Mickey Buddhism + Don + Marianne</text>
-              <text x="530" y="87" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) SV/Pool Exit · 3) Ken/ICE Corridor · 4) Wounded + Women</text>
-            </g>
+            <!-- COLUMN 2: UNIVERSE 2 · DAY 1 (LAMA BAR) -->
+            <div class="st-mm-col" data-st-mm-col="day1">
+              <div class="st-mm-col-head" data-st-mm-node="day1">
+                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (SAN PABLO · FREE)</div>
+                <h4 class="st-mm-col-title">Lama Bar · Main Counter, Back Pool Table &amp; Corridor</h4>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
+              </div>
+              <div class="st-mm-col-nodes">
+                <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">BEAT 1.1 · BAR CORE, BOOK &amp; “5TH AMENDMENT” JOKE (D012 / D013)</span>
+                    <span class="st-mm-portal-pill">← From Pool Hall Door</span>
+                  </div>
+                  <div class="st-mm-node-title">Russ’s Calm Contractor Precision, Book Manuscript &amp; “5th Amendment” Joke</div>
+                  <p class="st-mm-node-desc">Longtime regular who has worked w/ the female bartender (target: powerful-looking Black woman). With calm contractor precision, Russ names real tools &amp; materials to save his friend’s cliffside house, quotes his unfinished book (<em>“Why can’t I be a writer as well?”</em>), and tells the Trump <strong>5th Amendment / 400x</strong> joke. Ken (SAG) does French Drop magic; Mickey brings Buddhism; Don (ex-coach) joins; Marianne recognizes Mickey.</p>
+                </div>
 
-            <!-- Day 2A: Buffalo Billiards -->
-            <g class="st-node" data-st-mm-node="day2a">
-              <rect x="14" y="42" width="236" height="108" rx="15" fill="rgba(255,149,0,0.08)" stroke="#ff9500" stroke-width="2" />
-              <text x="132" y="64" text-anchor="middle" font-size="10" font-weight="700" fill="#ff9500">DAY 2 (OPT A) · UNIVERSE 1</text>
-              <text x="132" y="83" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Buffalo Billiards (12 AM)</text>
-              <text x="132" y="101" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Opening Shot: Russ Empty Hall → Door</text>
-              <text x="132" y="117" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Tripod WS: AI Crowd &amp; ICE in Windows</text>
-              <text x="132" y="133" text-anchor="middle" font-size="10.5" fill="#6e6e73">3) Back Room Match + Look-Down · 4) Brick Bsmt</text>
-            </g>
+                <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">BEATS 1.2–1.5 · POOL EXIT, CORRIDOR ICE &amp; WOUNDED MAN</span>
+                    <span class="st-mm-portal-pill">Portals #2 &amp; #3</span>
+                  </div>
+                  <div class="st-mm-node-title">SV/Pool Exit Upstairs · Ken/ICE Corridor Nod · Women Treat Wounded Man</div>
+                  <p class="st-mm-node-desc"><strong>1.2:</strong> SV &amp; Pool players (+ optional Brendan) agree on a game in back &amp; exit upstairs.<br/><strong>1.3:</strong> Ken exchanges a covert nod w/ 1 ICE guy in Lama Corridor, then exits to Basement w/ Russ.<br/><strong>1.4–1.5:</strong> ICE brings in wounded man — Women take charge while men freeze (+ optional Lama Attic).</p>
+                </div>
+              </div>
+            </div>
 
-            <!-- Day 2B: Mallard Club / Tap Haus -->
-            <g class="st-node" data-st-mm-node="day2b">
-              <rect x="14" y="264" width="236" height="96" rx="15" fill="rgba(88,86,214,0.08)" stroke="#5856d6" stroke-width="1.8" stroke-dasharray="5 3" />
-              <text x="132" y="286" text-anchor="middle" font-size="10" font-weight="700" fill="#5856d6">DAY 2 (OPT B) · ALTERNATIVE</text>
-              <text x="132" y="305" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Mallard Club / Tap Haus</text>
-              <text x="132" y="323" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) Closer 2nd-Floor Look-Down Window</text>
-              <text x="132" y="339" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Women/ICE in Discrete Upstairs Room</text>
-            </g>
+            <!-- COLUMN 3: UNIVERSE 3 · DAY 3 (LAMA RESTAURANT / "LAMA BEAN") -->
+            <div class="st-mm-col" data-st-mm-col="day3">
+              <div class="st-mm-col-head" data-st-mm-node="day3">
+                <div class="st-mm-col-kicker">UNIVERSE 3 · NIGHT 3 — LAMA RESTAURANT (“LAMA BEAN” · FREE)</div>
+                <h4 class="st-mm-col-title">Lama Restaurant · Dining Table, Pull-Down Door &amp; Storeroom</h4>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy/Mira), 5 Tough ICE Guys (Nancy Hayes · 1 SAG), Mickey, Russ</p>
+              </div>
+              <div class="st-mm-col-nodes">
+                <div class="st-mm-node-card" data-st-mm-node="day3" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">BEAT 3.1 · TABLE UNDER 5-ICE WINDOW LOCKDOWN</span>
+                    <span class="st-mm-portal-pill">Door Portal #4 → Restaurant</span>
+                  </div>
+                  <div class="st-mm-node-title">Women Exit Noisy Bar → Academic Ideas to Personal Stories + Mickey Intrusion</div>
+                  <p class="st-mm-node-desc">Owned by the same friendly family as Lama Bar. Women sit at a dining table while <strong>5 tough-looking ICE guys</strong> (recruited by Nancy Hayes at a low rate; includes 1 SAG actor) guard the windows and block them from leaving (<em>“Demonstration down the street, you can’t leave”</em>). Talk shifts from academic ideas to personal stories, plus a possible <strong>Mickey Disend intrusion</strong> talking to Marianne.</p>
+                </div>
 
-            <!-- Day 3: Lama Restaurant -->
-            <g class="st-node" data-st-mm-node="day3">
-              <rect x="810" y="88" width="236" height="114" rx="15" fill="rgba(52,199,89,0.08)" stroke="#34c759" stroke-width="2" />
-              <text x="928" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#34c759">DAY 3 · UNIVERSE 3 · FREE</text>
-              <text x="928" y="129" text-anchor="middle" font-size="13.5" font-weight="700" fill="currentColor">Lama Restaurant (Women)</text>
-              <text x="928" y="147" text-anchor="middle" font-size="10.5" fill="#6e6e73">1) 5 ICE Guard Windows ("Can't Leave")</text>
-              <text x="928" y="163" text-anchor="middle" font-size="10.5" fill="#6e6e73">2) Academic Ideas → Personal (+ Mickey)</text>
-              <text x="928" y="179" text-anchor="middle" font-size="10.5" fill="#6e6e73">3) Confrontation: Upstairs vs Side Room</text>
-            </g>
+                <div class="st-mm-node-card" data-st-mm-node="day3" tabindex="0" role="button">
+                  <div class="st-mm-node-top">
+                    <span class="st-mm-node-tag">BEAT 3.2 · PULL-DOWN METAL DOOR OR UPSTAIRS STOREROOM</span>
+                    <span class="st-mm-portal-pill">Climax &amp; Rescue</span>
+                  </div>
+                  <div class="st-mm-node-title">Right Side Room (Pull-Down Metal Door) OR Upstairs Stairway &amp; Storeroom</div>
+                  <p class="st-mm-node-desc"><strong>Option A (Right-Hand Side Room):</strong> Just inside the front door to the right; has a <strong>pull-down metal door</strong> that shuts completely with zero window restrictions.<br/><strong>Option B (Upstairs Stairway &amp; Storeroom):</strong> Stairway leads up to a storeroom where Russ &amp; Ken confront ICE and the women climb the stairs to rescue Russ.</p>
+                </div>
+              </div>
+            </div>
 
-            <!-- Rules Node -->
-            <g class="st-node" data-st-mm-node="rules">
-              <rect x="330" y="330" width="400" height="94" rx="15" fill="rgba(48,176,199,0.08)" stroke="#30b0c7" stroke-width="2" />
-              <text x="530" y="352" text-anchor="middle" font-size="10" font-weight="700" fill="#30b0c7">360° STAGING, CRAFT SERVICES &amp; CAMERA RULES (D012)</text>
-              <text x="530" y="371" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Craft Services Out of Sightlines · 2–3 Set Cameras + PA Guards</text>
-              <text x="530" y="390" text-anchor="middle" font-size="10.5" fill="#6e6e73">Lama Bar: Outside Back · Buffalo Billiards: Owner's Office · Restaurant: Kitchen / Side Room</text>
-              <text x="530" y="407" text-anchor="middle" font-size="10.5" fill="#6e6e73">PAs Guard Set Cameras · TV Sets Show Protest at Lama Bar &amp; Buffalo Billiards</text>
-            </g>
-          </svg>
+          </div>
+
+          <!-- FULL-WIDTH BOTTOM RULES BAR -->
+          <div class="st-mm-node-card st-mm-rules-bar" data-st-mm-node="rules" tabindex="0" role="button">
+            <div class="st-mm-node-top">
+              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PA GUARDS · CRAFT SERVICES PLACEMENT · 2 SAG ACTORS &amp; BOOK BOUNDARY (D011 / D012 / D013)</span>
+              <span class="st-mm-portal-pill">All 3 Universes · Click to Inspect Rules</span>
+            </div>
+            <div class="st-mm-rules-grid">
+              <div><strong>1. Maiden Voyage (~Nov 16 · D011):</strong> Wait on Ken Newman’s return date first, then lock opening night w/ Russ across 3–4 spaced nights (<code>Shoot → Rest → Shoot</code>).</div>
+              <div><strong>2. Hidden Craft Services (D012):</strong> <strong>Lama Bar:</strong> Outside in back · <strong>Buffalo Billiards:</strong> Owner’s office · <strong>Lama Restaurant:</strong> Low in kitchen or right-hand side room.</div>
+              <div><strong>3. 2–3 Set Cameras + PAs (D012):</strong> 2 Handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs; protest video on venue TVs.</div>
+              <div><strong>4. SAG &amp; Book Rules (D013):</strong> Only <strong>2 SAG actors</strong> (Ken Newman + 1 SAG ICE actor); any Zionism/AIPAC critique stays strictly in Russ’s book &amp; separated from Jewish people.</div>
+            </div>
+          </div>
         </div>
 
         <div class="st-mm-inspector" id="st-mm-inspector">
@@ -591,7 +614,7 @@
           <span class="num">★</span>
           <span>
             <div class="ct">Verbatim Oct 23 Written 3-Day Shooting Schedule Outline (Rob Nilsson)</div>
-            <div class="cs">Source: OCT23A01 · Scene 1 / Day 1 Lama Bar, Optional Day 2 Buffalo Billiards or Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant</div>
+            <div class="cs">Source: OCT23A01 + OCT23A02 · Scene 1 / Day 1 Lama Bar, Optional Day 2 Buffalo Billiards or Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant</div>
           </span>
           <span class="count">Verbatim Note <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
         </summary>
@@ -621,15 +644,26 @@
       }
     });
 
-    document.querySelectorAll(".st-mm-svg .st-node").forEach((n) => {
+    document.querySelectorAll("[data-st-mm-col]").forEach((col) => {
+      const tokens = (col.dataset.stMmCol || "").trim().split(/\s+/);
+      if (key === "ALL" || key === "rules") {
+        col.classList.remove("active-col", "dimmed-col");
+      } else {
+        const match = tokens.includes(key);
+        col.classList.toggle("active-col", match);
+        col.classList.toggle("dimmed-col", !match);
+      }
+    });
+
+    document.querySelectorAll(".st-mm-board .st-mm-node-card").forEach((n) => {
       const nk = n.dataset.stMmNode;
       if (key === "ALL") {
-        n.classList.toggle("on", nk === "hub");
+        n.classList.toggle("on", nk === "day2a");
         n.classList.remove("dimmed");
       } else {
         const isActive = nk === key;
         n.classList.toggle("on", isActive);
-        n.classList.toggle("dimmed", !isActive && nk !== "hub");
+        n.classList.toggle("dimmed", !isActive);
       }
     });
 

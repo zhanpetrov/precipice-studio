@@ -13,7 +13,7 @@ window.PRECIPICE_HUB_DATA = {
     coProducerDP: "Zhan Petrov",
     soundMixer: "Vitaly Ponomarev (Sound Check Locked: Wed Oct 28, 2026 @ 11:00 AM)",
     wardrobe: "Nancy Hayes",
-    shootWindow: "Projected Mid-November 2026 (No earlier than Nov 16 · 5-Day Expanded Working Plan: $51,500)",
+    shootWindow: "Target Maiden Voyage: ~Nov 16, 2026 (~24 Days Out · Waiting on Ken Newman first, then locking w/ Russ across 3–4 Spaced Nights)",
     flowProjectUrl: "https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe",
     controlTowerUrl: "https://zhanpetrov.github.io/precipice/",
     controlTowerRepo: "https://github.com/zhanpetrov/precipice",
@@ -27,6 +27,11 @@ window.PRECIPICE_HUB_DATA = {
         code: "D010",
         name: "Pre-Scene 6-Angle Photo + 2-Min Voice Protocol",
         desc: "Agreed Oct 20, 2026 (OCT20A01 [00:57:11]): Every actor arriving on set captures 6 reference angles (face straight/left/right, full body, hands, costume) + 2 minutes of clean isolated voice for AI overdub and visual continuity backup."
+      },
+      {
+        code: "D013",
+        name: "Russ’s Book Manuscript, '5th Amendment' Joke & Calm Contractor Precision",
+        desc: "Agreed Oct 23, 2026 (OCT23A02): Russ plays calm, explicit contractor precision (naming real construction tools/materials to save his friend's cliffside house) opposite a female bartender he has worked with, quotes his unfinished book ('Why can't I be a writer as well?'), and tells the Trump 'Fifth Amendment / 400 times in one day' joke. Any Zionism/AIPAC critique stays strictly in the book and separated from Jewish people."
       },
       {
         code: "PROMPT-LOCK",
@@ -299,26 +304,26 @@ window.PRECIPICE_HUB_DATA = {
         { src: "assets/actors/CHAR_RUSS_08_WIDE_WORKSHOP.jpg", label: "Angle 8: Full Body Workshop Blocking (48:15)" }
       ],
       physicalProfile: {
-        ageRange: "60s",
+        ageRange: "Late 60s–70s (Officially retiring from contracting in February 2027)",
         build: "Lean, weathered working-class contractor build with intense, coiled posture",
         hairFacial: "Swept-back silver-grey hair, sharp high angular cheekbones, penetrating blue-grey eyes, clean-shaven",
-        wardrobeProps: "Dark navy/charcoal zip-neck knit sweater layered over a dark striped collared shirt and dark undershirt; Props (Oct 23 D012): unfinished book manuscript/notebook carried at the bar for his 'save the house' & anti-Trump diatribe; Makeup Dept (Oct 20 intake): fake blood, bruises, cuts for post-confrontation sequence."
+        wardrobeProps: "Dark navy/charcoal zip-neck knit sweater layered over a dark striped collared shirt and dark undershirt; Props (Oct 23 D012 / D013): unfinished book manuscript/notebook ('all our arrows in the quiver' — quoting passages, telling the Trump 'Fifth Amendment / 400 times in one day' joke) + authentic construction tools/materials terminology for saving his friend's cliffside house; Makeup Dept (Oct 20 intake): fake blood, bruises, cuts for post-confrontation sequence."
       },
       psychology: {
         need: "Preserve his moral dignity and democratic conscience when cornered by authoritarian intimidation.",
-        want: "Enter the empty pool hall at night (opening shot), cross the door into Lama Bar, deliver his 'save the house' program and anti-Trump manuscript diatribe to the bartender, and stand his ground when Ken lures him to the basement.",
-        hate: "MAGA authoritarianism, surveillance coercion, being manipulated by a con game.",
-        love: "Direct eye-to-eye truth, political accountability, working-class solidarity."
+        want: "Enter the empty pool hall at night (opening shot), cross the door into Lama Bar where he is a longtime regular who has worked with the female bartender (target: powerful-looking Black woman), explain with calm contractor precision (naming specific construction tools & materials) how he is saving his friend's house before it slides off the cliff next month, and read/improvise from his unfinished anti-MAGA book manuscript ('Why can't I be a writer as well?') including the Trump Fifth Amendment joke.",
+        hate: "MAGA authoritarianism, hypocritical power (taking the 5th 400 times in one day after saying only the guilty plead the 5th), and being manipulated by a con game.",
+        love: "Direct eye-to-eye truth, structural craftsmanship, political accountability, working-class solidarity."
       },
-      defaultFlowPrompt: "Candid observational handheld 35mm cinema-verite medium close-up inside Lama Bar in Berkeley at night. A 60-year-old working-class contractor with swept-back silver-grey hair and sharp angular cheekbones, wearing a dark navy zip-neck knit sweater over a dark striped collared shirt, sits at a mahogany bar counter holding an unbound stack of book manuscript pages in warm Kodak Vision3 500T tungsten-amber and deep slate-teal neon reflections. He speaks passionately to the bartender in three-quarter profile as distant protest lights flash outside the frosted glass window. Natural micro-expressions, gritty independent film grain, never looking at the lens.",
+      defaultFlowPrompt: "Candid observational handheld 35mm cinema-verite medium close-up inside Lama Bar in Berkeley at night. A 60-year-old working-class contractor with swept-back silver-grey hair and sharp angular cheekbones, wearing a dark navy zip-neck knit sweater over a dark striped collared shirt, sits at a mahogany bar counter holding an unbound stack of book manuscript pages in warm Kodak Vision3 500T tungsten-amber and deep slate-teal neon reflections. With calm, explicit contractor precision, he speaks to a powerful Black female bartender in three-quarter profile as distant protest lights flash outside the frosted glass window. Natural micro-expressions, gritty independent film grain, never looking at the lens.",
       presets: [
         {
           label: "Beat 1 (Day 2 Opening Shot): Empty Pool Hall Walk-Through to Lama Bar Door",
           prompt: "Candid handheld 35mm cinema-verite tracking shot inside an empty pool hall at night (Buffalo Billiards): a 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater over a striped shirt walks alone past darkened green-felt pool tables and opens a heavy interior door leading directly into the warm neon-and-tungsten glow of Lama Bar. Kodak Vision3 500T grain."
         },
         {
-          label: "Beat 2 (Day 1 Lama Bar): 'Save the House' & Anti-Trump Manuscript Diatribe",
-          prompt: "Candid handheld 35mm cinema-verite medium close-up at Lama Bar counter: a 60-year-old man with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater flips through a worn unfinished book manuscript notebook on the bar counter while delivering a fiery anti-authoritarian monologue to the bartender under warm tungsten practical light, three-quarter profile."
+          label: "Beat 2 (Day 1 Lama Bar · D013): Calm Contractor Precision, Book Manuscript & '5th Amendment' Joke",
+          prompt: "Candid handheld 35mm cinema-verite medium close-up at Lama Bar counter: a 60-year-old contractor with swept-back silver-grey hair and sharp cheekbones in a dark navy zip sweater calmly explains structural house-saving materials to a powerful Black female bartender before quoting a passage from his worn unfinished book manuscript and delivering a dry punchline under warm tungsten practical light, three-quarter profile."
         },
         {
           label: "Beat 3 (Day 1): Watching Ken's French Drop & Exiting for Basement",
@@ -334,9 +339,9 @@ window.PRECIPICE_HUB_DATA = {
       id: "CHAR-02",
       slug: "ken_newman",
       name: "Ken Newman",
-      roleTitle: "The Bar Magician / Social Catalyst / 'The Magic Is a Lie' Con Man",
+      roleTitle: "The Bar Magician / Social Catalyst / 'The Magic Is a Lie' Con Man (SAG-AFTRA)",
       group: "Bar Core & Downstairs Betrayal",
-      ruleBadge: "FRENCH DROP SLEIGHT-OF-HAND CATALYST",
+      ruleBadge: "FRENCH DROP SLEIGHT-OF-HAND CATALYST · 1 OF 2 SAG ACTORS",
       status: "WORKSHOP #1 VERIFIED · VOICE & 8 STILLS EXTRACTED",
       heroStill: "assets/actors/CHAR_KEN_03_THREE_QUARTER.jpg",
       aiStill: "assets/actors/AI_STILL_KEN_FRENCH_DROP.jpg",
@@ -355,7 +360,7 @@ window.PRECIPICE_HUB_DATA = {
         { src: "assets/actors/CHAR_KEN_08_DINNER_MEXICO_STORY.jpg", label: "Angle 8: Speaking on Mexico at Dinner (21:45)" }
       ],
       physicalProfile: {
-        ageRange: "60s (arriving from Mexico for Nov 16 shoot window)",
+        ageRange: "60s (SAG-AFTRA · arriving from Mexico around Nov 16 to trigger Maiden Voyage night)",
         build: "Solid, expressive physical presence with agile magician's & guitarist's hands",
         hairFacial: "Shaved/bald head, expressive arched eyebrows, salt-and-pepper goatee / van dyke beard",
         wardrobeProps: "Black-and-white buffalo check plaid flannel shirt, small silver hoop earring in right ear, turquoise/stone pendant necklace, silver wrist cuff, rings on fingers; props: coins for The French Drop vanish, Alvarez classical guitar, bar glassware."
@@ -405,7 +410,7 @@ window.PRECIPICE_HUB_DATA = {
         { src: "assets/actors/CHAR_ROB_06_ANTI_MAGA_CLOSEUP.jpg", label: "Angle 6: 'An Anti-MAGA Movie' Close-Up (32:55)" }
       ],
       physicalProfile: {
-        ageRange: "80s",
+        ageRange: "87 years old (confirmed Oct 23 in OCT23A02)",
         build: "Lean, alert, kinetic observational posture",
         hairFacial: "White hair, thick black-rimmed rectangular glasses",
         wardrobeProps: "Olive-drab 'NORTHWOODS LAND TRUST' baseball cap, khaki field jacket over black turtleneck, signature silver rings with dark stone settings on both hands, Oct 23 3-day shooting schedule outline."
@@ -483,26 +488,26 @@ window.PRECIPICE_HUB_DATA = {
 
   tier2CastRoster: [
     // GROUP 1: BAR CORE (3)
-    { id: "CAST-01", name: "Rusty (Russ) Murphy", group: "Bar Core", role: "Anti-MAGA Contractor / Bar Protagonist (Day 2 Opening Pool-Hall Walk-Through · Day 1 'Save the House' & Anti-Trump Manuscript Diatribe D012 · Day 3 Upstairs Beating)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite medium close-up of a 60-year-old contractor with swept-back silver-grey hair and sharp angular cheekbones in a dark navy zip sweater over a striped shirt sitting at Lama Bar with an unbound book manuscript notebook in warm tungsten-amber light, three-quarter profile." },
-    { id: "CAST-02", name: "Ken Newman", group: "Bar Core", role: "Bar Magician / Con Man (Day 1 Apparent Agreement, French Drop Magic, Covert Nod w/ 1 ICE Guy in Lama Corridor & Basement Exit w/ Russ)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
+    { id: "CAST-01", name: "Rusty (Russ) Murphy", group: "Bar Core", role: "Anti-MAGA Contractor / Bar Protagonist (Day 2 Opening Pool-Hall Walk-Through · Day 1 Calm Contractor Precision, Book Manuscript & Trump '5th Amendment / 400x' Joke D012/D013 · Officially Retiring Feb 2027)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite medium close-up of a 60-year-old contractor with swept-back silver-grey hair and sharp angular cheekbones in a dark navy zip sweater over a striped shirt sitting at Lama Bar with an unbound book manuscript notebook in warm tungsten-amber light, three-quarter profile." },
+    { id: "CAST-02", name: "Ken Newman (SAG-AFTRA)", group: "Bar Core", role: "Bar Magician / Con Man · 1 of 2 SAG Actors on Roster (Day 1 Apparent Agreement, French Drop Magic, Covert Nod w/ 1 ICE Guy in Lama Corridor & Basement Exit w/ Russ)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
     { id: "CAST-03", name: "Mickey Disend", group: "Bar Core", role: "Buddhist Counterpoint at Bar / Recognized by Marianne Heath (Day 1 Lama Bar + Possible Day 3 Intrusion at Lama Restaurant)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite portrait of a weathered, philosophical Berkeley bar regular in a dark jacket bringing calm Buddhist observations into a heated political bar debate under warm tungsten neon light, three-quarter profile, natural film grain." },
 
     // GROUP 2: BARTENDERS & BAR PATRONS (5)
-    { id: "CAST-04", name: "Luis", group: "Bartenders & Patrons", role: "Bartender Candidate A (Receives Russ's 'Save the House' Program & Anti-Trump Diatribe on Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a seasoned Latino bartender wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage while listening to Russ's manuscript pitch, warm amber practical light." },
-    { id: "CAST-05", name: "Rosa", group: "Bartenders & Patrons", role: "Bartender Candidate B (Lama Bar Spatial Anchor — Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed Latina bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
+    { id: "CAST-04", name: "Female Bartender (Powerful Black Woman Target / Rosa / Luis)", group: "Bartenders & Patrons", role: "Lama Bar Bartender · Longtime Friend Who Has Worked w/ Russ ('How you doing with the house?') · Target: Powerful-Looking Black Woman (OCT23A02 / D013)", contact: "[CASTING TARGET LOCKED — ROB]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a powerful Black female bartender wiping down a mahogany bar counter beneath a wall-mounted television showing street protest footage while asking a silver-haired contractor 'How you doing with the house?' under warm amber practical light." },
+    { id: "CAST-05", name: "Rosa / Luis (Alternate Bar Counter Support)", group: "Bartenders & Patrons", role: "Alternate / Second Bartender Candidate (Lama Bar Spatial Anchor — Day 1)", contact: "[CONTACT PENDING — ROB TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up of a sharp-eyed bartender pouring water into bar glasses while glancing toward the front door as street noise escalates outside, Kodak 500T." },
     { id: "CAST-06", name: "Woman from Lama (Whistle / Rhythm)", group: "Bartenders & Patrons", role: "Active Bar Environment / Whistle & Finger-Snapping Catalyst", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Kinetic handheld 35mm cinema-verite medium shot inside a lively Berkeley bar at night: a Black woman in vibrant evening attire blows a rhythm whistle and dances amid finger-snapping patrons before the street demonstration interrupts, warm amber and teal neon." },
     { id: "CAST-07", name: "Wounded Protestor / Bar Patron", group: "Bartenders & Patrons", role: "Wounded Character Brought into Lama Bar by ICE Guy on Day 1 (Women Rush to Help While Men Freeze)", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Urgent handheld 35mm cinema-verite shot inside Lama Bar at night: a wounded man from the street demonstration is brought through the doorway as the women academics immediately rush forward to tend his injuries while the men at the bar freeze in hesitation." },
     { id: "CAST-08", name: "'? Talker' (Bar Raconteur)", group: "Bartenders & Patrons", role: "Bar Talker / Overlapping Vérité Dialogue", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of an animated bar talker leaning over a crowded counter in three-quarter profile, overlapping dialogue texture, smoky tungsten light." },
 
     // GROUP 3: POOL TABLE — RIGGED HIGH-STAKES MATCH (3)
-    { id: "CAST-09", name: "Billy Aguero", group: "Pool Table", role: "Master Pool Player / Coordinator (Day 1 Agrees on Game at Lama Bar Back Table · Day 2 High-Stakes Match vs Oscar in Back Pool Room)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite low-angle shot across the green baize of a regulation table in the smaller back room of Buffalo Billiards: a focused veteran pool player lines up a high-stakes 9-ball bank shot with his own custom cue stick against dark rear windows, three-quarter profile." },
-    { id: "CAST-10", name: "Don Bajema", group: "Pool Table", role: "Ex-Running & Football Coach / The Money Man (Day 1 Joins Russ & Mickey at Lama Bar · Day 2 Backs Billy vs Silicon Valley Crew)", contact: "[REDACTED — ON FILE · NYC TRAVEL]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Intense handheld 35mm cinema-verite medium close-up beside a dimly lit pool table: a sharp, fierce older money man and former football/running coach in a dark coat watches the cue ball deflect unnaturally, his eyes narrowing as he confronts the Silicon Valley team, Kodak Vision3 500T." },
+    { id: "CAST-09", name: "Billy Aguero", group: "Pool Table", role: "Master Pool Player / Coordinator · Works at Buffalo Billiards (Day 1 Agrees on Game at Lama Bar Back Table · Day 2 High-Stakes Match vs Oscar in Back Pool Room)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite low-angle shot across the green baize of a regulation table in the smaller back room of Buffalo Billiards: a focused veteran pool player lines up a high-stakes 9-ball bank shot with his own custom cue stick against dark rear windows, three-quarter profile." },
+    { id: "CAST-10", name: "Don Bajema", group: "Pool Table", role: "Ex-Running & Football Coach / The Money Man (Day 1 Joins Russ & Mickey at Lama Bar · Day 2 Backs Billy vs Silicon Valley 'Tech Boys')", contact: "[REDACTED — ON FILE · NYC TRAVEL]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Intense handheld 35mm cinema-verite medium close-up beside a dimly lit pool table: a sharp, fierce older money man and former football/running coach in a dark coat watches the cue ball deflect unnaturally, his eyes narrowing as he confronts the Silicon Valley team, Kodak Vision3 500T." },
     { id: "CAST-11", name: "Oscar Valdiviezo", group: "Pool Table", role: "Pool Opponent vs Billy Aguero (Day 1 Lama Bar Back Table Agreement · Day 2 Back Room Match · Brings Own Cue Stick)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a composed, razor-sharp pool player chalking his custom cue stick beside a group of Silicon Valley tech men in the back room of Buffalo Billiards, television protest glow in background." },
 
     // GROUP 4: SILICON VALLEY TECH MEN (4)
     { id: "CAST-12", name: "Andrei Tatarinov", group: "Silicon Valley Tech", role: "Silicon Valley Tech Lead (Day 1 Watches Pool & Agrees on Game at Lama Bar · Day 2 Back Room Match vs Don Bajema)", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium close-up inside a pool hall back room: a Silicon Valley tech founder in a minimalist dark bomber jacket glances subtly at a concealed sensor interface tracking the pool table geometry, cool screen glow on his face." },
     { id: "CAST-13", name: "Silicon Valley Tech #2 (Vitaly Cameo / TBD)", group: "Silicon Valley Tech", role: "Tech Syndicate Member (Day 1 Lama Bar Pool Table → Day 2 Back Room Match; Sound 2 covers if Vitaly acts)", contact: "[CASTING / VITALY CAMEO OPTION]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot of a Silicon Valley tech investor in a sleek dark sweater leaning against the wall of Buffalo Billiards, exchanging a covert look with his syndicate partner during a rigged pool shot." },
-    { id: "CAST-14", name: "Silicon Valley Tech #3 (Ilya / TBD)", group: "Silicon Valley Tech", role: "Tech Syndicate Member / 360° Camera & Algorithm Spotter", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a young Silicon Valley engineer watching a high-stakes pool game from the shadows, subtle smirk in three-quarter profile." },
+    { id: "CAST-14", name: "Ilya Fomin (Co-Producer · Ex-YouTube / Google)", group: "Silicon Valley Tech", role: "Co-Producer & Silicon Valley 'Tech Boy' · Former Head Engineer at YouTube / Google (Confirmed Oct 23 in OCT23A02 — Gaming the Game in Back Pool Room)", contact: "[CONFIRMED CO-PRODUCER & CAST — OCT 23]", d010Status: "CONFIRMED CO-PRODUCER & SV CAST (D004)", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a seasoned Silicon Valley chief engineer (former YouTube/Google tech lead) watching a high-stakes pool game from the shadows of the back room, subtle knowing look in three-quarter profile." },
     { id: "CAST-15", name: "Silicon Valley Tech #4", group: "Silicon Valley Tech", role: "Tech Syndicate Member / Autonomous Vehicle ('Hoe-Mobile') Link", contact: "[IDENTITY & CONTACT TO CONFIRM]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite shot inside a sleek autonomous vehicle parked outside a Berkeley bar at night, dashboard telemetry glowing against rain-streaked glass." },
 
     // GROUP 5: WOMEN ACADEMICS — EMERGENCY RESPONSE & DAY 3 LAMA RESTAURANT (7)
@@ -514,12 +519,12 @@ window.PRECIPICE_HUB_DATA = {
     { id: "CAST-21", name: "Lana Sherhbacova", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Emergency Response · Day 2/3 Lama Restaurant Table & Upstairs/Side-Room Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite medium shot of a striking woman academic exchanging an urgent look with her colleagues at the Lama Restaurant table before confronting the five ICE agents guarding the windows, Kodak Vision3 500T." },
     { id: "CAST-22", name: "Cathy Lerza", group: "Women Academics", role: "Women Academics Ensemble (Day 1 Wounded Response · Day 2/3 Women & ICE Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "WORKSHOP INVITED (OCT 26)", flowPrompt: "Candid handheld 35mm cinema-verite close-up of a seasoned woman academic speaking with grounded authority as the women confront the ICE operatives in the side room of Lama Restaurant." },
 
-    // GROUP 6: ICE / DETENTION UNIT (6 — Jeff Kao + Lance + Brandon + 3 Recruits)
+    // GROUP 6: ICE / DETENTION UNIT (6 — Jeff Kao + Lance + Brandon + Nancy Hayes's Tough Hombres incl. 1 SAG)
     { id: "CAST-23", name: "Jeff Kao", group: "Downstairs ICE Unit", role: "Lead ('Maitre d'') of ICE Unit (+ Lending 3 Sennheiser Wireless Sets · Day 1 Corridor/Wounded Beat · Day 3 Guards Lama Restaurant Windows)", contact: "[REDACTED — ON FILE · CALL VERIFIED OCT 20]", d010Status: "MEASUREMENTS TO NANCY HAYES", flowPrompt: "Claustrophobic handheld 35mm cinema-verite low-angle medium close-up inside Lama Restaurant at night: the commanding lead of a plainclothes ICE unit stands guarding the front window, telling the women academics they cannot leave to their car because of the demonstration down the street." },
     { id: "CAST-24", name: "Lance (Walker)", group: "Downstairs ICE Unit", role: "ICE Operative #2 (Day 2 Brick Basement / Day 3 Lama Restaurant Window Guard & Storeroom Confrontation)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Gritty handheld 35mm cinema-verite shot inside Lama Restaurant at night: a tense operative in dark street clothes guards the window in deep slate-teal shadow." },
     { id: "CAST-25", name: "Brandon (Brendan)", group: "Downstairs ICE Unit", role: "ICE Operative #3 OR Day 1 Background Pool Shooter at Lama Bar (Per Oct 23 Note)", contact: "[CONTACT PENDING]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite medium shot at the back pool table of Lama Bar: a man shoots pool casually in the background while Silicon Valley tech men and pool players negotiate a high-stakes game nearby." },
-    { id: "CAST-26", name: "ICE Recruit #4 (Stephen / Nancy Hayes Outreach)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #4 (Day 3 — One of 5 ICE Guys Guarding Lama Restaurant Windows)", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite shot of an off-duty operative standing watch by the frosted window of Lama Restaurant at night." },
-    { id: "CAST-27", name: "ICE Recruit #5 (Michael / Retiring Cop Outreach)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #5 (Day 3 — One of 5 ICE Guys Guarding Lama Restaurant Windows & Upstairs Commotion)", contact: "[NANCY HAYES CASTING PIPELINE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite over-the-shoulder shot in the upstairs storeroom of Lama Restaurant as the women burst in to stop the assault on Russ." },
+    { id: "CAST-26", name: "ICE Recruit #4 (Nancy Hayes's SAG ICE Actor)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #4 · 2nd SAG Actor on Roster (Recruited by Nancy Hayes at low rate · Day 3 Guards Lama Restaurant Windows)", contact: "[NANCY HAYES CASTING — CONFIRMED OCT 23]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite shot of a tough-looking plainclothes operative standing watch by the frosted window of Lama Restaurant at night." },
+    { id: "CAST-27", name: "ICE Recruit #5 (Nancy Hayes's Tough-Looking Hombre)", group: "Downstairs ICE Unit", role: "ICE Unit Operative #5 (Recruited by Nancy Hayes at low rate · Day 3 Lama Restaurant Window Guard & Upstairs Storeroom Beating)", contact: "[NANCY HAYES CASTING — CONFIRMED OCT 23]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Handheld 35mm cinema-verite over-the-shoulder shot in the upstairs storeroom of Lama Restaurant as the women burst in to stop the assault on Russ." },
     { id: "CAST-28", name: "Young Anti-MAGA / Dylan / Valery Slot", group: "Bar Core", role: "Young Anti-MAGA Catalyst / Dylan Slot (Discussed in Dinner 17:32 & Sept 19 Notes)", contact: "[OPEN CASTING VERIFICATION — ROB & ZHAN]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite tracking shot of a young anti-MAGA activist bursting through the front door of Lama Bar from a chaotic night street demonstration in Berkeley, catching their breath under neon light." }
   ],
 
@@ -636,42 +641,42 @@ window.PRECIPICE_HUB_DATA = {
 
   shootingScheduleMindMap: {
     updated: "2026-10-23",
-    sourceId: "OCT23A01",
-    sourceTitle: "Rob Nilsson Written 3-Day Outline & Oct 23 Production Meeting (Fifth St 13)",
+    sourceId: "OCT23A01 + OCT23A02",
+    sourceTitle: "Rob Nilsson Written 3-Day Outline, Fifth St 13 Meeting (OCT23A01) & Russ/Rob Conversation (OCT23A02)",
     rhythm: [
-      { id: "day1", step: "NIGHT 1 · SHOOT", title: "Day 1: Lama Bar", sub: "Universe 2 · 5 Beats · Free", kind: "shoot" },
+      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Universe 2 · Lock w/ Ken & Russ (~Nov 16)", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
-      { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard", kind: "shoot" },
+      { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard / Tap Haus", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
-      { id: "day3", step: "NIGHT 3 · SHOOT", title: "Day 3: Lama Restaurant", sub: "Universe 3 · Women & 5 ICE · Free", kind: "shoot" }
+      { id: "day3", step: "NIGHT 3 · SHOOT", title: "Day 3: Lama Restaurant", sub: "Universe 3 · 'Lama Bean' · Women & 5 ICE", kind: "shoot" }
     ],
     nodes: {
       hub: {
         id: "hub",
-        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01)",
-        title: "PRECIPICE — 3-Night Consolidated Schedule & 3-Universe Mind Map",
-        venue: "Lama Bar ↔ Buffalo Billiards (or Mallard Club) ↔ Lama Restaurant",
-        drefs: ["D001", "D011", "D012"],
-        summary: "Consolidates principal photography into 3 distinct night shoots connected by doors and stairs into one contiguous cinematic labyrinth, with mandatory rest days between midnight calls to protect senior cast and crew.",
+        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02)",
+        title: "PRECIPICE — 3–4 Spaced Nights & 3-Universe Mind Map",
+        venue: "Lama Bar ↔ Buffalo Billiards (or Mallard / Tap Haus) ↔ Lama Restaurant ('Lama Bean')",
+        drefs: ["D001", "D011", "D012", "D013"],
+        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Waiting on Ken Newman's Nov 16 return date first (~24 days out), then locking the 'Maiden Voyage' opening night with Russ across spaced nights with mandatory rest days.",
         craftServices: "Hidden out of 360° camera sightlines at all 3 venues",
         cameraPlan: "2× handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs"
       },
       day1: {
         id: "day1",
         badge: "DAY 1 · SCENE 1 · UNIVERSE 2",
-        title: "Day 1 — Lama Bar (Free Venue · 5 Core Beats)",
-        venue: "Lama Bar (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
-        cast: "Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley Guys, Pool Players (+ optional Brendan), 1 ICE Guy, Wounded Character, Women Academics",
-        drefs: ["D001", "D011", "D012"],
-        summary: "Establishes the anti-MAGA point of view at the bar counter, clears the back pool players upstairs, plants Ken's covert corridor meeting with 1 ICE agent, and contrasts the women's immediate emergency response to a wounded man against the men freezing up.",
+        title: "Day 1 — Lama Bar (Free Working-Man's Bar · 5 Core Beats)",
+        venue: "Lama Bar on San Pablo Ave (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
+        cast: "Russ, Ken (SAG), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
+        drefs: ["D001", "D011", "D012", "D013"],
+        summary: "Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
         craftServices: "Outside in the back (completely clear of 360° bar interior)",
         cameraPlan: "360° bar coverage + 2–3 set cameras + handheld iPhones; TV sets show street demonstration",
         beats: [
           {
             num: "1.1",
-            title: "Russ's 'Save the House' Program & Anti-Trump Manuscript Diatribe",
-            detail: "Russ delivers his 'save the house' program to the bartender and launches into his anti-Trump diatribe using an unbound book manuscript/notebook (D012 — organic prop and in-scene cheat-sheet). Ken listens apparently in agreement and performs close-up magic tricks. Mickey (Disend) brings in his Buddhist views. Don (Bajema, ex-running and football coach who may know Russ) joins the fray. Marianne (Heath) recognizes Mickey.",
-            prompt: "Candid handheld 35mm cinema-verite medium shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater flips through an unfinished book manuscript notebook while delivering an anti-Trump monologue to the bartender as a bald magician performs a coin trick, a Buddhist bar regular listens calmly, and an ex-football coach joins in."
+            title: "Russ's Calm Contractor Precision, Book Manuscript & Trump '5th Amendment' Joke (D012 / D013)",
+            detail: "Russ is a longtime regular who has worked with the female bartender (she asks 'How you doing with the house?'; Rob is eyeing a powerful-looking Black woman). With calm, explicit contractor precision ('because you're outraged, you want to be explicit'), Russ lays out specific names of construction tools, materials, and structural engineering methods to save his friend's cliffside house before quoting passages from his unfinished book ('Why can't I be a writer as well?') and telling the Trump 'Fifth Amendment / 400 times in one day' joke. Ken (SAG) listens apparently in agreement and does magic tricks; Mickey brings in Buddhist views; Don (ex-running and football coach) joins; Marianne recognizes Mickey.",
+            prompt: "Candid handheld 35mm cinema-verite medium shot at Lama Bar counter at night: a 60-year-old silver-haired contractor in a dark navy zip sweater calmly explains structural house-saving materials to a powerful Black female bartender while holding an unfinished book manuscript notebook as a bald magician performs a coin trick, a Buddhist bar regular listens calmly, and an ex-football coach joins in."
           },
           {
             num: "1.2",
@@ -704,9 +709,9 @@ window.PRECIPICE_HUB_DATA = {
         badge: "OPTIONAL DAY 2 (OPTION A) · UNIVERSE 1",
         title: "Day 2 (Option A) — Buffalo Billiards, Petaluma (12:00 AM Midnight Call · Free)",
         venue: "Buffalo Billiards (Main Empty Hall, Smaller Back Pool Room w/ TV & Rear Windows, Brick Basement Storage)",
-        cast: "Russ, Billy Aguero, Oscar Valdiviezo, Don Bajema, Silicon Valley Guys (Vitaly, Andrei, Ilya, etc.), All Women, All ICE Guys",
-        drefs: ["D001", "D011", "D012"],
-        summary: "Confirmed free ($0) starting at 12:00 AM midnight. Captures the opening shot of the film, tripod window plates for AI protest/ICE cutaways, the Billy vs. Oscar match in the smaller back room (solving 360° window continuity while enabling look-down crowd cutaways), and the brick basement storage.",
+        cast: "Russ, Billy Aguero, Oscar Valdiviezo, Don Bajema, Ilya Fomin (Ex-YouTube/Google), SV Guys (Vitaly, Andrei), All Women, All ICE Guys",
+        drefs: ["D001", "D004", "D011", "D012"],
+        summary: "Confirmed free ($0) starting at 12:00 AM midnight (where Billy Aguero works). Captures the opening shot of the film, tripod window plates for AI protest/ICE cutaways, the Billy vs. Oscar match in the smaller back room w/ co-producer Ilya Fomin (former head engineer at YouTube/Google) among the SV 'tech boys', and the brick basement underneath where ICE beats Russ and the women rescue him.",
         craftServices: "Owner's Office (completely out of 360° pool hall & back room sightlines)",
         cameraPlan: "Tripod wide/tight window plates + 360° handheld & set cameras in smaller back pool room (check overhead table light vs ugly general light)",
         beats: [
@@ -724,26 +729,26 @@ window.PRECIPICE_HUB_DATA = {
           },
           {
             num: "2A.3",
-            title: "Billy vs. Oscar Match (SV vs. Don Bajema) in Smaller Back Pool Room + Look-Down Windows",
-            detail: "Shooting in the main empty hall creates a 360° window continuity problem. Moving to the smaller back room gives a pro table, a TV set (showing the protest, matching Lama Bar TVs), and rear windows looking down onto a lot below — allowing high-angle look-down cutaways of rioters/ICE/women below while keeping 360° table angles against dark glass.",
-            prompt: "Handheld 35mm cinema-verite medium shot inside the intimate back pool room of Buffalo Billiards: Billy Aguero and Oscar Valdiviezo play high-stakes 9-ball watched by Don Bajema and Silicon Valley tech men under a table lamp, with a wall TV showing protest footage and dark rear windows overlooking a street lot below."
+            title: "Billy vs. Oscar Match (SV 'Tech Boys' w/ Ilya Fomin vs. Don Bajema) in Smaller Back Pool Room",
+            detail: "Moving to the smaller back room gives a pro table, a TV set (showing the protest), and rear windows looking down onto a lot below for high-angle crowd cutaways. Features co-producer Ilya Fomin (former head engineer at YouTube/Google) among the Silicon Valley 'emissaries of the tech boys' gaming the game against Billy and everyday pool players.",
+            prompt: "Handheld 35mm cinema-verite medium shot inside the intimate back pool room of Buffalo Billiards: Billy Aguero and Oscar Valdiviezo play high-stakes 9-ball watched by Don Bajema and Silicon Valley tech men including ex-YouTube/Google engineer Ilya Fomin under a table lamp, with a wall TV showing protest footage and dark rear windows overlooking a street lot below."
           },
           {
             num: "2A.4",
-            title: "Women & ICE in Brick Basement Storage Underneath",
-            detail: "Brick basement storage room underneath Buffalo Billiards available for the underground Women & ICE confrontation.",
-            prompt: "Claustrophobic handheld 35mm cinema-verite shot inside a raw brick basement storage room beneath a pool hall: women academics confront off-duty ICE operatives under low tungsten work lights."
+            title: "Brick Basement Underneath — ICE Beats Russ & Women Rescue Him",
+            detail: "Brick basement storage room underneath Buffalo Billiards where Russ gets the hell beaten out of him by the ICE guys and the women come to his rescue (arranging overnight lodging or next-day rest after the Petaluma schlep).",
+            prompt: "Claustrophobic handheld 35mm cinema-verite shot inside a raw brick basement storage room beneath a pool hall: women academics burst in to confront plainclothes ICE operatives and rescue a bruised silver-haired contractor under low tungsten work lights."
           }
         ]
       },
       day2b: {
         id: "day2b",
         badge: "OPTIONAL DAY 2 (OPTION B) · UNIVERSE 1",
-        title: "Day 2 (Option B) — Mallard Club (Albany) or Tap Haus (Petaluma)",
-        venue: "Mallard Club 2nd-Floor Pool Room & Discrete Upstairs Rooms (or Tap Haus)",
+        title: "Day 2 (Option B) — Mallard Club (San Pablo) or Tap Haus (Regent St near Telegraph, Berkeley)",
+        venue: "Mallard Club (2 Pool Rooms + Top/Bottom Bars) OR Tap Haus (Regent St, half a block from Telegraph Ave)",
         cast: "Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily (+ Pool & ICE Units)",
         drefs: ["D011", "D012"],
-        summary: "Closer East Bay alternative to Buffalo Billiards: 2nd-floor pool room allows looking down from upstairs windows onto the crowd below, plus discrete upstairs rooms for the Women/ICE confrontation. Trade-off: 2 PM–2 AM hours, paid fee, and unresponsive management.",
+        summary: "Closer East Bay alternatives if not driving to Buffalo Billiards at midnight: Mallard Club (~2 blocks from Lama Bar on San Pablo Ave: two full pool rooms + top-floor bar + bottom-floor bar) is run by the son of the man who runs Tap Haus (on Regent St, half a block from Telegraph Ave in downtown Berkeley). Both father and son remain unreachable despite Rob's calls and letter.",
         craftServices: "Staged in adjacent non-shooting room out of 360° sightlines",
         cameraPlan: "High-angle 2nd-floor window look-down plate + discrete upstairs room coverage",
         beats: [
@@ -763,49 +768,49 @@ window.PRECIPICE_HUB_DATA = {
       },
       day3: {
         id: "day3",
-        badge: "DAY 3 · UNIVERSE 3 · LAMA RESTAURANT",
-        title: "Day 3 — Women Academics at Lama Restaurant (Free Venue · 2 Core Beats)",
-        venue: "Lama Restaurant (Main Dining Room Table, Guarded Street Windows, Side Room w/ Shut Door, Upstairs Storeroom)",
-        cast: "Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy, Mira), 5 ICE Guys, Possible Mickey Intrusion, Russ",
+        badge: "DAY 3 · UNIVERSE 3 · LAMA RESTAURANT ('LAMA BEAN')",
+        title: "Day 3 — Women Academics at Lama Restaurant ('Lama Bean' · Free Venue)",
+        venue: "Lama Restaurant ('Lama Bean': Main Dining Table, Guarded Windows, Right Side Room w/ Pull-Down Metal Door, Upstairs Stairway & Storeroom)",
+        cast: "Lydia, Antonia, Lana, Marianne, Tiger Lily (+ Cathy, Mira), 5 Tough ICE Guys (Nancy Hayes · 1 SAG), Possible Mickey Intrusion, Russ",
         drefs: ["D001", "D011", "D012"],
-        summary: "The women exit noisy Lama Bar through the door and enter Lama Restaurant (via front door or back restroom door) to talk alone. 5 ICE guys guard the windows and trap them inside while their conversation shifts from academic ideas to personal stories, culminating in the upstairs storeroom or side-room confrontation.",
+        summary: "Owned by the same friendly family as Lama Bar. The women exit noisy Lama Bar through the door and enter Lama Restaurant ('Lama Bean') to talk alone. 5 tough-looking ICE guys (recruited by Nancy Hayes at a low rate; includes 1 SAG actor) guard the windows and trap them inside while their conversation shifts from academic ideas to personal stories, culminating in the pull-down metal door side room or upstairs storeroom confrontation.",
         craftServices: "Low inside the Kitchen OR inside the Right-Hand Side Room (if confrontation is shot upstairs)",
-        cameraPlan: "2–3 set cameras (re-angled) + handheld iPhones guarded by PAs; zero window restrictions if using the shut-door side room",
+        cameraPlan: "2–3 set cameras (re-angled) + handheld iPhones guarded by PAs; zero window restrictions in the pull-down metal door side room",
         beats: [
           {
             num: "3.1",
-            title: "Table Scene w/ 5 ICE Guys Guarding Windows: Academic Ideas → Personal Stories (+ Mickey Intrusion)",
-            detail: "Sitting at a table in the main dining room with 5 ICE guys guarding the windows (when the women try to go to their car, ICE blocks them: 'There's a demonstration down the street, you can't leave'). Conversation evolves from academic ideas to personal stories, with a possible Mickey Disend intrusion talking to Marianne.",
-            prompt: "Candid handheld 35mm cinema-verite ensemble shot inside Lama Restaurant at night: women academics sit around a dining table sharing academic ideas and personal stories while five plainclothes ICE agents stand guarding the street windows behind them, blocking the exit."
+            title: "Table Scene w/ 5 Tough ICE Guys Guarding Windows: Academic Ideas → Personal Stories (+ Mickey Intrusion)",
+            detail: "Sitting at a table in the main dining room with 5 tough-looking ICE guys (recruited by Nancy Hayes) guarding the windows (when the women try to go to their car, ICE blocks them: 'There's a demonstration down the street, you can't leave'). Conversation evolves from academic ideas to personal stories, with a possible Mickey Disend intrusion talking to Marianne.",
+            prompt: "Candid handheld 35mm cinema-verite ensemble shot inside Lama Restaurant at night: women academics sit around a dining table sharing academic ideas and personal stories while five tough-looking plainclothes ICE agents stand guarding the street windows behind them, blocking the exit."
           },
           {
             num: "3.2",
-            title: "Women / ICE Confrontation: Upstairs Storeroom vs. Lama Side Room",
-            detail: "Two staging options inside Lama Restaurant: (A) Upstairs Storeroom — the women hear commotion upstairs (ICE beating the shit out of Russ) and climb the stairs to intervene; OR (B) Lama Side Room (right as you enter) — has a shut-down door with zero exterior window continuity restrictions.",
+            title: "Pull-Down Metal Door Side Room vs. Upstairs Stairway & Storeroom Rescue",
+            detail: "Two staging options inside Lama Restaurant ('Lama Bean'): (A) Right-Hand Side Room — off to the right as you enter the front door, equipped with a pull-down metal door that shuts completely with zero exterior window restrictions; OR (B) Upstairs Stairway & Storeroom — where Russ & Ken confront the ICE guys and the women hear the beating upstairs and climb the stairs into the storeroom to rescue Russ.",
             prompt: "Dynamic handheld 35mm cinema-verite climax shot: women academics climb narrow stairs into an upstairs restaurant storeroom after hearing an assault above, surrounding five ICE operatives to rescue a bruised silver-haired contractor."
           }
         ]
       },
       rules: {
         id: "rules",
-        badge: "STAGING & CAMERA RULES · D011 & D012",
-        title: "360° Camera Access, 2–3 Set Cameras & Senior Cast Rest Rhythm",
-        venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard Club, Lama Restaurant)",
-        drefs: ["D001", "D010", "D011", "D012"],
-        summary: "Operational rules agreed by Rob Nilsson & Zhan Petrov on Oct 23 (OCT23A01) to protect senior cast/crew across midnight shoots and ensure fast multi-angle editorial cutting without cluttering 360° frames.",
+        badge: "STAGING, CAMERA, SAG & CHARACTER RULES · D011, D012 & D013",
+        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster & Russ Book Rules",
+        venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard / Tap Haus, Lama Restaurant)",
+        drefs: ["D001", "D010", "D011", "D012", "D013"],
+        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01 & OCT23A02) to protect senior cast/crew across spaced midnight shoots, ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
         craftServices: "Lama Bar: Outside in Back · Buffalo Billiards: Owner's Office · Lama Restaurant: Kitchen Low or Right-Hand Room",
-        cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras from being knocked over",
+        cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras; only 2 SAG actors (Ken Newman + 1 SAG ICE actor)",
         beats: [
           {
             num: "R.1",
-            title: "Staggered Night Schedule w/ Mandatory Rest Days (D011)",
-            detail: "Because Buffalo Billiards (12 AM midnight), Lama Bar, and Lama Restaurant are late-night shoots, never stack 3 consecutive all-nighters. Alternate Shoot Night 1 → Rest Day(s) → Shoot Night 2 → Rest Day(s) → Shoot Night 3 to protect Rob, Rusty, Ken, Mickey, and Nancy.",
+            title: "Maiden Voyage (~Nov 16) & Staggered Night Schedule w/ Rest Days (D011)",
+            detail: "Wait on Ken Newman's Nov 16 return date first (~24 days out), then lock the opening 'Maiden Voyage' night with Russ across 3–4 spaced nights (Shoot Night → Rest Day(s) → Shoot Night) so senior cast/crew (Rob [87], Russ [retiring Feb 2027], Ken, Mickey, Nancy) never work back-to-back all-nighters.",
             prompt: "Candid handheld 35mm behind-the-scenes cinema-verite shot of an independent film crew and senior actors reviewing a three-night shooting schedule board under warm tungsten light in a Berkeley bar."
           },
           {
             num: "R.2",
-            title: "2–3 Set Cameras + Handheld & PA Tripod Guards (D012)",
-            detail: "Deploy 2–3 set cameras (periodically re-angled) alongside Rob and Zhan's handheld iPhones so editorial can cut rapidly between angles instead of relying on slow panning masters. PAs stand guard near set cameras so actors don't knock them over.",
+            title: "2–3 Set Cameras + PA Guards, 2 SAG Actors & Book Boundary (D012 / D013)",
+            detail: "Deploy 2–3 set cameras (guarded by PAs) + 2 handheld iPhones for rapid cutting. Nancy Hayes cast tough-looking ICE guys at a low rate (only 2 SAG actors total on film: Ken Newman + 1 SAG ICE actor). Any critique of political Zionism/Netanyahu/AIPAC stays strictly in Russ's book and explicitly separated from Jewish people.",
             prompt: "Candid handheld 35mm behind-the-scenes shot inside Lama Restaurant at night: two production assistants guard compact tripod-mounted cinema cameras at the corners of the room while two handheld operators move fluidly around the table."
           }
         ]
@@ -817,31 +822,31 @@ SCENE 1- CHARACTERS: Russ, Ken, Bartender, Mickey, Don, Marianne
 DAY 1- LOCATION LAMA BAR
 CHARACTERS: Russ, Ken, Mickey, Don, Marianne, Bartender, Silicon Valley guys, 1 ICE guy, wounded character, Women
 
-1. Russ delivers his save the house program to the bartender and begins his Diatribe against Trump. Maybe writing a book about it [carries an unfinished manuscript/notebook as a prop & organic cheat-sheet]. Ken listens and responds apparently in agreement. Mickey brings in his more Buddhist views. Ken does magic tricks. Maybe Don [ex-running & football coach] comes over to join the fray. Marianne recognizes Mickey.
+1. Russ delivers his save the house program to the bartender [longtime regular who worked w/ the female bartender; calm contractor precision naming real tools & materials] and begins his Diatribe against Trump. Maybe writing a book about it [carries an unfinished manuscript/notebook as "all our arrows in the quiver" + tells the Trump "5th Amendment / 400 times in one day" joke — D013]. Ken listens and responds apparently in agreement. Mickey brings in his more Buddhist views. Ken does magic tricks. Maybe Don [ex-running & football coach] comes over to join the fray. Marianne recognizes Mickey.
 2. Silicon Valley and Pool players agree on a game- Exit [to upstairs pool room; optional Brendan shooting pool in background]
 3. Ken leaves and talks to ICE guy in Lama Corridor and returns- Russ and Ken Exit for Basement
 4. Ice Guy brings in wounded- women come in to him [showing the women know how to deal with emergencies while the men do nothing]
 5. *POSSIBLE ICE/WOMEN ENCOUNTER IN ATTIC OF LAMA RESTAURANT
 
 OPTIONAL- DAY 2- LOCATION- BUFFALO BILLIARDS- [12:00 AM Midnight Call · Free]
-CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya, etc.), all women, all ICE guys
+CHARACTERS: Russ, Silicon Valley guys (Vitaly, Andreii, Ilya [Fomin — ex-YouTube/Google head engineer], etc.), all women, all ICE guys
 
 1. Russ enters empty pool hall night- nobody around- walks into a door* This leads to the Lama Bar [Opening Shot of the Film]
 2. WS for use in empty hall with AI crowd and ICE fighting in the background [tripod wide & tighter window shots for Lama Bar noise cutaways]
 3. Match between Billy/Oscar takes place either in the empty hall or in the smaller pool room with Silicon Valley guys vs. Bajema [smaller back room has TV set + rear windows looking down onto lot below for crowd cutaways]
-4. Women and ICE in their basement [brick basement storage underneath]
+4. Women and ICE in their basement [brick basement storage underneath where ICE beats Russ & women rescue him]
 
 OR
 
-OPTIONAL: DO DAY TWO IN MALLARD CLUB/TAP HAUS
+OPTIONAL: DO DAY TWO IN MALLARD CLUB/TAP HAUS [Father & Son Operators in Berkeley/Albany — Currently Unreachable]
 Characters: Lydia, Antonia, Cathy, Lana, Marianne, Tiger Lily
 1. Shot women/ICE confrontation either in the side / discrete upstairs pool room + 2nd-floor look-down window onto crowd
 
-DAY 3- WOMEN ACADEMICS- LAMA RESTAURANT [Free Venue]
-Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys
+DAY 3- WOMEN ACADEMICS- LAMA RESTAURANT ["Lama Bean" · Free Venue]
+Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys [Recruited by Nancy Hayes · Incl. 1 SAG Actor]
 
 1. They sit at a table with ICE GUYS guarding the windows. All academic ideas and now personal stories. Possible Mickey intrusion.
-2. WOMEN/ICE confrontation in either Lama side room [shut-down door, no window restrictions] or upstairs storeroom [women hear ICE beating Russ upstairs and climb the stairs].`
+2. WOMEN/ICE confrontation in either Lama side room [right-hand side room w/ pull-down metal door, no window restrictions] or upstairs storeroom [stairway up to storeroom where women hear ICE beating Russ and climb stairs to rescue him].`
   }
 };
 
