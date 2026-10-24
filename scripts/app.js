@@ -486,6 +486,35 @@
           <div style="font:600 11.5px/1.4 var(--mono);color:var(--text-2);">Source: ${esc(MINDMAP.sourceId)} · Updated ${esc(MINDMAP.updated)}</div>
         </div>
 
+        <!-- KEN NEWMAN OCT 23 SCHEDULE & AVAILABILITY BANNER (OCT23A03 / D014) -->
+        <div class="st-mm-sched-banner">
+          <div class="st-mm-sched-head">
+            <div>
+              <span class="st-mm-sched-badge">NEW · KEN NEWMAN SCHEDULE DISPATCH (OCT23A03 · D014)</span>
+              <strong class="st-mm-sched-title">Ken Newman (SAG-AFTRA) November &amp; Early December Shoot Windows</strong>
+            </div>
+            <div>${dref("D014")} ${dref("D011")}</div>
+          </div>
+          <div class="st-mm-sched-windows">
+            <div class="st-mm-win st-mm-win-blocked">
+              <div class="st-mm-win-tag">BLOCKED · NOV 17–22, 2026</div>
+              <div><strong>Moscone Center &amp; Music Gigs:</strong> Week of Nov 17 Ken is at Moscone Center doing a tradeshow &amp; magician work plus music gigs — <strong>all wraps Sun Nov 22</strong>.</div>
+            </div>
+            <div class="st-mm-win st-mm-win-open">
+              <div class="st-mm-win-tag">WINDOW A · MON NOV 23 – WED NOV 25 (&amp; FRI NOV 27)</div>
+              <div><strong>Early Week of Nov 23 Open:</strong> Ken has time <strong>Nov 23, 24, 25, 26, 27</strong> (<em>Thu Nov 26 is Thanksgiving</em>; scheduled to fly to <strong>Zihuatanejo on Sat Nov 28</strong>).</div>
+            </div>
+            <div class="st-mm-win st-mm-win-dec">
+              <div class="st-mm-win-tag">WINDOW B · FIRST WEEK OF DECEMBER 2026</div>
+              <div><strong>Optional Airline Extension:</strong> Ken can check with the airlines to extend another week, giving production the <strong>first week of December</strong> as well.</div>
+            </div>
+          </div>
+          <blockquote class="st-mm-sched-quote">
+            “hey there great to hear from you. Yeah November has gotten pretty crazy. The week of the 17th I am at the Moscone center doing a tradeshow and doing Magican stuff and I have a bunch of music gigs but that all wraps on the 22nd. which means I would have some time the 23rd to 24th the 25th and the 26th and the 27th. That might create a problem for some people because Thursday is Thanksgiving. And I’m supposed to leave on Saturday for Zihuatanejo. It’s possible I have to check with the Airlines but I might be able to extend another week which would give us the first week of December as well but let me know if any of those days early the week of the 23rd might work. Look forward to seeing you and really looking forward to getting started”
+            <span>— Ken Newman to Rob Nilsson (Oct 23, 2026 · <code>OCT23A03</code>)</span>
+          </blockquote>
+        </div>
+
         <div class="st-mm-rhythm">
           ${(MINDMAP.rhythm || []).map((r, idx) => `
             <button type="button" class="st-mm-step ${r.kind === "rest" ? "rest" : ""} ${idx === 0 ? "on" : ""}" data-st-mm-rhythm="${esc(r.id)}">
@@ -530,18 +559,18 @@
             <!-- COLUMN 2: UNIVERSE 2 · DAY 1 (LAMA BAR) -->
             <div class="st-mm-col" data-st-mm-col="day1">
               <div class="st-mm-col-head" data-st-mm-node="day1">
-                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (SAN PABLO · FREE)</div>
+                <div class="st-mm-col-kicker">UNIVERSE 2 · NIGHT 1 — LAMA BAR (WIN A: NOV 23–25/27 · WIN B: 1ST WK DEC)</div>
                 <h4 class="st-mm-col-title">Lama Bar · Main Counter, Back Pool Table &amp; Corridor</h4>
-                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
+                <p class="st-mm-col-sub"><strong>Cast:</strong> Russ, Ken (SAG · D014), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV &amp; Pool Guys, 1 ICE, Wounded Man, Women</p>
               </div>
               <div class="st-mm-col-nodes">
                 <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
                   <div class="st-mm-node-top">
-                    <span class="st-mm-node-tag">BEAT 1.1 · BAR CORE, BOOK &amp; “5TH AMENDMENT” JOKE (D012 / D013)</span>
+                    <span class="st-mm-node-tag">BEAT 1.1 · BAR CORE, BOOK &amp; “5TH AMENDMENT” JOKE (D012 / D013 / D014)</span>
                     <span class="st-mm-portal-pill">← From Pool Hall Door</span>
                   </div>
                   <div class="st-mm-node-title">Russ’s Calm Contractor Precision, Book Manuscript &amp; “5th Amendment” Joke</div>
-                  <p class="st-mm-node-desc">Longtime regular who has worked w/ the female bartender (target: powerful-looking Black woman). With calm contractor precision, Russ names real tools &amp; materials to save his friend’s cliffside house, quotes his unfinished book (<em>“Why can’t I be a writer as well?”</em>), and tells the Trump <strong>5th Amendment / 400x</strong> joke. Ken (SAG) does French Drop magic; Mickey brings Buddhism; Don (ex-coach) joins; Marianne recognizes Mickey.</p>
+                  <p class="st-mm-node-desc">Longtime regular who has worked w/ the female bartender (target: powerful-looking Black woman). With calm contractor precision, Russ names real tools &amp; materials to save his friend’s cliffside house, quotes his unfinished book (<em>“Why can’t I be a writer as well?”</em>), and tells the Trump <strong>5th Amendment / 400x</strong> joke. Ken (SAG · available Nov 23–25/27 or 1st Wk Dec) does French Drop magic; Mickey brings Buddhism; Don (ex-coach) joins; Marianne recognizes Mickey.</p>
                 </div>
 
                 <div class="st-mm-node-card" data-st-mm-node="day1" tabindex="0" role="button">
@@ -588,11 +617,11 @@
           <!-- FULL-WIDTH BOTTOM RULES BAR -->
           <div class="st-mm-node-card st-mm-rules-bar" data-st-mm-node="rules" tabindex="0" role="button">
             <div class="st-mm-node-top">
-              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PA GUARDS · CRAFT SERVICES PLACEMENT · 2 SAG ACTORS &amp; BOOK BOUNDARY (D011 / D012 / D013)</span>
+              <span class="st-mm-node-tag">360° CAMERA ACCESS · 2–3 SET CAMERAS + PA GUARDS · CRAFT SERVICES · KEN WINDOWS &amp; BOOK BOUNDARY (D011 / D012 / D013 / D014)</span>
               <span class="st-mm-portal-pill">All 3 Universes · Click to Inspect Rules</span>
             </div>
             <div class="st-mm-rules-grid">
-              <div><strong>1. Maiden Voyage (~Nov 16 · D011):</strong> Wait on Ken Newman’s return date first, then lock opening night w/ Russ across 3–4 spaced nights (<code>Shoot → Rest → Shoot</code>).</div>
+              <div><strong>1. Ken Newman Windows (D011 / D014):</strong> Nov 17–22 blocked (Moscone). <strong>Window A:</strong> Mon Nov 23–Wed Nov 25 / Fri Nov 27 (Thu Thanksgiving; Sat Zihuatanejo flight). <strong>Window B:</strong> 1st Wk of Dec.</div>
               <div><strong>2. Hidden Craft Services (D012):</strong> <strong>Lama Bar:</strong> Outside in back · <strong>Buffalo Billiards:</strong> Owner’s office · <strong>Lama Restaurant:</strong> Low in kitchen or right-hand side room.</div>
               <div><strong>3. 2–3 Set Cameras + PAs (D012):</strong> 2 Handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs; protest video on venue TVs.</div>
               <div><strong>4. SAG &amp; Book Rules (D013):</strong> Only <strong>2 SAG actors</strong> (Ken Newman + 1 SAG ICE actor); any Zionism/AIPAC critique stays strictly in Russ’s book &amp; separated from Jewish people.</div>
@@ -613,8 +642,8 @@
         <summary>
           <span class="num">★</span>
           <span>
-            <div class="ct">Verbatim Oct 23 Written 3-Day Shooting Schedule Outline (Rob Nilsson)</div>
-            <div class="cs">Source: OCT23A01 + OCT23A02 · Scene 1 / Day 1 Lama Bar, Optional Day 2 Buffalo Billiards or Mallard Club/Tap Haus, Day 3 Women Academics at Lama Restaurant</div>
+            <div class="ct">Verbatim Ken Newman Schedule Message (OCT23A03) &amp; Rob Nilsson 3-Day Outline</div>
+            <div class="cs">Source: OCT23A01 + OCT23A02 + OCT23A03 · Ken Newman Nov 23–27 &amp; Early Dec Windows (D014) + Day 1 Lama Bar, Day 2 Pool Hall, Day 3 Lama Restaurant</div>
           </span>
           <span class="count">Verbatim Note <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
         </summary>
@@ -1118,7 +1147,7 @@
   let scope = "all";
   let searchItems = [];
   let sel = 0;
-  const TRY_TERMS = ["Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman", "Mickey Disend", "Don Bajema", "360"];
+  const TRY_TERMS = ["Nov 23", "Moscone", "Zihuatanejo", "Day 1 Lama Bar", "Buffalo Billiards", "Lama Restaurant", "manuscript", "Russ Murphy", "Ken Newman", "Mickey Disend", "360"];
 
   function openSearch(q) {
     sheet.hidden = false;

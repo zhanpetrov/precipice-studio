@@ -2,16 +2,22 @@
   --bg: #fbfbfd;
   --surface: #ffffff;
   --surface-2: #f5f5f7;
+  --bg-2: #f5f5f7;
   --text: #1d1d1f;
   --text-2: #6e6e73;
   --line: rgba(0, 0, 0, 0.08);
   --accent: #0071e3;
   --accent-text: #ffffff;
   --chosen: #34c759;
-  --bar: rgba(251, 251, 253, 0.72);
+  --green: #34c759;
+  --rose: #ff3b30;
+  --bar: rgba(251, 251, 253, 0.78);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 28px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 28px rgba(0, 0, 0, 0.06);
   --radius: 18px;
+  --radius-lg: 22px;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, monospace;
 }
@@ -20,13 +26,17 @@
     --bg: #000000;
     --surface: #1c1c1e;
     --surface-2: #2c2c2e;
+    --bg-2: #2c2c2e;
     --text: #f5f5f7;
     --text-2: #a1a1a6;
-    --line: rgba(255, 255, 255, 0.1);
+    --line: rgba(255, 255, 255, 0.12);
     --accent: #2997ff;
     --chosen: #30d158;
-    --bar: rgba(0, 0, 0, 0.66);
+    --green: #30d158;
+    --rose: #ff453a;
+    --bar: rgba(20, 20, 22, 0.78);
     --shadow: none;
+    --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.45);
   }
 }
 
@@ -888,12 +898,374 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
   overflow-y: auto;
 }
 
+/* ==========================================================================
+   KEN NEWMAN SCHEDULE & AVAILABILITY BANNER (OCT23A03 / D014)
+   ========================================================================== */
+.st-mm-sched-banner {
+  background: var(--bg-2);
+  border: 1.5px solid rgba(52, 199, 89, 0.35);
+  border-left: 4px solid var(--green);
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+
+.st-mm-sched-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.st-mm-sched-badge {
+  display: block;
+  font: 700 10.5px/1.3 var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 2px;
+}
+
+.st-mm-sched-title {
+  display: block;
+  font: 650 15.5px/1.3 var(--sans);
+  color: var(--text);
+}
+
+.st-mm-sched-windows {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.st-mm-win {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 11px 13px;
+  font-size: 12.8px;
+  line-height: 1.46;
+  color: var(--text-2);
+}
+
+.st-mm-win strong {
+  color: var(--text);
+}
+
+.st-mm-win-blocked {
+  border-left: 3px solid var(--rose);
+}
+
+.st-mm-win-open {
+  border-left: 3px solid var(--green);
+}
+
+.st-mm-win-dec {
+  border-left: 3px solid var(--accent);
+}
+
+.st-mm-win-tag {
+  font: 700 10.5px/1.25 var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.st-mm-win-blocked .st-mm-win-tag {
+  color: var(--rose);
+}
+
+.st-mm-win-open .st-mm-win-tag {
+  color: var(--green);
+}
+
+.st-mm-win-dec .st-mm-win-tag {
+  color: var(--accent);
+}
+
+.st-mm-sched-quote {
+  margin: 0;
+  padding: 10px 13px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 12.5px;
+  line-height: 1.52;
+  color: var(--text-2);
+  font-style: italic;
+}
+
+.st-mm-sched-quote span {
+  display: block;
+  margin-top: 5px;
+  font-style: normal;
+  font: 600 11px/1.3 var(--mono);
+  color: var(--text);
+}
+
+@media (max-width: 960px) {
+  .st-mm-sched-windows {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   NATIVE iOS FROSTED BOTTOM TAB BAR & PHONE OPTIMIZATIONS (<= 860px / 734px / 560px)
+   ========================================================================== */
+.mobile-tab-bar {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .st-mm-rhythm {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 10px;
+    padding-bottom: 4px;
+  }
+  .st-mm-rhythm::-webkit-scrollbar {
+    display: none;
+  }
+  .st-mm-step {
+    flex: 0 0 74%;
+    max-width: 260px;
+    scroll-snap-align: start;
   }
   .st-mm-days-grid {
     grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 734px) {
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .bar-inner {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .wordmark {
+    font-size: 17px;
+  }
+
+  .search-trigger {
+    min-width: 0;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .search-trigger kbd {
+    display: none;
+  }
+
+  .bar-nav {
+    order: 3;
+    flex: 1 1 100%;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px;
+    padding-top: 6px;
+    border-top: 1px solid var(--line);
+  }
+
+  .bar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Fixed iOS Frosted Bottom Tab Bar on Phones */
+  .mobile-tab-bar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: var(--bar);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-top: 1px solid var(--line);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .mobile-tab-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px 2px;
+    border-radius: 10px;
+    color: var(--text-2);
+    font: 500 10.5px/1.15 var(--sans);
+    text-decoration: none;
+    transition: color 0.16s ease;
+  }
+
+  .mobile-tab-link:hover {
+    text-decoration: none;
+  }
+
+  .mobile-tab-link svg {
+    width: 19px;
+    height: 19px;
+    stroke-width: 1.9;
+  }
+
+  .mobile-tab-link.on {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .flow-sheet-toast {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+    right: 12px;
+    left: 12px;
+    width: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 28px 14px 20px;
+  }
+
+  .lede {
+    font-size: 16.5px;
+    line-height: 1.45;
+  }
+
+  .player-wrap,
+  .monitor-section,
+  .list-section,
+  .how-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .shot-body,
+  .actor-body {
+    padding: 16px 14px 18px;
+  }
+
+  .transport {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .now {
+    flex: 1 1 100%;
+    padding-left: 2px;
+    padding-top: 4px;
+    border-top: 1px solid var(--line);
+  }
+
+  .voice-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .voice-row audio {
+    width: 100%;
+  }
+
+  /* Fix 3-child .row and .row.no-thumb stacking on narrow phone screens */
+  .row {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .row > .pill-btn,
+  .row > button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .row.no-thumb {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Mind Map Phone Compact Padding & Pill Wrapping */
+  .st-mm-shell {
+    padding: 14px 12px;
+    border-radius: 18px;
+  }
+
+  .st-mm-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .st-mm-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .st-mm-pill {
+    flex-shrink: 0;
+  }
+
+  .st-mm-sched-banner {
+    padding: 13px 12px;
+  }
+
+  .st-mm-board {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .st-mm-col {
+    padding: 12px 11px;
+  }
+
+  .st-mm-node-card {
+    padding: 11px 12px;
+  }
+
+  .st-mm-portal-pill {
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .st-mm-day-card {
+    padding: 15px 13px;
+  }
+
+  .st-mm-day-head {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .st-mm-beat-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .st-mm-beat-top .pill-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

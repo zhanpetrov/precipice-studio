@@ -13,7 +13,7 @@ window.PRECIPICE_HUB_DATA = {
     coProducerDP: "Zhan Petrov",
     soundMixer: "Vitaly Ponomarev (Sound Check Locked: Wed Oct 28, 2026 @ 11:00 AM)",
     wardrobe: "Nancy Hayes",
-    shootWindow: "Target Maiden Voyage: ~Nov 16, 2026 (~24 Days Out · Waiting on Ken Newman first, then locking w/ Russ across 3–4 Spaced Nights)",
+    shootWindow: "Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 (Nov 17–22 Moscone Blocked · Thu Nov 26 Thanksgiving · Sat Nov 28 Zihuatanejo Flight) OR Window B: 1st Wk of Dec (D014)",
     flowProjectUrl: "https://flow.google.com/project/fc62d0fe-0303-4e5a-8864-0d8a9aee5bbe",
     controlTowerUrl: "https://zhanpetrov.github.io/precipice/",
     controlTowerRepo: "https://github.com/zhanpetrov/precipice",
@@ -32,6 +32,11 @@ window.PRECIPICE_HUB_DATA = {
         code: "D013",
         name: "Russ’s Book Manuscript, '5th Amendment' Joke & Calm Contractor Precision",
         desc: "Agreed Oct 23, 2026 (OCT23A02): Russ plays calm, explicit contractor precision (naming real construction tools/materials to save his friend's cliffside house) opposite a female bartender he has worked with, quotes his unfinished book ('Why can't I be a writer as well?'), and tells the Trump 'Fifth Amendment / 400 times in one day' joke. Any Zionism/AIPAC critique stays strictly in the book and separated from Jewish people."
+      },
+      {
+        code: "D014",
+        name: "Ken Newman's Nov 23–27 & Early Dec Shoot Windows (OCT23A03)",
+        desc: "Dispatched Oct 23, 2026 (OCT23A03): Ken Newman is booked Nov 17–22 at Moscone Center (tradeshow magician + music gigs wrapping Nov 22). Window A: Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B: First Week of December (if Ken extends his airline ticket)."
       },
       {
         code: "PROMPT-LOCK",
@@ -360,7 +365,7 @@ window.PRECIPICE_HUB_DATA = {
         { src: "assets/actors/CHAR_KEN_08_DINNER_MEXICO_STORY.jpg", label: "Angle 8: Speaking on Mexico at Dinner (21:45)" }
       ],
       physicalProfile: {
-        ageRange: "60s (SAG-AFTRA · arriving from Mexico around Nov 16 to trigger Maiden Voyage night)",
+        ageRange: "60s (SAG-AFTRA · OCT23A03: Nov 17–22 at Moscone Center [tradeshow magician + music gigs wrapping Nov 22]; Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 [Thu Nov 26 Thanksgiving; Sat Nov 28 Zihuatanejo flight]; Window B: 1st Wk of Dec if airline extended)",
         build: "Solid, expressive physical presence with agile magician's & guitarist's hands",
         hairFacial: "Shaved/bald head, expressive arched eyebrows, salt-and-pepper goatee / van dyke beard",
         wardrobeProps: "Black-and-white buffalo check plaid flannel shirt, small silver hoop earring in right ear, turquoise/stone pendant necklace, silver wrist cuff, rings on fingers; props: coins for The French Drop vanish, Alvarez classical guitar, bar glassware."
@@ -489,7 +494,7 @@ window.PRECIPICE_HUB_DATA = {
   tier2CastRoster: [
     // GROUP 1: BAR CORE (3)
     { id: "CAST-01", name: "Rusty (Russ) Murphy", group: "Bar Core", role: "Anti-MAGA Contractor / Bar Protagonist (Day 2 Opening Pool-Hall Walk-Through · Day 1 Calm Contractor Precision, Book Manuscript & Trump '5th Amendment / 400x' Joke D012/D013 · Officially Retiring Feb 2027)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite medium close-up of a 60-year-old contractor with swept-back silver-grey hair and sharp angular cheekbones in a dark navy zip sweater over a striped shirt sitting at Lama Bar with an unbound book manuscript notebook in warm tungsten-amber light, three-quarter profile." },
-    { id: "CAST-02", name: "Ken Newman (SAG-AFTRA)", group: "Bar Core", role: "Bar Magician / Con Man · 1 of 2 SAG Actors on Roster (Day 1 Apparent Agreement, French Drop Magic, Covert Nod w/ 1 ICE Guy in Lama Corridor & Basement Exit w/ Russ)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
+    { id: "CAST-02", name: "Ken Newman (SAG-AFTRA)", group: "Bar Core", role: "Bar Magician / Con Man · 1 of 2 SAG Actors on Roster (OCT23A03 Schedule: Booked Nov 17–22 at Moscone Center [tradeshow magician + music gigs wrapping Nov 22]; Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 [Thu Nov 26 Thanksgiving; Sat Nov 28 Zihuatanejo flight]; Window B: 1st Wk of Dec · Day 1 French Drop, Covert Nod w/ 1 ICE Guy & Basement Exit w/ Russ)", contact: "[REDACTED — ON FILE]", d010Status: "COMPLETE (Workshop #1 + Dinner)", flowPrompt: "Candid 35mm cinema-verite close-up of a bald 60-year-old bar magician with a salt-and-pepper goatee, silver ear hoop, and black-and-white buffalo plaid shirt performing the French Drop coin trick at a dim bar counter, three-quarter profile." },
     { id: "CAST-03", name: "Mickey Disend", group: "Bar Core", role: "Buddhist Counterpoint at Bar / Recognized by Marianne Heath (Day 1 Lama Bar + Possible Day 3 Intrusion at Lama Restaurant)", contact: "[REDACTED — ON FILE]", d010Status: "PENDING ON-SET D010 CAPTURE", flowPrompt: "Candid handheld 35mm cinema-verite portrait of a weathered, philosophical Berkeley bar regular in a dark jacket bringing calm Buddhist observations into a heated political bar debate under warm tungsten neon light, three-quarter profile, natural film grain." },
 
     // GROUP 2: BARTENDERS & BAR PATRONS (5)
@@ -641,10 +646,10 @@ window.PRECIPICE_HUB_DATA = {
 
   shootingScheduleMindMap: {
     updated: "2026-10-23",
-    sourceId: "OCT23A01 + OCT23A02",
-    sourceTitle: "Rob Nilsson Written 3-Day Outline, Fifth St 13 Meeting (OCT23A01) & Russ/Rob Conversation (OCT23A02)",
+    sourceId: "OCT23A01 + OCT23A02 + OCT23A03",
+    sourceTitle: "Rob Nilsson 3-Day Outline, Fifth St 13 Meeting (OCT23A01), Russ/Rob Call (OCT23A02) & Ken Newman Schedule Dispatch (OCT23A03)",
     rhythm: [
-      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Universe 2 · Lock w/ Ken & Russ (~Nov 16)", kind: "shoot" },
+      { id: "day1", step: "NIGHT 1 · MAIDEN VOYAGE", title: "Day 1: Lama Bar", sub: "Win A: Nov 23–25/27 · Win B: 1st Wk Dec (D014)", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
       { id: "day2a", step: "NIGHT 2 · SHOOT", title: "Day 2: Pool Hall", sub: "Buffalo Billiards (12 AM) or Mallard / Tap Haus", kind: "shoot" },
       { id: "rules", step: "RECOVERY", title: "Rest Day(s)", sub: "Senior Cast & Crew Recovery", kind: "rest" },
@@ -653,11 +658,11 @@ window.PRECIPICE_HUB_DATA = {
     nodes: {
       hub: {
         id: "hub",
-        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02)",
+        badge: "3-UNIVERSE HUB · OCT 23 (OCT23A01 + OCT23A02 + OCT23A03)",
         title: "PRECIPICE — 3–4 Spaced Nights & 3-Universe Mind Map",
         venue: "Lama Bar ↔ Buffalo Billiards (or Mallard / Tap Haus) ↔ Lama Restaurant ('Lama Bean')",
-        drefs: ["D001", "D011", "D012", "D013"],
-        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Waiting on Ken Newman's Nov 16 return date first (~24 days out), then locking the 'Maiden Voyage' opening night with Russ across spaced nights with mandatory rest days.",
+        drefs: ["D001", "D011", "D012", "D013", "D014"],
+        summary: "Consolidates principal photography into 3–4 spaced night shoots connected by interior doors and stairways into one contiguous nocturnal labyrinth. Per Ken Newman's Oct 23 dispatch (OCT23A03 / D014): Nov 17–22 is blocked (Moscone Center tradeshow magician + music gigs wrapping Nov 22). Window A opens Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket.",
         craftServices: "Hidden out of 360° camera sightlines at all 3 venues",
         cameraPlan: "2× handheld iPhone 17 Pro Max + 2–3 re-angled set cameras guarded by PAs"
       },
@@ -666,9 +671,9 @@ window.PRECIPICE_HUB_DATA = {
         badge: "DAY 1 · SCENE 1 · UNIVERSE 2",
         title: "Day 1 — Lama Bar (Free Working-Man's Bar · 5 Core Beats)",
         venue: "Lama Bar on San Pablo Ave (Main Counter, Back Pool Table, Lama Corridor, Basement Door, Attic Option)",
-        cast: "Russ, Ken (SAG), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
-        drefs: ["D001", "D011", "D012", "D013"],
-        summary: "Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
+        cast: "Russ, Ken (SAG · Nov 23–25/27 or 1st Wk Dec), Mickey, Don, Marianne, Female Bartender (Black Woman Target), SV & Pool Guys (+ optional Brendan), 1 ICE Guy, Wounded Man, Women Academics",
+        drefs: ["D001", "D011", "D012", "D013", "D014"],
+        summary: "Target Maiden Voyage Night (Window A: Mon Nov 23–Wed Nov 25 / Fri Nov 27 OR Window B: 1st Week of Dec per OCT23A03 / D014). Establishes the anti-MAGA point of view at the bar counter: Russ (longtime regular who worked with the female bartender) lays out real construction tools/materials with calm contractor precision before quoting his unfinished book manuscript and delivering the Trump '5th Amendment / 400x' joke (D013). Clears the back pool players upstairs, plants Ken's covert corridor nod with 1 ICE agent, and contrasts the women's emergency response to a wounded man against the men freezing up.",
         craftServices: "Outside in the back (completely clear of 360° bar interior)",
         cameraPlan: "360° bar coverage + 2–3 set cameras + handheld iPhones; TV sets show street demonstration",
         beats: [
@@ -793,18 +798,18 @@ window.PRECIPICE_HUB_DATA = {
       },
       rules: {
         id: "rules",
-        badge: "STAGING, CAMERA, SAG & CHARACTER RULES · D011, D012 & D013",
-        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster & Russ Book Rules",
+        badge: "STAGING, CAMERA, SAG & SCHEDULE RULES · D011, D012, D013 & D014",
+        title: "360° Camera Access, 2–3 Set Cameras, SAG Roster, Russ Book & Ken Windows",
         venue: "All 3 Universes (Lama Bar, Buffalo Billiards / Mallard / Tap Haus, Lama Restaurant)",
-        drefs: ["D001", "D010", "D011", "D012", "D013"],
-        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01 & OCT23A02) to protect senior cast/crew across spaced midnight shoots, ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
+        drefs: ["D001", "D010", "D011", "D012", "D013", "D014"],
+        summary: "Operational & creative rules agreed on Oct 23 (OCT23A01, OCT23A02 & OCT23A03) to protect senior cast/crew across spaced midnight shoots, map Ken Newman's Nov 23–27 & early Dec shoot windows (D014), ensure fast multi-angle cutting without cluttering 360° frames, and lock Russ's calm contractor precision & book boundaries.",
         craftServices: "Lama Bar: Outside in Back · Buffalo Billiards: Owner's Office · Lama Restaurant: Kitchen Low or Right-Hand Room",
         cameraPlan: "2–3 re-angled set cameras + 2× handheld iPhone 17 Pro Max; PAs guard set cameras; only 2 SAG actors (Ken Newman + 1 SAG ICE actor)",
         beats: [
           {
             num: "R.1",
-            title: "Maiden Voyage (~Nov 16) & Staggered Night Schedule w/ Rest Days (D011)",
-            detail: "Wait on Ken Newman's Nov 16 return date first (~24 days out), then lock the opening 'Maiden Voyage' night with Russ across 3–4 spaced nights (Shoot Night → Rest Day(s) → Shoot Night) so senior cast/crew (Rob [87], Russ [retiring Feb 2027], Ken, Mickey, Nancy) never work back-to-back all-nighters.",
+            title: "Ken Newman's Nov 23–27 & Early Dec Shoot Windows + Staggered Rest Days (D011 / D014)",
+            detail: "Per Ken Newman's Oct 23 message (OCT23A03 / D014): Nov 17–22 is blocked (Moscone Center tradeshow magician + music gigs wrapping Nov 22). Window A opens Mon Nov 23–Wed Nov 25 (& Fri Nov 27; Thu Nov 26 is Thanksgiving; Ken flies to Zihuatanejo Sat Nov 28). Window B opens First Week of December if Ken extends his airline ticket. Shoot Night → Rest Day(s) → Shoot Night protects senior cast/crew (Rob [87], Russ [retiring Feb 2027], Ken, Mickey, Nancy).",
             prompt: "Candid handheld 35mm behind-the-scenes cinema-verite shot of an independent film crew and senior actors reviewing a three-night shooting schedule board under warm tungsten light in a Berkeley bar."
           },
           {
@@ -816,7 +821,13 @@ window.PRECIPICE_HUB_DATA = {
         ]
       }
     },
-    verbatimOutline: `PRECIPICE
+    verbatimOutline: `KEN NEWMAN SCHEDULE & AVAILABILITY MESSAGE TO ROB NILSSON (OCT 23, 2026 · OCT23A03 / D014)
+"hey there great to hear from you. Yeah November has gotten pretty crazy. The week of the 17th I am at the Moscone center doing a tradeshow and doing Magican stuff and I have a bunch of music gigs but that all wraps on the 22nd.
+which means I would have some time the 23rd to 24th the 25th and the 26th and the 27th. That might create a problem for some people because Thursday is Thanksgiving. And I’m supposed to leave on Saturday for Zihuatanejo. It’s possible I have to check with the Airlines but I might be able to extend another week which would give us the first week of December as well but let me know if any of those days early the week of the 23rd might work. Look forward to seeing you and really looking forward to getting started"
+
+---
+
+PRECIPICE — ROB NILSSON WRITTEN 3-DAY OUTLINE (OCT 23, 2026 · OCT23A01 + OCT23A02)
 SCENE 1- CHARACTERS: Russ, Ken, Bartender, Mickey, Don, Marianne
 
 DAY 1- LOCATION LAMA BAR
@@ -849,4 +860,5 @@ Characters: Lydia, Antonia, Lana, Marianne, Tiger Lilly, 5 ICE guys [Recruited b
 2. WOMEN/ICE confrontation in either Lama side room [right-hand side room w/ pull-down metal door, no window restrictions] or upstairs storeroom [stairway up to storeroom where women hear ICE beating Russ and climb stairs to rescue him].`
   }
 };
+
 
